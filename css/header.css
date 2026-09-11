@@ -140,9 +140,9 @@
 .brand-logo-text {
   display: inline-flex;
   align-items: baseline;
-  gap: 0.35rem;
+  gap: 0.2rem;
   position: relative;
-  top: -5px;
+  top: -7px;
   left: -14px;
   padding-bottom: 2px;
 }
@@ -229,20 +229,20 @@
   color: var(--pwc-charcoal);
 }
 
-/* 6. MEGA DROPDOWN (Services - 2 Columns) */
+/* 6. MEGA DROPDOWN (Services - 3 Columns) */
 html body .mega-dropdown-menu,
 .main-nav .mega-dropdown-menu,
 .mega-dropdown-menu {
   position: absolute !important;
   top: 100% !important;
   left: 0 !important;
-  width: 580px !important;
-  max-width: 92vw !important;
+  width: 720px !important;
+  max-width: 95vw !important;
   background: #ffffff !important;
   border: 1px solid #e2e8f0 !important;
   border-radius: 12px !important;
   box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.12), 0 8px 16px -4px rgba(0, 0, 0, 0.04) !important;
-  padding: 1.5rem 1.75rem !important;
+  padding: 1.75rem 2rem !important;
   opacity: 0 !important;
   visibility: hidden !important;
   transform: translateY(10px) !important;
@@ -272,17 +272,19 @@ html body .mega-dropdown-grid,
 .mega-dropdown-menu .mega-dropdown-grid,
 .mega-dropdown-grid {
   display: grid !important;
-  grid-template-columns: 1fr 1fr !important;
-  gap: 2rem !important;
+  grid-template-columns: 1fr 1fr 1fr !important;
+  gap: 1.75rem !important;
 }
 
 .mega-col-heading {
-  font-size: 0.82rem;
+  font-size: 0.75rem;
   font-weight: 700;
   color: #64748b;
-  margin-bottom: 1.25rem;
-  letter-spacing: 0.3px;
-  text-transform: none;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f1f5f9;
 }
 
 .mega-subnav-list {
@@ -846,3 +848,69 @@ html body .mega-dropdown-grid,
     gap: 0.4rem !important;
   }
 }
+
+/* Sticky Footer Consultant Button (Icon-only by default, expands text on hover) */
+    .sticky-talk-consultant {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 999;
+    }
+    .sticky-talk-btn {
+      background: #0f172a;
+      color: #ffffff !important;
+      border: 2px solid var(--pwc-orange, #d85604);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.28);
+      border-radius: 50px;
+      height: 52px;
+      min-width: 52px;
+      padding: 0 14px;
+      font-weight: 700;
+      font-size: 0.88rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      overflow: hidden;
+      white-space: nowrap;
+      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .sticky-talk-btn i {
+      font-size: 1.25rem;
+      color: var(--pwc-orange, #d85604);
+      flex-shrink: 0;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+    .sticky-talk-btn span {
+      max-width: 0;
+      opacity: 0;
+      margin-left: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      display: inline-block;
+      transition: max-width 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease, margin-left 0.35s ease;
+    }
+    .sticky-talk-btn:hover {
+      background: var(--pwc-orange, #d85604);
+      border-color: #ffffff;
+      padding: 0 1.4rem 0 1.25rem;
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(216, 86, 4, 0.4);
+    }
+    .sticky-talk-btn:hover i {
+      color: #ffffff !important;
+      transform: scale(1.1);
+    }
+    .sticky-talk-btn:hover span {
+      max-width: 380px;
+      opacity: 1;
+      margin-left: 0.65rem;
+    }
+    @media (max-width: 768px) {
+      .sticky-talk-consultant {
+        right: 1rem;
+        bottom: 1rem;
+        left: auto;
+      }
+    }
