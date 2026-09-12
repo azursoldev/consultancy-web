@@ -197,11 +197,19 @@
   `;
 
   // Mount Header to DOM
-  const mount = document.getElementById('site-header');
-  if (mount) {
-    mount.outerHTML = headerHTML;
-  } else {
-    document.body.insertAdjacentHTML('afterbegin', headerHTML);
+  const existingHeader = document.querySelector('header.header');
+  if (!existingHeader) {
+    const mount = document.getElementById('site-header');
+    if (mount) {
+      mount.outerHTML = headerHTML;
+    } else {
+      document.body.insertAdjacentHTML('afterbegin', headerHTML);
+    }
+  } else if (!document.getElementById('mobileNavOverlay')) {
+    const drawerIdx = headerHTML.indexOf('<!-- 4. Responsive Mobile Slideout Drawer -->');
+    if (drawerIdx !== -1) {
+      document.body.insertAdjacentHTML('beforeend', headerHTML.slice(drawerIdx));
+    }
   }
 
   // Interactive Logic: Mobile Drawer
