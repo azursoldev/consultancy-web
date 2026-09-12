@@ -1,186 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact & Request Proposal (RFP) | Amstel Consulting</title>
-  <meta name="description"
-    content="Engage Amstel Consulting's licensed DPCO partners. Request a formal compliance audit proposal or visit our Abuja and Lagos offices.">
+  <title>Connect with Our Data Privacy & CyberSecurity Compliance Experts | Amstel Consulting</title>
+  <meta name="description" content="Engage Amstel Consulting's licensed DPCO partners. Boardroom-level guidance within 2 hours for annual CAR filings, DPO appointments, and data protection audits.">
   <link rel="canonical" href="https://consultancy-web-virid-seven.vercel.app/contact.html">
   <link rel="icon" type="image/jpeg" href="logo.png">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6 Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-  <!-- Unified Site Header (Single Source: js/header.js & css/style.css) -->
+  <!-- Unified Site Header -->
   <div id="site-header"></div>
   <script src="js/header.js"></script>
 
-
-
-  <!-- Inner Hero -->
-  <section class="inner-hero">
-    <div class="container">
-      <div class="breadcrumbs">
-        <a href="index.html">Home</a>
-        <span>/</span>
-        <span>Contact</span>
-      </div>
-
-      <span class="practice-kicker">Section 05 • Client Engagement & RFP Desk</span>
-      <h1>Request a Proposal & Contact</h1>
-      <p class="hero-lead">
-        Initiate a formal engagement with Amstel Consulting. Whether commissioning an urgent annual CAR statutory audit,
-        retaining an Outsourced DPO, or requesting a boardroom briefing, our partner group will respond within 4
-        business hours.
-      </p>
+  <main class="container">
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs-detail" style="margin-top: 2rem;">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <span>Contact Us</span>
     </div>
-  </section>
 
-  <!-- Contact & RFP Form Section -->
-  <section class="contact-main-section">
-    <div class="container">
-      <div class="contact-layout-grid">
+    <!-- 60/40 Screen Split (Client 12 Sept Spec: Note to Ali on Page 12) -->
+    <div class="split-60-40-layout">
+      
+      <!-- Left Column: 60% Content Paragraphs -->
+      <article class="split-60-main">
+        <h1 class="service-split-headline">Connect with Our Data Privacy &amp; CyberSecurity Compliance Experts</h1>
 
-        <!-- RFP Proposal Builder Form -->
-        <div class="rfp-form-card">
-          <h2>Request a Formal Proposal (RFP)</h2>
-          <p class="form-subtitle">Complete the statutory scoping parameters below to receive our engagement terms,
-            timeline, and fee schedule.</p>
-
-          <form id="rfpForm"
-            onsubmit="event.preventDefault(); alert('Thank you. Your proposal request has been logged. An Amstel Consulting practice partner will contact you within 4 business hours.');">
-            <div class="form-group-grid">
-              <div>
-                <label class="form-label" for="rfpFullName">Full Name *</label>
-                <input type="text" id="rfpFullName" class="form-control" placeholder="e.g. Tunde Adeyemi" required>
-              </div>
-              <div>
-                <label class="form-label" for="rfpEmail">Corporate Email Address *</label>
-                <input type="email" id="rfpEmail" class="form-control" placeholder="tunde@organization.ng" required>
-              </div>
-
-              <div>
-                <label class="form-label" for="rfpPhone">Direct Phone / WhatsApp *</label>
-                <input type="tel" id="rfpPhone" class="form-control" placeholder="+234 (0) 803 000 0000" required>
-              </div>
-              <div>
-                <label class="form-label" for="rfpCompany">Company / Institution Name *</label>
-                <input type="text" id="rfpCompany" class="form-control" placeholder="e.g. Apex Bank PLC" required>
-              </div>
-
-              <div>
-                <label class="form-label" for="rfpService">Primary Service Required *</label>
-                <select id="rfpService" class="form-control" required>
-                  <option value="">-- Select Service --</option>
-                  <option value="car">Compliance Audit Return (CAR)</option>
-                  <option value="audit">Data Protection Audit (Gap Analysis)</option>
-                  <option value="training">Data Protection Training & Boardroom</option>
-                  <option value="policies">Privacy Policies & Vendor DPAs</option>
-                  <option value="ropa">ROPA Data Lineage & Mapping</option>
-                  <option value="dpia">DPIA & LIA Impact Assessments</option>
-                  <option value="dpo">Outsourced DPO (DPO-as-a-Service)</option>
-                  <option value="cyber">Cybersecurity & Penetration Testing</option>
-                  <option value="ai">AI Consulting & Algorithmic Governance</option>
-                  <option value="gov">Corporate Governance & ESG Digital Trust</option>
-                </select>
-              </div>
-
-              <div>
-                <label class="form-label" for="rfpIndustry">Industry Sector *</label>
-                <select id="rfpIndustry" class="form-control" required>
-                  <option value="">-- Select Industry --</option>
-                  <option value="banking">Banking & Capital Markets</option>
-                  <option value="fintech">Fintech & Payments</option>
-                  <option value="health">Healthcare & Life Sciences</option>
-                  <option value="education">Education & EdTech</option>
-                  <option value="retail">Retail & E-Commerce</option>
-                  <option value="insurance">Insurance & Underwriting</option>
-                  <option value="pension">Pension Funds (PFAs)</option>
-                  <option value="transport">Transport & Logistics</option>
-                  <option value="public-sector">Public Sector & MDAs</option>
-                  <option value="real-estate">Real Estate & Property Development</option>
-                  <option value="energy">Energy, Oil & Power</option>
-                  <option value="telecom">Telecommunications</option>
-                  <option value="engineering">Engineering & Construction</option>
-                </select>
-              </div>
-
-              <div class="form-group-full">
-                <label class="form-label" for="rfpScope">Project Scope & Compliance Deadlines</label>
-                <textarea id="rfpScope" class="form-control"
-                  placeholder="Provide details on your system architecture, data subject volume, and compliance filing targets (e.g., March 15 annual statutory CAR deadline)..."></textarea>
-              </div>
-            </div>
-            <button type="submit" class="btn-submit-rfp">
-              <span>Submit Request for Proposal</span>
-              <i class="fa-solid fa-arrow-right"></i>
-            </button>
-          </form>
+        <!-- Section 1 -->
+        <div class="split-section-block" style="border-top: none; padding-top: 0;">
+          <h3><i class="fa-solid fa-clock-rotate-left"></i> 1. Boardroom-Level Guidance within 24 Hours</h3>
+          <p>
+            Whether your organization is racing to beat an annual statutory deadline, responding to a data incident, or upgrading its technical infrastructure, our advisory team is standing by to assist you. At Amstel Consulting, we don’t believe in automated ticketing queues or endless phone loops. We ensure that every corporate inquiry is routed directly to a senior compliance consultant or technical engineer, guaranteeing an informed, expert response to your business challenges within 2 business hours.
+          </p>
         </div>
 
-        <!-- Contact Information & Virtual Practice -->
-        <div class="contact-info-panel">
-
-          <!-- Direct Advisory Hotline -->
-          <div class="direct-advisory-card">
-            <h4>Senior Partner Direct Desk</h4>
-            <p>For urgent statutory audit deadlines, active NDPC enforcement notices, or immediate 72-hour breach
-              containment consultation:</p>
-            <a href="tel:+23412345678" class="direct-phone-link">+234 (01) 280 9400</a>
-            <a href="mailto:advisory@amstelconsulting.ng" class="direct-email-link">advisory@amstelconsulting.ng</a>
-          </div>
-
-          <!-- Nationwide Virtual Practice Operations -->
-          <div class="office-box">
-            <span class="office-city">Pan-Nigeria Operations</span>
-            <h3>Nigeria (Virtual Practice)</h3>
-            <p class="office-address">
-              Amstel Consulting operates as a nationwide virtual data protection and privacy advisory firm, delivering
-              accredited DPCO compliance, annual audit filings, and cybersecurity audits across all 36 States and the
-              FCT.
+        <!-- Section 2 -->
+        <div class="split-section-block">
+          <h3><i class="fa-solid fa-building-shield"></i> 2. Our Corporate Head Office</h3>
+          <p>
+            Our central advisory team operates directly out of our corporate headquarters in Nigeria, serving clients across West Africa and managing direct filings with the Nigeria Data Protection Commission (NDPC). If your executive board requires a physical, face-to-face consultation, or if you need to coordinate an on-site technical infrastructure audit, you can easily reach out to schedule an appointment at our offices.
+          </p>
+          <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 1.4rem; margin-top: 1rem;">
+            <p style="margin-bottom: 0.6rem; font-size: 0.96rem; color: #1e293b;">
+              <strong style="color: var(--pwc-charcoal);"><i class="fa-solid fa-location-dot" style="color: var(--pwc-orange); width: 20px;"></i> Office Address:</strong> Plot 1024, Diplomatic Drive, Central Business District, Abuja, FCT, Nigeria
             </p>
-            <ul class="office-directs">
-              <li><i class="fa-solid fa-phone"></i> +234 (01) 280 9400</li>
-              <li><i class="fa-solid fa-envelope"></i> advisory@amstelconsulting.ng</li>
-              <li><i class="fa-solid fa-clock"></i> Mon – Fri: 08:30 – 17:30 WAT</li>
-            </ul>
+            <p style="margin-bottom: 0.6rem; font-size: 0.96rem; color: #1e293b;">
+              <strong style="color: var(--pwc-charcoal);"><i class="fa-solid fa-phone" style="color: var(--pwc-orange); width: 20px;"></i> Official Advisory Line:</strong> +234 (01) 280 9400 / +234 (0) 803 123 4567
+            </p>
+            <p style="margin-bottom: 0; font-size: 0.96rem; color: #1e293b;">
+              <strong style="color: var(--pwc-charcoal);"><i class="fa-solid fa-envelope" style="color: var(--pwc-orange); width: 20px;"></i> Direct Engagement Email:</strong> <a href="mailto:advisory@amstelconsulting.ng" style="color: var(--pwc-orange); text-decoration: underline; font-weight: 600;">advisory@amstelconsulting.ng</a>
+            </p>
           </div>
-
         </div>
 
-      </div>
-    </div>
-  </section>
+        <!-- Section 3 -->
+        <div class="split-section-block">
+          <h3><i class="fa-solid fa-bolt"></i> 3. Streamlined Onboarding for Corporate Partners</h3>
+          <p>
+            For fast-scaling startups and enterprise vendors, time is money. We have engineered our client onboarding framework to be completely friction-free, allowing our DPCO consultants to initiate gap checks, verify entity documentation, and step in as your named legal advisors within 24 hours of form approval. You don’t need to spend weeks negotiating entry frameworks; simply use the structured secure portal below to specify your exact operational requirements.
+          </p>
+        </div>
 
-  <!-- ==========================================================================
-       PwC MULTI-COLUMN MEGA FOOTER (Standardized Across All Pages)
-       ========================================================================== -->
-  <!-- ==========================================================================
-       PwC MULTI-COLUMN MEGA FOOTER (Standardized Across All Pages)
+        <!-- Section 4 -->
+        <div class="split-section-block">
+          <h3><i class="fa-solid fa-shield-halved"></i> 4. Data Privacy &amp; Confidentiality Shield</h3>
+          <p>
+            We treat your initial engagement with the absolute highest level of professional discretion. All details submitted through this portal are insulated by strict non-disclosure parameters and managed under our secure enterprise data storage architecture. We ensure that your corporate vulnerabilities, current compliance gaps, and internal infrastructure statistics remain completely confidential, protecting your brand reputation throughout the consultation phase.
+          </p>
+        </div>
+      </article>
+
+      <!-- Right Column: 40% Sticky Consultation Form (60/40 Screen Split) -->
+      <aside class="split-40-aside">
+        <div class="compliance-form-card">
+          <div class="compliance-form-header">
+            <span class="compliance-form-badge">Priority Engagement</span>
+            <h3>Initiate Secure Consultation</h3>
+            <p>Direct portal to our senior DPCO partners. Scoped consultation scheduled within 2 hours.</p>
+          </div>
+
+          <!-- Dynamic Form Component Slot -->
+          <div class="dynamic-compliance-form-slot" data-form-type="contact"></div>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+    <!-- ==========================================================================
+       PwC MULTI-COLUMN MEGA FOOTER (Standardized Light Theme Across All Pages)
        ========================================================================== -->
   <footer class="pwc-footer">
     <div class="pwc-footer-container">
-            <div class="pwc-footer-columns">
+      <div class="pwc-footer-columns">
         
-        <!-- Col 1: Services -->
+        <!-- Col 1: Our Solutions -->
         <div class="footer-col">
-          <h5>Services</h5>
+          <h5>Our Solutions</h5>
           <ul>
-            <li><a href="service-car.html">Compliance Audit Return (CAR)</a></li>
-            <li><a href="service-audit.html">Data Protection Audit</a></li>
+            <li><a href="services/compliance-audit-return.html">Compliance Audit Return (CAR)</a></li>
+            <li><a href="services/data-protection-audit.html">Data Protection Audit</a></li>
+            <li><a href="services/outsourced-dpo.html">Outsourced DPO</a></li>
             <li><a href="service-ropa.html">Record of Processing Activities (ROPA)</a></li>
             <li><a href="service-dpia.html">DPIA &amp; LIA</a></li>
-            <li><a href="service-dpo.html">Outsourced DPO</a></li>
             <li><a href="service-policies.html">Privacy Policies</a></li>
             <li><a href="service-dpa.html">Data Processing Agreements</a></li>
             <li><a href="service-training.html">Data Protection Training</a></li>
@@ -190,14 +124,15 @@
           </ul>
         </div>
 
-        <!-- Col 2: Blog -->
+        <!-- Col 2: Knowledge Hub -->
         <div class="footer-col">
-          <h5>Blog</h5>
+          <h5>Knowledge Hub</h5>
           <ul>
             <li><a href="publication-detail.html">Complying with Nigeria Data Protection Act (NDPA)</a></li>
             <li><a href="topics.html#ai-business">Artificial Intelligence for Business</a></li>
             <li><a href="topics.html#cybersecurity">Cyber Security</a></li>
             <li><a href="publication-detail.html">Regulatory Guidance</a></li>
+            <li><a href="topics.html">All Insights &amp; Publications</a></li>
           </ul>
         </div>
 
@@ -205,9 +140,10 @@
         <div class="footer-col">
           <h5>Our Organisation</h5>
           <ul>
-            <li><a href="organisation-values.html">About Us</a></li>
-            <li><a href="organisation-consultants.html">Team</a></li>
-            <li><a href="contact.html">Career</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html#credentials">Licensed DPCO Status</a></li>
+            <li><a href="about.html#leadership">Team &amp; Advisory Board</a></li>
+            <li><a href="contact.html">Career &amp; Partnerships</a></li>
           </ul>
         </div>
 
@@ -215,11 +151,11 @@
         <div class="footer-col">
           <h5>Legal</h5>
           <ul>
-            <li><a href="privacy-statement.html">Privacy Statement</a></li>
+            <li><a href="legal/privacy-statement.html">Privacy &amp; Legal Statement</a></li>
             <li><a href="cookie-policy.html">Cookie Policy</a></li>
             <li><a href="legal-disclaimer.html">Legal Disclaimer</a></li>
             <li><a href="terms-and-conditions.html">Terms and Conditions</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
           </ul>
         </div>
       </div>
@@ -228,111 +164,15 @@
       <div class="pwc-footer-bottom">
         <div class="footer-logo-wrap">
           <img src="logo.png" alt="Amstel Consulting" class="brand-logo-img">
-          <span class="brand-logo-text"><span class="brand-mstel">mstel</span> <span
-              class="brand-consulting">Consulting</span></span>
+          <span class="brand-logo-text"><span class="brand-mstel">mstel</span> <span class="brand-consulting">Consulting</span></span>
         </div>
         <div class="footer-disclaimer">
-          Licensed as a Data Protection Compliance Organization (DPCO) by the National Data Protection Commission |
-          License No: DPCO/XXXX/2026. &copy; 2026 Amstel Consulting Nigeria. All rights reserved.
+          Licensed as a Data Protection Compliance Organization (DPCO) by the National Data Protection Commission | License No: DPCO/XXXX/2026. &copy; 2026 Amstel Consulting Nigeria. All rights reserved.
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- Sitewide Sticky Footer Consultant Button -->
-  <div class="sticky-talk-consultant">
-    <a href="contact.html" class="sticky-talk-btn">
-      <i class="fa-solid fa-headset text-orange"></i>
-      <span>Talk to Our Experienced Consultants for Free</span>
-    </a>
-  </div>
-
-  <!-- Search Modal Overlay -->
-  <div id="siteSearchModal" class="search-modal-overlay" onclick="if(event.target===this) closeSearchModal()">
-    <div class="search-modal-card">
-      <div class="search-input-wrap">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" id="siteSearchInput" placeholder="Search services, NDPA regulations, DPCO audit rules..."
-          oninput="handleSearch(this.value)">
-        <button onclick="closeSearchModal()" class="search-close-btn">&times;</button>
-      </div>
-      <div id="searchResults" class="search-results-list">
-        <div class="search-quick-links">
-          <span>Quick links:</span>
-          <a href="service-car.html">Compliance Audit Return (CAR)</a>
-          <a href="service-dpo.html">Outsourced DPO</a>
-          <a href="service-audit.html">Data Protection Audit</a>
-          <a href="service-training.html">Data Protection Training</a>
-          <a href="topics.html#ndpa-laws">NDPA 2023 Statutory Laws</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    // Pre-populate service/industry from URL params if available
-    window.addEventListener('DOMContentLoaded', () => {
-      const urlParams = new URLSearchParams(window.location.search);
-      const serviceParam = urlParams.get('service');
-      const industryParam = urlParams.get('industry');
-      if (serviceParam && document.getElementById('rfpService')) {
-        document.getElementById('rfpService').value = serviceParam;
-      }
-      if (industryParam && document.getElementById('rfpIndustry')) {
-        document.getElementById('rfpIndustry').value = industryParam;
-      }
-    });
-  </script>
-
-
-
-
-
-  <script>
-    function openSearchModal() {
-      const modal = document.getElementById('siteSearchModal');
-      if (modal) {
-        modal.classList.add('open');
-        setTimeout(() => {
-          const inp = document.getElementById('siteSearchInput');
-          if (inp) inp.focus();
-        }, 100);
-      }
-    }
-
-    function closeSearchModal() {
-      const modal = document.getElementById('siteSearchModal');
-      if (modal) modal.classList.remove('open');
-    }
-
-    function handleSearch(val) {
-      const res = document.getElementById('searchResults');
-      if (!res) return;
-      if (!val || val.trim() === '') {
-        res.innerHTML = '<div class="search-quick-links"><span>Quick links:</span><a href="service-car.html">Compliance Audit Return (CAR)</a><a href="service-dpo.html">Outsourced DPO</a><a href="service-audit.html">Data Protection Audit</a><a href="service-training.html">Data Protection Training</a><a href="topics.html#ndpa-laws">NDPA 2023 Statutory Laws</a></div>';
-        return;
-      }
-      const q = val.toLowerCase();
-      const allServices = [
-        { name: 'Compliance Audit Return (CAR)', url: 'service-car.html', desc: 'Statutory annual audit filing with NDPC before March 15.' },
-        { name: 'Data Protection Audit', url: 'service-audit.html', desc: 'Comprehensive technical and operational gap assessments.' },
-        { name: 'Data Protection Training', url: 'service-training.html', desc: 'Workforce NDPA e-learning & DPO masterclasses.' },
-        { name: 'Privacy Policies & Notices', url: 'service-policies.html', desc: 'Layered transparency notices and vendor DPAs.' },
-        { name: 'ROPA (Record of Processing Activities)', url: 'service-ropa.html', desc: 'Article 24 data lineage and processing inventory.' },
-        { name: 'DPIA & LIA Assessments', url: 'service-dpia.html', desc: 'High-risk 5x5 threat and impact assessments.' },
-        { name: 'Outsourced DPO', url: 'service-dpo.html', desc: 'Accredited external DPO designation & NDPC liaison.' },
-        { name: 'Cybersecurity & Pen-Testing', url: 'service-cyber.html', desc: 'Security posture hardening, vulnerability assessment & pen-testing.' },
-        { name: 'Corporate Governance', url: 'service-gov.html', desc: 'Boardroom digital trust charters and fiduciary risk monitoring.' },
-        { name: 'Cookie & Consent Compliance', url: 'service-cookie.html', desc: 'Zero-party consent telemetry and tracking audits.' }
-      ];
-      const filtered = allServices.filter(s => s.name.toLowerCase().includes(q) || s.desc.toLowerCase().includes(q));
-      if (filtered.length === 0) {
-        res.innerHTML = '<p class="search-disclaimer">No direct matching service found. <a href="contact.html" class="text-orange">Contact our advisory desk</a> for assistance.</p>';
-      } else {
-        res.innerHTML = filtered.map(s => '<div class="search-result-item-wrap"><a href="' + s.url + '" class="search-result-item-title">' + s.name + '</a><span class="search-result-item-desc">' + s.desc + '</span></div>').join('');
-      }
-    }
-  </script>
+  <script src="js/compliance-form.js"></script>
 </body>
-
 </html>

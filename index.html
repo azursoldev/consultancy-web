@@ -55,19 +55,18 @@
         </div>
 
         <div class="hero-btn-group">
-          <a href="service-car.html" class="btn-hero-explore">
-            <span>File CAR Before deadline</span>
+          <a href="services/compliance-audit-return.html" class="btn-hero-explore">
+            <span>FILE YOUR CAR</span>
             <i class="fa-solid fa-arrow-right"></i>
           </a>
-          <a href="#contact" class="btn-hero-secondary">
-            <span>Request FREE Privacy Assessment</span>
+          <button type="button" class="btn-hero-secondary" data-open-modal="compliance" data-precheck="car">
+            <span>Request Consultation</span>
             <i class="fa-solid fa-arrow-right"></i>
-          </a>
+          </button>
         </div>
       </div>
     </div>
   </section>
-
 
 
   <!-- ==========================================================================
@@ -462,19 +461,22 @@
   <!-- ==========================================================================
        PwC MULTI-COLUMN MEGA FOOTER (Standardized Across All Pages)
        ========================================================================== -->
+    <!-- ==========================================================================
+       PwC MULTI-COLUMN MEGA FOOTER (Standardized Light Theme Across All Pages)
+       ========================================================================== -->
   <footer class="pwc-footer">
     <div class="pwc-footer-container">
-            <div class="pwc-footer-columns">
+      <div class="pwc-footer-columns">
         
-        <!-- Col 1: Services -->
+        <!-- Col 1: Our Solutions -->
         <div class="footer-col">
-          <h5>Services</h5>
+          <h5>Our Solutions</h5>
           <ul>
-            <li><a href="service-car.html">Compliance Audit Return (CAR)</a></li>
-            <li><a href="service-audit.html">Data Protection Audit</a></li>
+            <li><a href="services/compliance-audit-return.html">Compliance Audit Return (CAR)</a></li>
+            <li><a href="services/data-protection-audit.html">Data Protection Audit</a></li>
+            <li><a href="services/outsourced-dpo.html">Outsourced DPO</a></li>
             <li><a href="service-ropa.html">Record of Processing Activities (ROPA)</a></li>
             <li><a href="service-dpia.html">DPIA &amp; LIA</a></li>
-            <li><a href="service-dpo.html">Outsourced DPO</a></li>
             <li><a href="service-policies.html">Privacy Policies</a></li>
             <li><a href="service-dpa.html">Data Processing Agreements</a></li>
             <li><a href="service-training.html">Data Protection Training</a></li>
@@ -484,14 +486,15 @@
           </ul>
         </div>
 
-        <!-- Col 2: Blog -->
+        <!-- Col 2: Knowledge Hub -->
         <div class="footer-col">
-          <h5>Blog</h5>
+          <h5>Knowledge Hub</h5>
           <ul>
             <li><a href="publication-detail.html">Complying with Nigeria Data Protection Act (NDPA)</a></li>
             <li><a href="topics.html#ai-business">Artificial Intelligence for Business</a></li>
             <li><a href="topics.html#cybersecurity">Cyber Security</a></li>
             <li><a href="publication-detail.html">Regulatory Guidance</a></li>
+            <li><a href="topics.html">All Insights &amp; Publications</a></li>
           </ul>
         </div>
 
@@ -499,9 +502,10 @@
         <div class="footer-col">
           <h5>Our Organisation</h5>
           <ul>
-            <li><a href="organisation-values.html">About Us</a></li>
-            <li><a href="organisation-consultants.html">Team</a></li>
-            <li><a href="contact.html">Career</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html#credentials">Licensed DPCO Status</a></li>
+            <li><a href="about.html#leadership">Team &amp; Advisory Board</a></li>
+            <li><a href="contact.html">Career &amp; Partnerships</a></li>
           </ul>
         </div>
 
@@ -509,11 +513,11 @@
         <div class="footer-col">
           <h5>Legal</h5>
           <ul>
-            <li><a href="privacy-statement.html">Privacy Statement</a></li>
+            <li><a href="legal/privacy-statement.html">Privacy &amp; Legal Statement</a></li>
             <li><a href="cookie-policy.html">Cookie Policy</a></li>
             <li><a href="legal-disclaimer.html">Legal Disclaimer</a></li>
             <li><a href="terms-and-conditions.html">Terms and Conditions</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
           </ul>
         </div>
       </div>
@@ -522,12 +526,10 @@
       <div class="pwc-footer-bottom">
         <div class="footer-logo-wrap">
           <img src="logo.png" alt="Amstel Consulting" class="brand-logo-img">
-          <span class="brand-logo-text"><span class="brand-mstel">mstel</span> <span
-              class="brand-consulting">Consulting</span></span>
+          <span class="brand-logo-text"><span class="brand-mstel">mstel</span> <span class="brand-consulting">Consulting</span></span>
         </div>
         <div class="footer-disclaimer">
-          Licensed as a Data Protection Compliance Organization (DPCO) by the National Data Protection Commission |
-          License No: DPCO/XXXX/2026. &copy; 2026 Amstel Consulting Nigeria. All rights reserved.
+          Licensed as a Data Protection Compliance Organization (DPCO) by the National Data Protection Commission | License No: DPCO/XXXX/2026. &copy; 2026 Amstel Consulting Nigeria. All rights reserved.
         </div>
       </div>
     </div>
@@ -627,6 +629,7 @@
       }
     }
   </script>
+  <script src="js/compliance-form.js"></script>
 </body>
 
 </html>

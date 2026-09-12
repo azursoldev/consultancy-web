@@ -8555,3 +8555,967 @@ textarea.form-control {
   border-left-color: #ef4444 !important;
   background: #fef2f2 !important;
 }
+
+/* ==========================================================================
+   26. CLIENT 12 SEPT SPECIFICATIONS: 60/40 SPLIT LAYOUT & DYNAMIC FORMS
+   ========================================================================== */
+
+/* 60/40 Split Screen Grid (Mockup Page 14 & Pages 4, 6, 8, 12) */
+.split-60-40-layout {
+  display: grid;
+  grid-template-columns: 1.45fr 1fr;
+  gap: 3.5rem;
+  align-items: start;
+  margin: 2.5rem 0 5rem;
+}
+
+@media (max-width: 1024px) {
+  .split-60-40-layout {
+    grid-template-columns: 1.25fr 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 860px) {
+  .split-60-40-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.split-60-main {
+  min-width: 0;
+}
+
+.split-60-main h1,
+.split-60-main .service-split-headline {
+  font-family: var(--font-serif);
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--pwc-charcoal);
+  margin-bottom: 1.75rem;
+  letter-spacing: -0.02em;
+}
+
+.split-60-main p {
+  font-size: 1.06rem;
+  line-height: 1.75;
+  color: var(--pwc-gray-text);
+  margin-bottom: 1.4rem;
+}
+
+.split-60-main .lead-paragraph {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  line-height: 1.7;
+}
+
+.split-section-block {
+  margin: 2.2rem 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eaeaea;
+}
+
+.split-section-block h3 {
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--pwc-charcoal);
+  margin-bottom: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.split-section-block h3 i {
+  color: var(--pwc-orange);
+  font-size: 1.1rem;
+}
+
+.split-section-block p {
+  font-size: 1rem;
+  color: #555555;
+  line-height: 1.7;
+}
+
+/* 40% Sticky Compliance Mini-Form Box */
+.split-40-aside {
+  position: sticky;
+  top: 95px;
+  z-index: 10;
+}
+
+.compliance-form-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-top: 4px solid var(--pwc-orange);
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+  padding: 2.2rem 2rem;
+  transition: box-shadow 0.25s ease;
+}
+
+.compliance-form-card:hover {
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.1);
+}
+
+.compliance-form-header {
+  margin-bottom: 1.6rem;
+  padding-bottom: 1.1rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.compliance-form-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--pwc-orange);
+  margin-bottom: 0.4rem;
+}
+
+.compliance-form-header h3 {
+  font-family: var(--font-sans);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 0.4rem;
+  line-height: 1.3;
+}
+
+.compliance-form-header p {
+  font-size: 0.88rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Form Fields Styling */
+.compliance-form-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.form-field-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.form-field-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #334155;
+}
+
+.form-field-label span.req {
+  color: var(--pwc-orange);
+}
+
+.form-field-label span.opt {
+  color: #94a3b8;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 0.78rem;
+}
+
+.compliance-input,
+.compliance-select,
+.compliance-textarea {
+  width: 100%;
+  padding: 0.72rem 0.95rem;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: #1e293b;
+  background-color: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.compliance-input:focus,
+.compliance-select:focus,
+.compliance-textarea:focus {
+  background-color: #ffffff;
+  border-color: var(--pwc-orange);
+  box-shadow: 0 0 0 3px rgba(208, 74, 2, 0.15);
+}
+
+.compliance-textarea {
+  resize: vertical;
+  min-height: 85px;
+  line-height: 1.5;
+}
+
+/* Radio Button Group (Estimated Records) */
+.form-radio-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.form-radio-label {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.88rem;
+  color: #334155;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 0.6rem 0.85rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.form-radio-label:hover {
+  background: #fff5ee;
+  border-color: #fdba74;
+}
+
+.form-radio-label input[type="radio"] {
+  accent-color: var(--pwc-orange);
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.form-radio-label.selected {
+  background: #fff7ed;
+  border-color: var(--pwc-orange);
+  font-weight: 600;
+  color: #9a3412;
+}
+
+/* Checkbox Options (Compliance Objectives) */
+.form-checkbox-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.form-checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.86rem;
+  line-height: 1.45;
+  color: #334155;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 0.6rem 0.85rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.form-checkbox-label:hover {
+  background: #fff5ee;
+  border-color: #fdba74;
+}
+
+.form-checkbox-label input[type="checkbox"] {
+  accent-color: var(--pwc-orange);
+  width: 17px;
+  height: 17px;
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+.form-checkbox-label.pre-selected {
+  background: #fff7ed;
+  border-color: var(--pwc-orange);
+  font-weight: 600;
+  color: #9a3412;
+}
+
+/* Submit Action Button */
+.btn-compliance-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  width: 100%;
+  padding: 0.95rem 1.4rem;
+  background: var(--pwc-orange);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 0.98rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(208, 74, 2, 0.28);
+  transition: all 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+.btn-compliance-submit:hover {
+  background: var(--pwc-orange-dark);
+  box-shadow: 0 6px 20px rgba(208, 74, 2, 0.38);
+  transform: translateY(-1px);
+}
+
+.form-guarantee-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  color: #64748b;
+  margin-top: 0.7rem;
+  text-align: center;
+}
+
+.form-guarantee-note i {
+  color: #10b981;
+}
+
+/* ==========================================================================
+   27. OUR ORGANISATION (ABOUT US) PAGE 5-SECTION ARCHITECTURE
+   ========================================================================== */
+.about-clean-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 2rem 2rem 5rem;
+}
+
+.about-hero-block {
+  margin-bottom: 2.8rem;
+}
+
+.about-hero-title {
+  font-family: var(--font-serif);
+  font-size: 2.7rem;
+  font-weight: 700;
+  color: var(--pwc-charcoal);
+  margin-bottom: 1.6rem;
+  line-height: 1.2;
+}
+
+.about-lead-text {
+  font-size: 1.18rem;
+  line-height: 1.8;
+  color: #334155;
+  margin-bottom: 1.5rem;
+}
+
+.about-body-text {
+  font-size: 1.06rem;
+  line-height: 1.75;
+  color: #475569;
+  margin-bottom: 1.5rem;
+}
+
+.about-cta-wrap {
+  margin: 1.8rem 0 2.8rem;
+}
+
+.btn-about-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  background: var(--pwc-orange);
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.9rem 1.85rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(208, 74, 2, 0.25);
+}
+
+.btn-about-cta:hover {
+  background: var(--pwc-orange-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(208, 74, 2, 0.35);
+}
+
+/* Stylized Credentials Callout Box (Paragraph 3) */
+.credentials-callout-box {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  color: #ffffff;
+  border-radius: 6px;
+  padding: 2.4rem 2.6rem;
+  margin: 3.2rem 0;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.2);
+  border-left: 6px solid var(--pwc-orange);
+}
+
+.credentials-callout-box::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 180px;
+  height: 180px;
+  background: rgba(208, 74, 2, 0.12);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.credentials-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(208, 74, 2, 0.25);
+  color: #fdba74;
+  border: 1px solid rgba(208, 74, 2, 0.4);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 0.8rem;
+  border-radius: 4px;
+  margin-bottom: 1.1rem;
+}
+
+.credentials-callout-box h3 {
+  font-family: var(--font-serif);
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.credentials-callout-box p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #cbd5e1;
+  margin: 0;
+}
+
+/* Leadership Matrix Grid (Advisory Board & Consultants Side-by-Side) */
+.leadership-matrix-section {
+  margin: 3.5rem 0;
+}
+
+.leadership-matrix-heading {
+  font-family: var(--font-serif);
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--pwc-charcoal);
+  margin-bottom: 0.6rem;
+}
+
+.leadership-matrix-sub {
+  font-size: 1rem;
+  color: #64748b;
+  margin-bottom: 2rem;
+}
+
+.leadership-matrix-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+}
+
+@media (max-width: 900px) {
+  .leadership-matrix-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .leadership-matrix-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.leader-profile-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.leader-profile-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  border-color: #cbd5e1;
+}
+
+.leader-card-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  background: #f1f5f9;
+}
+
+.leader-card-body {
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.leader-role-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--pwc-orange);
+  margin-bottom: 0.35rem;
+}
+
+.leader-name {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 0.25rem;
+}
+
+.leader-title {
+  font-size: 0.86rem;
+  font-weight: 500;
+  color: #475569;
+  margin-bottom: 0.85rem;
+  line-height: 1.4;
+}
+
+.leader-bio {
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.55;
+  margin-top: auto;
+}
+
+/* ==========================================================================
+   28. POP-UP MODAL ROUTE (ELITE UX)
+   ========================================================================== */
+.compliance-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+  padding: 1.5rem;
+}
+
+.compliance-modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.compliance-modal-container {
+  background: #ffffff;
+  width: 100%;
+  max-width: 580px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 8px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+  position: relative;
+  transform: scale(0.94);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 2.2rem 2.4rem;
+}
+
+.compliance-modal-overlay.active .compliance-modal-container {
+  transform: scale(1);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  background: #f1f5f9;
+  border: none;
+  font-size: 1.4rem;
+  color: #64748b;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  transition: all 0.15s ease;
+}
+
+.modal-close-btn:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.modal-header {
+  margin-bottom: 1.4rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.modal-header h3 {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.3rem;
+}
+
+.modal-header p {
+  font-size: 0.88rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ==========================================================================
+   29. OUR SOLUTIONS INDEX HUB PAGE
+   ========================================================================== */
+.solutions-hub-hero {
+  background: linear-gradient(to bottom, #fff7ed 0%, #ffffff 100%);
+  padding: 4rem 2rem 3rem;
+  border-bottom: 1px solid #fed7aa;
+}
+
+.solutions-hub-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.solutions-hub-title {
+  font-family: var(--font-serif);
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--pwc-charcoal);
+  margin-bottom: 1.4rem;
+  line-height: 1.2;
+}
+
+.solutions-hub-lead {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #334155;
+  max-width: 950px;
+  margin-bottom: 1.2rem;
+}
+
+.solutions-hub-sub {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #64748b;
+  max-width: 950px;
+}
+
+.solutions-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.2rem;
+  margin: 3.5rem 0 5rem;
+}
+
+@media (max-width: 960px) {
+  .solutions-pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.solution-pillar-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-top: 4px solid var(--pwc-orange);
+  border-radius: 6px;
+  padding: 2.4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  transition: all 0.25s ease;
+}
+
+.solution-pillar-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.1);
+  border-color: #cbd5e1;
+}
+
+.pillar-number {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--pwc-orange);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.6rem;
+}
+
+.pillar-title {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 1.2rem;
+  line-height: 1.35;
+}
+
+.pillar-goal-box {
+  background: #f8fafc;
+  border-left: 3px solid #0284c7;
+  padding: 0.85rem 1rem;
+  border-radius: 0 4px 4px 0;
+  margin-bottom: 1.2rem;
+}
+
+.pillar-goal-box strong {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #0369a1;
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.pillar-goal-box p {
+  font-size: 0.88rem;
+  color: #334155;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.pillar-action-desc {
+  font-size: 0.94rem;
+  line-height: 1.65;
+  color: #475569;
+  margin-bottom: 1.8rem;
+  flex-grow: 1;
+}
+
+.pillar-action-desc strong {
+  color: #0f172a;
+}
+
+.btn-pillar-route {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.95rem 1.35rem;
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  color: #0f172a;
+  font-size: 0.92rem;
+  font-weight: 700;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.solution-pillar-card:hover .btn-pillar-route {
+  background: var(--pwc-orange);
+  border-color: var(--pwc-orange);
+  color: #ffffff;
+}
+
+.btn-pillar-route i {
+  transition: transform 0.2s ease;
+}
+
+.btn-pillar-route:hover i {
+  transform: translateX(4px);
+}
+
+/* ==========================================================================
+   30. GLOBAL FOOTER STYLES (Standardized PwC Light Theme Across All Pages)
+   ========================================================================== */
+footer.footer,
+.pwc-footer {
+  background: #f2f2f2 !important;
+  color: #53565a !important;
+  padding: 4.5rem 0 2.5rem !important;
+  border-top: 1px solid #e0e0e0 !important;
+  font-size: 0.88rem !important;
+  margin-top: 5rem !important;
+  width: 100% !important;
+}
+
+footer.footer .container,
+.pwc-footer-container {
+  max-width: 1280px !important;
+  margin: 0 auto !important;
+  padding: 0 2.5rem !important;
+}
+
+.pwc-footer-columns {
+  display: grid !important;
+  grid-template-columns: 1.4fr 1.3fr 1.1fr 1fr !important;
+  gap: 3rem !important;
+  padding-bottom: 3.5rem !important;
+  border-bottom: 1px solid #e0e0e0 !important;
+}
+
+footer.footer .footer-top {
+  display: grid;
+  grid-template-columns: 1.3fr 3fr;
+  gap: 3.5rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 900px) {
+  footer.footer .footer-top {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .pwc-footer-columns {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 2rem !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .pwc-footer-columns {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+footer.footer .footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+footer.footer .footer-brand .brand-logo-text,
+.pwc-footer .brand-logo-text {
+  color: #2d2d2d !important;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+footer.footer .brand-logo-img,
+.pwc-footer .brand-logo-img {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+footer.footer .footer-bio {
+  color: #53565a;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  max-width: 320px;
+}
+
+footer.footer .footer-links-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+@media (max-width: 650px) {
+  footer.footer .footer-links-grid {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+  }
+}
+
+footer.footer .footer-links-grid h4,
+.footer-col h5 {
+  font-family: var(--font-serif, 'Georgia', serif) !important;
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 1.25rem !important;
+  color: #2d2d2d !important;
+}
+
+footer.footer .footer-links-grid ul,
+.footer-col ul {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.65rem !important;
+}
+
+footer.footer .footer-links-grid li,
+.footer-col li {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+footer.footer .footer-links-grid a,
+.footer-col a {
+  color: #53565a !important;
+  text-decoration: none !important;
+  font-size: 0.84rem !important;
+  transition: color 0.2s ease !important;
+}
+
+footer.footer .footer-links-grid a:hover,
+.footer-col a:hover {
+  color: var(--pwc-orange, #d04a02) !important;
+}
+
+footer.footer .footer-bottom,
+.pwc-footer-bottom {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  color: #53565a !important;
+  font-size: 0.8rem !important;
+  flex-wrap: wrap !important;
+  gap: 1.5rem !important;
+  padding-top: 1.5rem !important;
+}
+
+footer.footer .footer-bottom p {
+  margin: 0;
+  color: #53565a;
+}
+
+footer.footer .footer-legal-links {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+footer.footer .footer-legal-links a,
+.pwc-footer-bottom a {
+  color: #53565a !important;
+  text-decoration: none !important;
+  font-size: 0.82rem !important;
+  transition: color 0.2s ease !important;
+}
+
+footer.footer .footer-legal-links a:hover,
+.pwc-footer-bottom a:hover {
+  color: var(--pwc-orange, #d04a02) !important;
+}
+
+.footer-disclaimer {
+  color: #64748b !important;
+  font-size: 0.78rem !important;
+  max-width: 620px;
+  line-height: 1.5;
+}
