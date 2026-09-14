@@ -288,6 +288,14 @@
         if (badgeEl) badgeEl.textContent = 'NDPA 2023 Readiness Assessment';
         if (titleEl) titleEl.textContent = 'Schedule an NDPA Readiness Assessment';
         if (subEl) subEl.textContent = 'Connect with our accredited DPCO directors to identify and close your compliance gaps.';
+      } else if (precheckOption === 'pia' || precheckOption === 'audit') {
+        if (badgeEl) badgeEl.textContent = 'Privacy Impact Assessment';
+        if (titleEl) titleEl.textContent = 'Request a Privacy Impact Assessment';
+        if (subEl) subEl.textContent = 'Uncover compliance vulnerabilities and receive a tailored gap assessment within 24 hours.';
+      } else if (precheckOption === 'car') {
+        if (badgeEl) badgeEl.textContent = 'Statutory DPCO Filing';
+        if (titleEl) titleEl.textContent = 'Initiate CAR Filing Support';
+        if (subEl) subEl.textContent = 'Connect with an NDPC-licensed DPCO lead auditor within 24 hours to secure your filing certificate.';
       } else {
         if (badgeEl) badgeEl.textContent = 'Confidential Consultation';
         if (titleEl) titleEl.textContent = 'Speak with an Advisory Consultant';
@@ -298,12 +306,30 @@
         const formType = precheckOption === 'readiness' ? 'readiness' : 'about';
         formContainer.innerHTML = generateFormHTML(formType, true);
 
-        // Pre-selection logic
-        if (precheckOption) {
-          const targetCb = formContainer.querySelector(`input[name="objectives"][value="${precheckOption}"]`);
+        // Pre-selection logic (map pia -> audit)
+        const targetValue = precheckOption === 'pia' ? 'audit' : precheckOption;
+        if (targetValue) {
+          // Uncheck all first
+          formContainer.querySelectorAll('input[name="objectives"]').forEach(cb => {
+            cb.checked = false;
+            cb.closest('.form-checkbox-label')?.classList.remove('pre-selected');
+          });
+          const targetCb = formContainer.querySelector(`input[name="objectives"][value="${targetValue}"]`);
           if (targetCb) {
             targetCb.checked = true;
-            targetCb.closest('.form-checkbox-label').classList.add('pre-selected');
+            targetCb.closest('.form-checkbox-label')?.classList.add('pre-selected');
+          }
+        }
+
+        // Contextual CTA button text
+        const submitBtnSpan = formContainer.querySelector('.btn-compliance-submit span');
+        if (submitBtnSpan) {
+          if (precheckOption === 'pia') {
+            submitBtnSpan.textContent = 'Request Free Privacy Impact Assessment ➔';
+          } else if (precheckOption === 'car') {
+            submitBtnSpan.textContent = 'Initiate CAR Filing Support ➔';
+          } else if (precheckOption === 'general') {
+            submitBtnSpan.textContent = 'Initiate Secure Consultation ➔';
           }
         }
       }
