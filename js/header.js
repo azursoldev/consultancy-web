@@ -22,89 +22,37 @@
     </a>
 
     <ul class="main-nav">
-      <!-- 1. Our Solutions Dropdown & Hub (Client 12 Sept Spec) -->
+      <!-- 1. Our Solutions Dropdown (Client Sitemap: Exactly 4 Core Services) -->
       <li class="nav-item-dropdown">
         <a href="${pfx}services/index.html" class="nav-dropdown-trigger">
           <span>Our Solutions</span>
           <i class="fa-solid fa-chevron-down nav-chevron"></i>
         </a>
         
-        <div class="mega-dropdown-menu">
-          <div class="mega-dropdown-grid">
-            
-            <!-- Column 1: Core Statutory Pillars (12 Sept Spec) -->
-            <div>
-              <div class="mega-col-heading">Core Compliance Solutions</div>
-              <ul class="mega-subnav-list">
-                <li><a href="${pfx}services/compliance-audit-return.html">Annual Compliance Audit Return Filing</a></li>
-                <li><a href="${pfx}services/data-protection-audit.html">Data Protection Audit</a></li>
-                <li><a href="${pfx}services/outsourced-dpo.html">Appoint Outsourced Certified DPO</a></li>
-                <li><a href="${pfx}services/index.html" style="color: var(--pwc-orange); font-weight: 700;">Explore All Solutions &rarr;</a></li>
-              </ul>
-            </div>
-
-            <!-- Column 2: Governance & Privacy -->
-            <div>
-              <div class="mega-col-heading">Operational Privacy</div>
-              <ul class="mega-subnav-list">
-                <li><a href="${pfx}service-ropa.html">Record of Processing Activities (ROPA)</a></li>
-                <li><a href="${pfx}service-dpia.html">DPIA &amp; LIA Assessments</a></li>
-                <li><a href="${pfx}service-policies.html">Privacy Policies &amp; Notices</a></li>
-                <li><a href="${pfx}service-dpa.html">Data Processing Agreements (DPA)</a></li>
-              </ul>
-            </div>
-
-            <!-- Column 3: Advisory & Defense -->
-            <div>
-              <div class="mega-col-heading">Advanced Advisory</div>
-              <ul class="mega-subnav-list">
-                <li><a href="${pfx}service-training.html">Data Protection Training</a></li>
-                <li><a href="${pfx}service-ai.html">AI Governance &amp; Ethics</a></li>
-                <li><a href="${pfx}service-cyber.html">Cybersecurity Advisory</a></li>
-                <li><a href="${pfx}service-gov.html">Corporate Governance</a></li>
-              </ul>
-            </div>
-
-          </div>
-        </div>
-      </li>
-
-      <!-- 2. Our Organisation -->
-      <li class="nav-item-dropdown">
-        <a href="${pfx}about.html" class="nav-dropdown-trigger">
-          <span>Our Organisation</span>
-          <i class="fa-solid fa-chevron-down nav-chevron"></i>
-        </a>
-
         <div class="simple-dropdown-menu">
           <ul class="simple-dropdown-list">
-            <li><a href="${pfx}about.html">About Amstel Consulting</a></li>
-            <li><a href="${pfx}about.html#credentials">Licensed DPCO Status</a></li>
-            <li><a href="${pfx}about.html#leadership">Advisory Board &amp; Team</a></li>
-            <li><a href="${pfx}contact.html">Careers &amp; Partnerships</a></li>
+            <li><a href="${pfx}services/compliance-audit-return.html">Annual Compliance Audit Return Filing</a></li>
+            <li><a href="${pfx}services/outsourced-dpo.html">Appoint Outsourced Certified DPO</a></li>
+            <li><a href="${pfx}services/data-protection-audit.html">Data Protection Audit</a></li>
+            <li><a href="${pfx}services/data-privacy-training.html">Data Privacy Training</a></li>
           </ul>
         </div>
       </li>
 
-      <!-- 3. Knowledge Hub -->
-      <li class="nav-item-dropdown">
-        <a href="${pfx}blog/index.html" class="nav-dropdown-trigger">
-          <span>Knowledge Hub</span>
-          <i class="fa-solid fa-chevron-down nav-chevron"></i>
-        </a>
-
-        <div class="simple-dropdown-menu">
-          <ul class="simple-dropdown-list">
-            <li><a href="${pfx}publication-detail.html">Complying with Nigeria Data Protection Act (NDPA)</a></li>
-            <li><a href="${pfx}service-ai.html">Artificial Intelligence for Business</a></li>
-            <li><a href="${pfx}service-cyber.html">Cyber Security Best Practices</a></li>
-            <li><a href="${pfx}topics.html">All Publications &amp; Regulatory Insights</a></li>
-          </ul>
-        </div>
+      <!-- 2. Our Organization (Client Sitemap: Direct Link) -->
+      <li>
+        <a href="${pfx}about.html">Our Organization</a>
       </li>
 
-      <!-- 4. Contact Us -->
-      <li><a href="${pfx}contact.html">Contact Us</a></li>
+      <!-- 3. Knowledge Hub (Client Sitemap: Direct Link) -->
+      <li>
+        <a href="${pfx}blog/index.html">Knowledge Hub</a>
+      </li>
+
+      <!-- 4. Contact Us (Client Sitemap: Direct Link) -->
+      <li>
+        <a href="${pfx}contact.html">Contact Us</a>
+      </li>
     </ul>
 
     <div class="header-right">
@@ -132,55 +80,23 @@
         <button class="mobile-drawer-close" onclick="toggleMobileMenu()" aria-label="Close menu">&times;</button>
       </div>
       <div class="mobile-drawer-body">
-        <!-- Our Solutions (Client 12 Sept Pillars) -->
+        <!-- Our Solutions (Client Sitemap) -->
         <div>
-          <div class="mobile-nav-group-title">Core Solutions (NDPC Certified)</div>
+          <div class="mobile-nav-group-title">Our Solutions</div>
           <ul class="mobile-nav-links">
-            <li><a href="${pfx}services/compliance-audit-return.html" onclick="toggleMobileMenu()">Annual CAR Filing Support <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
-            <li><a href="${pfx}services/data-protection-audit.html" onclick="toggleMobileMenu()">Data Protection Audit <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
+            <li><a href="${pfx}services/compliance-audit-return.html" onclick="toggleMobileMenu()">Annual Compliance Audit Return Filing <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
             <li><a href="${pfx}services/outsourced-dpo.html" onclick="toggleMobileMenu()">Appoint Outsourced Certified DPO <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
-            <li><a href="${pfx}services/index.html" onclick="toggleMobileMenu()" style="color: var(--pwc-orange); font-weight: 700;">View All Solutions Hub <i class="fa-solid fa-arrow-right text-xs"></i></a></li>
+            <li><a href="${pfx}services/data-protection-audit.html" onclick="toggleMobileMenu()">Data Protection Audit <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
+            <li><a href="${pfx}services/data-privacy-training.html" onclick="toggleMobileMenu()">Data Privacy Training <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
           </ul>
         </div>
-        <!-- Services: Operational Privacy -->
+
+        <!-- Navigation Links -->
         <div>
-          <div class="mobile-nav-group-title">Operational Privacy</div>
+          <div class="mobile-nav-group-title">Navigation</div>
           <ul class="mobile-nav-links">
-            <li><a href="${pfx}service-ropa.html" onclick="toggleMobileMenu()">Record of Processing (ROPA) <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
-            <li><a href="${pfx}service-dpia.html" onclick="toggleMobileMenu()">DPIA &amp; LIA Assessments <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
-            <li><a href="${pfx}service-policies.html" onclick="toggleMobileMenu()">Privacy Policies &amp; Notices <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
-            <li><a href="${pfx}service-dpa.html" onclick="toggleMobileMenu()">Data Processing Agreements <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
-          </ul>
-        </div>
-        <!-- Services: Advanced Advisory -->
-        <div>
-          <div class="mobile-nav-group-title">Advanced Advisory</div>
-          <ul class="mobile-nav-links">
-            <li><a href="${pfx}service-training.html" onclick="toggleMobileMenu()">Data Protection Training <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
-            <li><a href="${pfx}service-ai.html" onclick="toggleMobileMenu()">AI Consulting &amp; Ethics <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
-            <li><a href="${pfx}service-cyber.html" onclick="toggleMobileMenu()">Cybersecurity Advisory <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
-          </ul>
-        </div>
-        <!-- Our Organisation -->
-        <div>
-          <div class="mobile-nav-group-title">Our Organisation</div>
-          <ul class="mobile-nav-links">
-            <li><a href="${pfx}about.html" onclick="toggleMobileMenu()">About Amstel Consulting <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
-            <li><a href="${pfx}about.html#credentials" onclick="toggleMobileMenu()">Licensed DPCO Status <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
-            <li><a href="${pfx}about.html#leadership" onclick="toggleMobileMenu()">Advisory Board &amp; Team <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
-          </ul>
-        </div>
-        <!-- Knowledge Hub -->
-        <div>
-          <div class="mobile-nav-group-title">Knowledge Hub</div>
-          <ul class="mobile-nav-links">
-            <li><a href="${pfx}blog/index.html" onclick="toggleMobileMenu()">Complying with NDPA 2023 <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
-            <li><a href="${pfx}topics.html" onclick="toggleMobileMenu()">Regulatory Guidance &amp; Insights <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
-          </ul>
-        </div>
-        <div>
-          <div class="mobile-nav-group-title">Direct Inquiries</div>
-          <ul class="mobile-nav-links">
+            <li><a href="${pfx}about.html" onclick="toggleMobileMenu()">Our Organization <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
+            <li><a href="${pfx}blog/index.html" onclick="toggleMobileMenu()">Knowledge Hub <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
             <li><a href="${pfx}contact.html" onclick="toggleMobileMenu()">Contact Us <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
           </ul>
         </div>

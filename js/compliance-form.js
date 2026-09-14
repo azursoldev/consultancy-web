@@ -48,6 +48,12 @@
       ctaText = 'Appoint Your Certified Outsourced DPO ➔';
       showRadios = false;
       prechecked = 'dpo';
+    } else if (type === 'training') {
+      formTitle = 'Request Corporate Training';
+      formSubtitle = 'Empower your leadership and staff with certified NDPA data privacy training programs.';
+      ctaText = 'Request Data Privacy Training ➔';
+      showRadios = false;
+      prechecked = 'training';
     } else if (type === 'contact') {
       formTitle = 'Initiate Corporate Scoping';
       formSubtitle = 'Direct channel to our senior data privacy partners. Response within 2 business hours.';
@@ -126,6 +132,10 @@
               <label class="form-checkbox-label ${prechecked === 'audit' ? 'pre-selected' : ''}">
                 <input type="checkbox" name="objectives" value="audit" ${prechecked === 'audit' ? 'checked' : ''}>
                 <span>Data Protection Audit (ROPA, DPIA, &amp; Privacy Notices)</span>
+              </label>
+              <label class="form-checkbox-label ${prechecked === 'training' ? 'pre-selected' : ''}">
+                <input type="checkbox" name="objectives" value="training" ${prechecked === 'training' ? 'checked' : ''}>
+                <span>Data Privacy Training &amp; Capacity Building</span>
               </label>
               <label class="form-checkbox-label">
                 <input type="checkbox" name="objectives" value="general">

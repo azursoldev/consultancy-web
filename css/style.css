@@ -3230,7 +3230,7 @@ html body .mega-dropdown-grid,
 }
 
 .hero-scale-word {
-  font-size: 1.45em;
+  font-size: 1.05rem;
   font-weight: 800;
   color: #ffffff;
   letter-spacing: 0.02em;
@@ -8540,7 +8540,7 @@ textarea.form-control {
 }
 
 .hero-scale-word {
-  font-size: 1.45em;
+  font-size: 1.05rem;
   font-weight: 800;
   color: #ffffff;
   letter-spacing: 0.02em;
@@ -9516,6 +9516,7 @@ footer.footer .footer-top {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
+
   .pwc-footer-columns {
     grid-template-columns: 1fr 1fr !important;
     gap: 2rem !important;
@@ -9655,6 +9656,7 @@ footer.footer .footer-legal-links a:hover,
    31. COMPREHENSIVE MOBILE RESPONSIVENESS ENHANCEMENTS (All Pages & Devices)
    ========================================================================== */
 @media (max-width: 960px) {
+
   /* 1. Prevent Sticky Form Sticking on Mobile Single-Column Flow */
   .split-40-aside {
     position: static !important;
@@ -9710,6 +9712,7 @@ footer.footer .footer-legal-links a:hover,
 }
 
 @media (max-width: 768px) {
+
   /* 4. Hero Section on Mobile: Avoid Clipping Content */
   .pwc-hero-wrapper {
     height: auto !important;
@@ -9784,6 +9787,7 @@ footer.footer .footer-legal-links a:hover,
 }
 
 @media (max-width: 640px) {
+
   /* 9. Homepage Container & Header Adjustments */
   .section-container {
     padding: 0 1rem !important;
@@ -9932,6 +9936,7 @@ footer.footer .footer-legal-links a:hover,
 }
 
 @media (max-width: 420px) {
+
   /* 17. Ultra-Compact Mobile Support (<= 420px) */
   .contact-pwc-left,
   .contact-pwc-right {
