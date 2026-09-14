@@ -3843,6 +3843,9 @@ html body .mega-dropdown-grid,
   border: 1px solid var(--pwc-gray-border);
   display: grid;
   grid-template-columns: 1fr 1.2fr;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .contact-pwc-left {
@@ -3852,6 +3855,7 @@ html body .mega-dropdown-grid,
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  box-sizing: border-box;
 }
 
 .contact-pwc-left h3 {
@@ -3871,12 +3875,15 @@ html body .mega-dropdown-grid,
 .contact-pwc-right {
   padding: 3.5rem;
   background: var(--pwc-white);
+  box-sizing: border-box;
 }
 
 .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.25rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .form-col-full {
@@ -3895,6 +3902,8 @@ html body .mega-dropdown-grid,
 .form-select,
 .form-textarea {
   width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   padding: 0.75rem 1rem;
   border: 1px solid var(--pwc-gray-border);
   border-radius: 2px;
@@ -9523,7 +9532,7 @@ footer.footer .footer-legal-links a:hover,
 /* ==========================================================================
    31. COMPREHENSIVE MOBILE RESPONSIVENESS ENHANCEMENTS (All Pages & Devices)
    ========================================================================== */
-@media (max-width: 860px) {
+@media (max-width: 960px) {
   /* 1. Prevent Sticky Form Sticking on Mobile Single-Column Flow */
   .split-40-aside {
     position: static !important;
@@ -9535,10 +9544,51 @@ footer.footer .footer-legal-links a:hover,
     gap: 2.25rem !important;
     margin: 1.5rem 0 3.5rem !important;
   }
+
+  /* 2. Homepage Section Containers & Headers */
+  .section-container {
+    padding: 0 1.5rem !important;
+    margin: 0 auto 3.5rem !important;
+  }
+
+  .pwc-section-header {
+    margin-bottom: 2rem !important;
+    padding-top: 1.75rem !important;
+  }
+
+  .pwc-section-header h2 {
+    font-size: 2.1rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .pwc-section-header p {
+    font-size: 0.95rem !important;
+  }
+
+  /* 3. Homepage Contact RFP Section: Switch 2-column Grid to Stacked 1-column */
+  .contact-pwc-wrap {
+    grid-template-columns: 1fr !important;
+    border-radius: 4px !important;
+    overflow: hidden !important;
+  }
+
+  .contact-pwc-left {
+    padding: 2.5rem 1.75rem !important;
+    gap: 2rem !important;
+  }
+
+  .contact-pwc-left h3 {
+    font-size: 1.85rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .contact-pwc-right {
+    padding: 2.25rem 1.75rem !important;
+  }
 }
 
 @media (max-width: 768px) {
-  /* 2. Hero Section on Mobile: Avoid Clipping Content */
+  /* 4. Hero Section on Mobile: Avoid Clipping Content */
   .pwc-hero-wrapper {
     height: auto !important;
     min-height: auto !important;
@@ -9576,7 +9626,7 @@ footer.footer .footer-legal-links a:hover,
     justify-content: center !important;
   }
 
-  /* 3. Inner Page Heroes */
+  /* 5. Inner Page Heroes */
   .inner-hero {
     padding: 3rem 0 2.5rem !important;
   }
@@ -9590,7 +9640,7 @@ footer.footer .footer-legal-links a:hover,
     font-size: 1rem !important;
   }
 
-  /* 4. Page Breadcrumbs Clean Wrapping */
+  /* 6. Page Breadcrumbs Clean Wrapping */
   .breadcrumbs,
   .breadcrumbs-detail {
     flex-wrap: wrap !important;
@@ -9598,15 +9648,82 @@ footer.footer .footer-legal-links a:hover,
     font-size: 0.78rem !important;
   }
 
-  /* 5. General Container Padding on Mobile */
+  /* 7. General Container Padding on Mobile */
   .container,
   .pwc-detail-container {
     padding: 0 1.25rem !important;
   }
+
+  /* 8. Homepage Services Grid Fluidity */
+  .services-pwc-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
 }
 
 @media (max-width: 640px) {
-  /* 6. Grid Auto-Fill Overflows: Prevent Horizontal Scrollbars */
+  /* 9. Homepage Container & Header Adjustments */
+  .section-container {
+    padding: 0 1rem !important;
+    margin: 0 auto 2.5rem !important;
+  }
+
+  .pwc-section-header h2 {
+    font-size: 1.75rem !important;
+  }
+
+  /* 10. Homepage Contact Section & Form Stacking */
+  .contact-pwc-left {
+    padding: 1.75rem 1.25rem !important;
+    gap: 1.5rem !important;
+  }
+
+  .contact-pwc-left h3 {
+    font-size: 1.5rem !important;
+  }
+
+  .contact-pwc-right {
+    padding: 1.75rem 1.25rem !important;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  .form-col-full {
+    grid-column: span 1 !important;
+  }
+
+  .form-input,
+  .form-select,
+  .form-textarea {
+    font-size: 0.95rem !important;
+    padding: 0.8rem 0.85rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .highlight-stack {
+    gap: 1rem !important;
+  }
+
+  .highlight-stack-desc {
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .btn-pwc-submit {
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 0.95rem 1rem !important;
+    font-size: 0.88rem !important;
+    white-space: normal !important;
+    text-align: center !important;
+    line-height: 1.35 !important;
+  }
+
+  /* 11. Grid Auto-Fill Overflows: Prevent Horizontal Scrollbars */
   .services-grid,
   .industry-list-grid,
   .solutions-pillars-grid,
@@ -9614,7 +9731,7 @@ footer.footer .footer-legal-links a:hover,
     grid-template-columns: 1fr !important;
   }
 
-  /* 7. Typography Scaling for Service Split Pages & Hub */
+  /* 12. Typography Scaling for Service Split Pages & Hub */
   .split-60-main h1,
   .split-60-main .service-split-headline {
     font-size: 1.75rem !important;
@@ -9632,7 +9749,7 @@ footer.footer .footer-legal-links a:hover,
     line-height: 1.6 !important;
   }
 
-  /* 8. Padding Reductions for Cards & Callout Boxes */
+  /* 13. Padding Reductions for Cards & Callout Boxes */
   .compliance-form-card {
     padding: 1.5rem 1.15rem !important;
   }
@@ -9646,7 +9763,7 @@ footer.footer .footer-legal-links a:hover,
     margin-bottom: 1rem;
   }
 
-  /* 9. Modal Responsive Fit */
+  /* 14. Modal Responsive Fit */
   .compliance-modal-container {
     width: 95% !important;
     max-width: 95% !important;
@@ -9659,7 +9776,7 @@ footer.footer .footer-legal-links a:hover,
     right: 0.85rem !important;
   }
 
-  /* 10. Sticky Consultant Button: Keep Circular on Mobile to Avoid Edge Overflow */
+  /* 15. Sticky Consultant Button: Keep Circular on Mobile to Avoid Edge Overflow */
   .sticky-talk-consultant {
     right: 0.85rem !important;
     bottom: 0.85rem !important;
@@ -9680,7 +9797,7 @@ footer.footer .footer-legal-links a:hover,
     display: none !important;
   }
 
-  /* 11. Footer Columns on Mobile */
+  /* 16. Footer Columns on Mobile */
   .pwc-footer {
     padding: 3rem 1.25rem 2rem !important;
   }
@@ -9689,5 +9806,23 @@ footer.footer .footer-legal-links a:hover,
     flex-direction: column !important;
     align-items: flex-start !important;
     gap: 1rem !important;
+  }
+}
+
+@media (max-width: 420px) {
+  /* 17. Ultra-Compact Mobile Support (<= 420px) */
+  .contact-pwc-left,
+  .contact-pwc-right {
+    padding: 1.4rem 0.9rem !important;
+  }
+
+  .contact-pwc-left h3 {
+    font-size: 1.35rem !important;
+  }
+
+  .form-input,
+  .form-select,
+  .form-textarea {
+    padding: 0.7rem 0.75rem !important;
   }
 }
