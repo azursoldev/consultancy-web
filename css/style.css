@@ -8827,8 +8827,8 @@ textarea.form-control {
 }
 
 .callout-alert-red {
-  border-left-color: #ef4444 !important;
-  background: #fef2f2 !important;
+  border-left-color: var(--pwc-orange) !important;
+  background: #fff8f3 !important;
 }
 
 /* ==========================================================================
