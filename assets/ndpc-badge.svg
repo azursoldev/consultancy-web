@@ -28,6 +28,6 @@
 
   <!-- Official Authority Typography -->
   <text x="74" y="24" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8.5" font-weight="700" fill="#006633" letter-spacing="0.08em">OFFICIAL AUTHORITY CREDENTIAL</text>
-  <text x="74" y="42" font-family="'Newsreader', 'Georgia', 'Times New Roman', serif" font-size="13" font-weight="700" fill="#1e293b" letter-spacing="-0.01em">National Data Protection Commission</text>
+  <text x="74" y="42" font-family="'Newsreader', 'Georgia', 'Times New Roman', serif" font-size="13" font-weight="700" fill="#1e293b" letter-spacing="-0.01em">Nigeria Data Protection Commission</text>
   <text x="74" y="58" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="600" fill="#eb5f07" letter-spacing="0.01em">Licensed DPCO Assurance Partner &#8226; 2026</text>
 </svg>
