@@ -46,6 +46,81 @@ a {
   color: inherit;
 }
 
+/* ==========================================================================
+   GLOBAL TEXT JUSTIFICATION (Client Directive: Ensure Texts Are Properly Aligned)
+   ========================================================================== */
+p,
+article p,
+main p,
+section p,
+.lead-paragraph,
+.article-lead-text,
+.article-lead-muted,
+.article-body-p,
+.split-60-main p,
+.split-section-block p,
+.pillar-action-desc,
+.pillar-goal-box p,
+.credentials-callout-box p,
+.about-editorial-text p,
+.hero-lead,
+.topic-body p,
+.dept-card p,
+.strategic-action-box p,
+.readiness-banner-content p,
+.download-box-text p,
+.solution-pillar-card p,
+.related-card-body p,
+.article-pullquote,
+.service-desc-preview,
+.intro-lead {
+  text-align: justify !important;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+/* Exemptions to maintain crisp UI elements, buttons, headers, and navigation */
+.footer-disclaimer,
+.footer-col h5,
+.pwc-footer-columns p,
+.pwc-nav-links,
+.mobile-nav-links,
+.header-right,
+.btn,
+.btn *,
+button,
+button *,
+.compliance-form-header h3,
+.compliance-form-header p,
+.form-field-label,
+.form-guarantee-note,
+.modal-header h3,
+.modal-header p,
+.article-meta-bar,
+.author-info,
+.author-info *,
+.topic-meta,
+.topic-meta *,
+.pillar-number,
+.pillar-title,
+.service-split-headline,
+.breadcrumbs,
+.breadcrumbs-detail,
+.article-breadcrumbs,
+.readiness-banner-content h3,
+.download-box-text h3,
+h1, h2, h3, h4, h5, h6 {
+  text-align: left !important;
+}
+
+.text-center,
+.centered-text,
+.pwc-hero-center,
+.hero-center {
+  text-align: center !important;
+}
+
 .container,
 .pwc-detail-container {
   max-width: 1200px;
@@ -6561,9 +6636,61 @@ html body .mega-dropdown-grid,
   line-height: 1.6;
 }
 
+.readiness-assessment-banner {
+  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+  border-left: 4px solid var(--pwc-orange);
+  border-radius: 6px;
+  padding: 1.75rem 2rem;
+  margin: 2.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  box-shadow: 0 4px 15px rgba(208, 74, 2, 0.08);
+}
+
+.readiness-banner-content h3 {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #9a3412;
+  margin-bottom: 0.5rem;
+}
+
+.readiness-banner-content p {
+  color: #7c2d12;
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.btn-readiness-cta {
+  background: var(--pwc-orange);
+  color: #ffffff !important;
+  border: none;
+  cursor: pointer;
+  padding: 0.95rem 1.8rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(208, 74, 2, 0.25);
+}
+
+.btn-readiness-cta:hover {
+  background: var(--pwc-orange-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(208, 74, 2, 0.35);
+}
+
 .btn-download-guide {
   background: var(--pwc-orange);
   color: #ffffff;
+  border: none;
+  cursor: pointer;
   padding: 0.9rem 2rem;
   border-radius: 4px;
   font-size: 0.95rem;
@@ -6579,6 +6706,19 @@ html body .mega-dropdown-grid,
 .btn-download-guide:hover {
   background: var(--pwc-orange-dark);
   transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .readiness-assessment-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+    padding: 1.5rem;
+  }
+  .btn-readiness-cta {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 /* Authors / Expert Contributors (Screenshot 1 Exact) */

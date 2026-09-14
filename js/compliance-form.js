@@ -54,6 +54,13 @@
       ctaText = 'Request Data Privacy Training ➔';
       showRadios = false;
       prechecked = 'training';
+    } else if (type === 'readiness') {
+      formTitle = 'Schedule NDPA Readiness Assessment';
+      formSubtitle = 'Identify and close your NDPA 2023 compliance gaps with licensed DPCO experts.';
+      ctaText = 'Book NDPA Readiness Assessment ➔';
+      showRadios = true;
+      showMessage = true;
+      prechecked = 'readiness';
     } else if (type === 'contact') {
       formTitle = 'Initiate Corporate Scoping';
       formSubtitle = 'Direct channel to our senior data privacy partners. Response within 2 business hours.';
@@ -96,7 +103,7 @@
             <input type="tel" name="phone" class="compliance-input" placeholder="+234 (0) 803 000 0000">
           </div>
 
-          <!-- Contextual Field 5: Estimated Records (Radio Buttons for CAR & Audit) -->
+          <!-- Contextual Field 5: Estimated Records (Radio Buttons for CAR, Audit, & Readiness) -->
           ${showRadios ? `
           <div class="form-field-wrap">
             <label class="form-field-label">Estimated Customer / Employee Count <span class="req">*</span></label>
@@ -121,6 +128,10 @@
           <div class="form-field-wrap">
             <label class="form-field-label">Compliance Objectives <span class="opt">(Select all that apply)</span></label>
             <div class="form-checkbox-options">
+              <label class="form-checkbox-label ${prechecked === 'readiness' ? 'pre-selected' : ''}">
+                <input type="checkbox" name="objectives" value="readiness" ${prechecked === 'readiness' ? 'checked' : ''}>
+                <span>NDPA 2023 Readiness Assessment &amp; Gap Analysis</span>
+              </label>
               <label class="form-checkbox-label ${prechecked === 'car' ? 'pre-selected' : ''}">
                 <input type="checkbox" name="objectives" value="car" ${prechecked === 'car' ? 'checked' : ''}>
                 <span>File annual Compliance Audit Return (CAR)</span>
@@ -269,10 +280,25 @@
     // Modal API
     window.openComplianceModal = function (precheckOption = 'dpo') {
       const formContainer = document.getElementById('modalFormContainer');
-      if (formContainer) {
-        formContainer.innerHTML = generateFormHTML('about', true);
+      const badgeEl = modalOverlay.querySelector('.compliance-form-badge');
+      const titleEl = modalOverlay.querySelector('.modal-header h3');
+      const subEl = modalOverlay.querySelector('.modal-header p');
 
-        // Pre-selection logic (About page modal automatically pre-checks Option 3 "Appoint Your Outsourced Certified DPO")
+      if (precheckOption === 'readiness') {
+        if (badgeEl) badgeEl.textContent = 'NDPA 2023 Readiness Assessment';
+        if (titleEl) titleEl.textContent = 'Schedule an NDPA Readiness Assessment';
+        if (subEl) subEl.textContent = 'Connect with our accredited DPCO directors to identify and close your compliance gaps.';
+      } else {
+        if (badgeEl) badgeEl.textContent = 'Confidential Consultation';
+        if (titleEl) titleEl.textContent = 'Speak with an Advisory Consultant';
+        if (subEl) subEl.textContent = 'Connect with our senior data privacy lawyers and cybersecurity engineers.';
+      }
+
+      if (formContainer) {
+        const formType = precheckOption === 'readiness' ? 'readiness' : 'about';
+        formContainer.innerHTML = generateFormHTML(formType, true);
+
+        // Pre-selection logic
         if (precheckOption) {
           const targetCb = formContainer.querySelector(`input[name="objectives"][value="${precheckOption}"]`);
           if (targetCb) {
@@ -288,13 +314,14 @@
       modalOverlay.classList.remove('active');
     };
 
-    // Attach click listeners to all CTA modal triggers
-    document.querySelectorAll('[data-open-modal="compliance"]').forEach(btn => {
-      btn.addEventListener('click', function (e) {
+    // Attach delegated click listener for all CTA modal triggers (including inline links & buttons)
+    document.addEventListener('click', function (e) {
+      const btn = e.target.closest('[data-open-modal="compliance"]');
+      if (btn) {
         e.preventDefault();
-        const precheck = this.dataset.precheck || 'dpo';
+        const precheck = btn.dataset.precheck || 'dpo';
         window.openComplianceModal(precheck);
-      });
+      }
     });
   }
 
