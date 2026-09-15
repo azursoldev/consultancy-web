@@ -23,7 +23,7 @@
             <li><a href="${pfx}services/compliance-audit-return.html">Annual Compliance Audit Return (CAR)</a></li>
             <li><a href="${pfx}services/outsourced-dpo.html">Appoint Outsourced Certified DPO</a></li>
             <li><a href="${pfx}services/data-protection-audit.html">Data Protection Audit</a></li>
-            <li><a href="javascript:void(0)" style="cursor: default; opacity: 0.75;">Data Privacy Training</a></li>
+            <li><a href="${pfx}services/data-privacy-training.html">Data Privacy Training</a></li>
           </ul>
         </div>
 
