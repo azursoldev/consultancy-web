@@ -154,8 +154,8 @@
       keywords: 'audit privacy assessment ndpa gap analysis security controls ndpc dpco audit rules regulations verification risk assessment'
     },
     {
-      title: 'Data Protection Training & Awareness',
-      url: 'service-training.html',
+      title: 'Data Privacy Training & Capacity Building',
+      url: 'services/data-privacy-training.html',
       badge: 'Workforce & DPO',
       desc: 'Certified executive and workforce data privacy training, employee awareness modules, and advanced DPO masterclasses.',
       keywords: 'training education masterclass workforce awareness ndpa certification privacy skills compliance course elearning'
@@ -283,9 +283,8 @@
           <a href="${pfx}services/compliance-audit-return.html">Compliance Audit Return (CAR)</a>
           <a href="${pfx}services/outsourced-dpo.html">Outsourced DPO</a>
           <a href="${pfx}services/data-protection-audit.html">Data Protection Audit</a>
-          <a href="${pfx}service-training.html">Data Protection Training</a>
-          <a href="${pfx}topics.html#ndpa-laws">NDPA 2023 Statutory Laws</a>
-          <a href="${pfx}service-ai.html">AI Governance</a>
+          <a href="${pfx}services/data-privacy-training.html">Data Privacy Training</a>
+          <a href="${pfx}publication-detail.html">Complying With NDPA 2023</a>
           <a href="${pfx}about.html#credentials">Licensed DPCO</a>
           <a href="${pfx}contact.html">Contact Advisory Desk</a>
         </div>
