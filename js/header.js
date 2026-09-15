@@ -25,7 +25,7 @@
       <!-- 1. Our Solutions Dropdown (Client Sitemap: Exactly 4 Core Services) -->
       <li class="nav-item-dropdown">
         <a href="${pfx}services/index.html" class="nav-dropdown-trigger">
-          <span>Our Solutions</span>
+          <span>Services</span>
           <i class="fa-solid fa-chevron-down nav-chevron"></i>
         </a>
         
@@ -35,6 +35,7 @@
             <li><a href="${pfx}services/outsourced-dpo.html">Appoint Outsourced Certified DPO</a></li>
             <li><a href="${pfx}services/data-protection-audit.html">Data Protection Audit</a></li>
             <li><a href="${pfx}services/data-privacy-training.html">Data Privacy Training</a></li>
+            <li><a href="${pfx}services/index.html">All Services</a></li>
           </ul>
         </div>
       </li>
@@ -82,12 +83,13 @@
       <div class="mobile-drawer-body">
         <!-- Our Solutions (Client Sitemap) -->
         <div>
-          <div class="mobile-nav-group-title">Our Solutions</div>
+          <div class="mobile-nav-group-title">Services</div>
           <ul class="mobile-nav-links">
             <li><a href="${pfx}services/compliance-audit-return.html" onclick="toggleMobileMenu()">Annual Compliance Audit Return Filing <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
             <li><a href="${pfx}services/outsourced-dpo.html" onclick="toggleMobileMenu()">Appoint Outsourced Certified DPO <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
             <li><a href="${pfx}services/data-protection-audit.html" onclick="toggleMobileMenu()">Data Protection Audit <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
             <li><a href="${pfx}services/data-privacy-training.html" onclick="toggleMobileMenu()">Data Privacy Training <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
+            <li><a href="${pfx}services/index.html" onclick="toggleMobileMenu()">All Services <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
           </ul>
         </div>
 

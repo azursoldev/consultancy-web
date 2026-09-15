@@ -16,14 +16,15 @@
     <div class="pwc-footer-container">
       <div class="pwc-footer-columns">
 
-        <!-- Col 1: Our Solutions -->
+        <!-- Col 1: Services -->
         <div class="footer-col">
-          <h5>Our Solutions</h5>
+          <h5>Services</h5>
           <ul>
             <li><a href="${pfx}services/compliance-audit-return.html">Annual Compliance Audit Return (CAR)</a></li>
             <li><a href="${pfx}services/outsourced-dpo.html">Appoint Outsourced Certified DPO</a></li>
             <li><a href="${pfx}services/data-protection-audit.html">Data Protection Audit</a></li>
             <li><a href="${pfx}services/data-privacy-training.html">Data Privacy Training</a></li>
+            <li><a href="${pfx}services/index.html">All Services</a></li>
           </ul>
         </div>
 
