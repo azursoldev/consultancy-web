@@ -9059,11 +9059,13 @@ textarea.form-control {
   margin-bottom: 1.4rem;
 }
 
-.split-60-main .lead-paragraph {
-  font-size: 1.15rem;
-  font-weight: 500;
-  color: #1a1a1a;
-  line-height: 1.7;
+.split-60-main .lead-paragraph,
+.split-60-main p.lead-paragraph,
+.lead-paragraph {
+  font-size: 1.06rem;
+  font-weight: 400 !important;
+  color: var(--pwc-gray-text) !important;
+  line-height: 1.75;
 }
 
 .split-section-block {
