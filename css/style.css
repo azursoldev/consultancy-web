@@ -6718,6 +6718,59 @@ html body .mega-dropdown-grid,
   .btn-readiness-cta {
     width: 100%;
     justify-content: center;
+    white-space: normal;
+    text-align: center;
+  }
+  /* Issue 3 & 4 Fix: report-download-box and btn-download-guide mobile */
+  .report-download-box {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 1.5rem 1.25rem;
+    margin: 2.5rem 0 2rem;
+  }
+  .download-box-text h3 {
+    font-size: 1.25rem;
+  }
+  .btn-download-guide {
+    width: 100%;
+    justify-content: center;
+    white-space: normal;
+    text-align: center;
+    font-size: 0.88rem;
+    padding: 0.85rem 1.25rem;
+  }
+  /* Issue 5 Fix: article page mobile */
+  .article-container {
+    padding: 1.5rem 1rem 3rem;
+  }
+  .article-hero-split {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .article-hero-img-wrap {
+    height: 210px;
+  }
+  .article-hero-title {
+    font-size: 1.85rem;
+  }
+  .article-meta-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .article-meta-info {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  .analysis-section-banner {
+    font-size: 1.15rem;
+    padding: 1rem 1.25rem;
+    margin: 2.5rem 0 1.25rem;
+  }
+  .cross-functional-grid {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
   }
 }
 

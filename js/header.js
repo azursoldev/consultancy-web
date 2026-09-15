@@ -172,7 +172,7 @@
       url: 'publication-detail.html',
       badge: 'Executive Briefing',
       desc: 'Top 5 strategic NDPA requirements to mitigate regulatory risk, prevent statutory fines of up to 2% of annual revenue.',
-      keywords: 'checklist executive ndpa 2023 alignment strategic c-suite board directors fines 2 percent lawful basis breach 72 hours dpia dpo car filing audit circulars regulations'
+      keywords: 'checklist executive ndpa 2023 alignment strategic c-suite board directors fines 2 percent lawful basis breach 72 hours dpia dpo car filing audit circulars regulations ndpa alignment strategic checklist public sector private sector executives compliance guide proactive mitigation statutory requirements article publication complying with ndpa knowledge hub'
     },
     {
       title: 'Knowledge Hub: Insights & Regulatory Guidance',

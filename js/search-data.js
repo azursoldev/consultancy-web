@@ -47,7 +47,7 @@ window.siteSearchIndex = [
     category: 'Knowledge Hub',
     badge: 'Complying With NDPA 2023',
     desc: 'Proactive alignment strategy for C-suite leaders and founders. The top 5 strategic NDPA requirements to mitigate regulatory risk, prevent statutory fines of up to 2% of annual revenue, and ensure operational continuity.',
-    keywords: 'checklist executive ndpa 2023 alignment strategic c-suite board directors fines 2 percent lawful basis breach 72 hours dpia dpo car filing audit circulars regulations'
+    keywords: 'checklist executive ndpa 2023 alignment strategic c-suite board directors fines 2 percent lawful basis breach 72 hours dpia dpo car filing audit circulars regulations ndpa alignment strategic checklist public sector private sector executives compliance guide proactive mitigation statutory requirements article publication complying with ndpa knowledge hub'
   },
   {
     id: 'knowledge-hub',
@@ -93,15 +93,6 @@ window.siteSearchIndex = [
     badge: 'Board & Leadership',
     desc: 'Multidisciplinary team of Nigerian data privacy attorneys, veteran cybersecurity architects, chartered accountants, and public policy advisors guiding enterprise clients.',
     keywords: 'leadership team advisory board emeka dan-ogun olufunke adeyemi fatima al-hassan tariq ibrahim kelechi okafor nnamdi okoli partners directors consultants experts practice'
-  },
-  {
-    id: 'regulatory-statutory-mandate',
-    title: 'NDPA 2023 Statutory Regulatory Mandates & Filing Requirements',
-    url: 'publication-detail.html',
-    category: 'Regulatory',
-    badge: 'Statutory Guidance',
-    desc: 'Detailed breakdown of statutory compliance mandates, penalty thresholds under the Nigeria Data Protection Act 2023, and NDPC enforcement circulars.',
-    keywords: 'regulatory ndpa laws regulations enforcement section 25 section 31 section 39 section 40 statutory penalties ndpc fines mandate legal compliance'
   },
   {
     id: 'car-regulatory-filing',
