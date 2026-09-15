@@ -295,6 +295,12 @@
     });
   };
 
+  window.navigateToSearchPage = function (overrideQuery) {
+    const input = document.getElementById('siteSearchInput') || document.querySelector('.search-input');
+    const q = (overrideQuery !== undefined ? overrideQuery : (input ? input.value : '')).trim();
+    window.location.href = `${pfx}search.html?q=` + encodeURIComponent(q);
+  };
+
   window.handleSearch = function (query) {
     const containers = document.querySelectorAll('.search-results-list, #searchResults');
     if (!containers || containers.length === 0) return;
@@ -304,6 +310,10 @@
       window.renderDefaultQuickLinks();
       return;
     }
+
+    const safeQ = q.replace(/[&<>"']/g, function (m) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[m];
+    });
 
     const words = q.split(/\s+/).filter(Boolean);
     const matched = searchIndex.filter(item => {
@@ -316,23 +326,25 @@
     });
 
     if (matched.length === 0) {
-      const safeQ = q.replace(/[&<>"']/g, function (m) {
-        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[m];
-      });
       containers.forEach(c => {
         c.innerHTML = `
-          <div style="padding: 2.25rem 1rem; text-align: center;">
+          <div style="padding: 1.75rem 1rem; text-align: center;">
             <i class="fa-solid fa-circle-question" style="font-size: 2rem; color: #cbd5e1; margin-bottom: 0.75rem; display: block;"></i>
             <p style="color: #475569; font-size: 0.95rem; margin-bottom: 0.5rem; font-weight: 500;">
-              No direct matches found for "<strong>${safeQ}</strong>"
+              No direct matches found in preview for "<strong>${safeQ}</strong>"
             </p>
             <p style="font-size: 0.82rem; color: #94a3b8; margin-bottom: 1.25rem;">
-              Try searching for <em>CAR</em>, <em>Audit</em>, <em>DPO</em>, <em>NDPA</em>, or <em>Training</em>.
+              You can still search our full directory or contact our advisory team.
             </p>
-            <a href="${pfx}contact.html" style="display: inline-flex; align-items: center; gap: 0.45rem; background: #fff5ee; color: var(--pwc-orange, #d04a02); padding: 0.5rem 1.15rem; border-radius: 9999px; text-decoration: none; font-weight: 700; font-size: 0.85rem; border: 1px solid #fed7aa;">
-              <span>Contact our DPCO Advisory Desk</span>
-              <i class="fa-solid fa-arrow-right text-xs"></i>
-            </a>
+            <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+              <button type="button" onclick="window.navigateToSearchPage('${safeQ}')" style="background: var(--pwc-orange); color: #fff; padding: 0.55rem 1.25rem; border-radius: 9999px; border: none; font-weight: 700; font-size: 0.85rem; cursor: pointer;">
+                Open Full Search Page &rarr;
+              </button>
+              <a href="${pfx}contact.html" style="display: inline-flex; align-items: center; gap: 0.45rem; background: #fff5ee; color: var(--pwc-orange, #d04a02); padding: 0.55rem 1.15rem; border-radius: 9999px; text-decoration: none; font-weight: 700; font-size: 0.85rem; border: 1px solid #fed7aa;">
+                <span>Advisory Desk</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
+            </div>
           </div>
         `;
       });
@@ -340,10 +352,16 @@
     }
 
     const html = `
-      <div style="font-size: 0.78rem; font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; padding-left: 0.25rem;">
-        ${matched.length} Result${matched.length > 1 ? 's' : ''} Found
+      <!-- Top Call-to-Action to Full Search Page -->
+      <a href="${pfx}search.html?q=${encodeURIComponent(q)}" style="display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1rem; background: #fff7ed; border: 1px solid #fed7aa; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.88rem; color: var(--pwc-orange, #d04a02); margin-bottom: 0.85rem; transition: background 0.15s ease;" onmouseover="this.style.background='#ffedd5'" onmouseout="this.style.background='#fff7ed'">
+        <span><i class="fa-solid fa-arrow-up-right-from-square" style="margin-right: 0.45rem;"></i> View all matching results for &ldquo;${safeQ}&rdquo; in Dedicated Search Page</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+
+      <div style="font-size: 0.75rem; font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.6rem; padding-left: 0.25rem;">
+        ${matched.length} Quick Preview Result${matched.length > 1 ? 's' : ''}
       </div>
-      <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+      <div style="display: flex; flex-direction: column; gap: 0.5rem; max-height: 320px; overflow-y: auto; padding-right: 0.25rem;">
     ` + matched.map(m => `
       <a href="${pfx}${m.url}" class="search-result-row" style="display: block; padding: 0.85rem 1rem; border-radius: 8px; text-decoration: none; background: #f8fafc; border: 1px solid #f1f5f9; transition: all 0.15s ease;" onmouseover="this.style.background='#fff5ee'; this.style.borderColor='#fed7aa';" onmouseout="this.style.background='#f8fafc'; this.style.borderColor='#f1f5f9';">
         <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.25rem;">
@@ -365,6 +383,37 @@
     if (overlay) {
       overlay.classList.add('open');
       document.body.style.overflow = 'hidden';
+
+      // Ensure search submit button exists in modal input bar
+      const inputWrap = overlay.querySelector('.search-input-wrap');
+      if (inputWrap && !inputWrap.querySelector('.btn-modal-search-go')) {
+        const goBtn = document.createElement('button');
+        goBtn.type = 'button';
+        goBtn.className = 'btn-modal-search-go';
+        goBtn.innerHTML = '<span>Search</span> <i class="fa-solid fa-arrow-right"></i>';
+        goBtn.onclick = function (e) {
+          e.preventDefault();
+          window.navigateToSearchPage();
+        };
+
+        const icon = inputWrap.querySelector('i.fa-magnifying-glass');
+        if (icon) {
+          icon.style.cursor = 'pointer';
+          icon.title = 'Click to search';
+          icon.onclick = function (e) {
+            e.preventDefault();
+            window.navigateToSearchPage();
+          };
+        }
+
+        const closeBtn = inputWrap.querySelector('.search-close-btn');
+        if (closeBtn) {
+          inputWrap.insertBefore(goBtn, closeBtn);
+        } else {
+          inputWrap.appendChild(goBtn);
+        }
+      }
+
       const input = overlay.querySelector('input') || document.getElementById('siteSearchInput');
       if (input) {
         input.value = '';
@@ -417,10 +466,7 @@
       const active = document.activeElement;
       if (active && (active.id === 'siteSearchInput' || active.classList.contains('search-input'))) {
         e.preventDefault();
-        const firstLink = document.querySelector('.search-results-list a.search-result-row, .search-results-list a');
-        if (firstLink && firstLink.href) {
-          window.location.href = firstLink.href;
-        }
+        window.navigateToSearchPage();
       }
     }
   });

@@ -10556,3 +10556,30 @@ footer.footer .footer-legal-links a:hover,
     justify-content: center;
   }
 }
+
+/* Modal Search Go Button */
+.btn-modal-search-go {
+  background: var(--pwc-orange, #d04a02);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.55rem 1.15rem;
+  font-weight: 700;
+  font-size: 0.92rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  white-space: nowrap;
+  font-family: var(--font-sans);
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.btn-modal-search-go:hover {
+  background: #b53e00;
+  transform: translateY(-1px);
+}
+
+.btn-modal-search-go:active {
+  transform: translateY(0);
+}

@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Results | Amstel Consulting Ltd</title>
+  <meta name="description" content="Search Amstel Consulting Ltd database of statutory compliance audit return (CAR) filings, outsourced DPO solutions, NDPA 2023 regulations, and executive privacy briefings.">
+  <link rel="canonical" href="https://consultancy-web-virid-seven.vercel.app/search.html">
+  <link rel="icon" type="image/jpeg" href="logo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  
+  <style>
+    /* Dedicated Search Page Styles */
+    .search-page-hero {
+      background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+      padding: 3.5rem 1.5rem 2.5rem;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .search-page-hero-inner {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .search-page-kicker {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--pwc-orange);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.5rem;
+      display: inline-block;
+    }
+    .search-page-hero h1 {
+      font-family: var(--font-serif);
+      font-size: 2.35rem;
+      color: #0f172a;
+      font-weight: 700;
+      line-height: 1.2;
+      margin: 0 0 0.8rem;
+    }
+    .search-page-hero p {
+      font-size: 1.05rem;
+      color: #475569;
+      margin-bottom: 1.8rem;
+      max-width: 720px;
+    }
+    .search-bar-container {
+      display: flex;
+      align-items: center;
+      background: #ffffff;
+      border: 2px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 0.35rem 0.5rem 0.35rem 1.25rem;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .search-bar-container:focus-within {
+      border-color: var(--pwc-orange);
+      box-shadow: 0 4px 20px rgba(208, 74, 2, 0.15);
+    }
+    .search-bar-container i.search-main-icon {
+      color: var(--pwc-orange);
+      font-size: 1.25rem;
+      margin-right: 0.85rem;
+    }
+    .search-bar-input {
+      flex: 1;
+      border: none;
+      outline: none;
+      font-size: 1.15rem;
+      font-family: var(--font-sans);
+      color: #0f172a;
+      background: transparent;
+      padding: 0.6rem 0;
+    }
+    .search-clear-btn {
+      background: none;
+      border: none;
+      color: #94a3b8;
+      font-size: 1.15rem;
+      padding: 0.5rem 0.75rem;
+      cursor: pointer;
+      display: none;
+    }
+    .search-clear-btn:hover {
+      color: #0f172a;
+    }
+    .search-submit-btn {
+      background: var(--pwc-orange);
+      color: #ffffff;
+      border: none;
+      border-radius: 6px;
+      padding: 0.8rem 1.75rem;
+      font-weight: 700;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.1s ease;
+      font-family: var(--font-sans);
+    }
+    .search-submit-btn:hover {
+      background: #b53e00;
+    }
+    .search-submit-btn:active {
+      transform: scale(0.98);
+    }
+
+    /* Category Filter Tabs */
+    .search-filter-strip {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+    .filter-chip {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      color: #475569;
+      padding: 0.45rem 1rem;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .filter-chip:hover {
+      border-color: #cbd5e1;
+      color: #0f172a;
+    }
+    .filter-chip.active {
+      background: #0f172a;
+      color: #ffffff;
+      border-color: #0f172a;
+    }
+
+    /* Results Section */
+    .search-results-section {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4.5rem;
+    }
+    .results-meta-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid #e2e8f0;
+      margin-bottom: 2rem;
+    }
+    .results-count-text {
+      font-size: 1rem;
+      color: #475569;
+    }
+    .results-count-text strong {
+      color: #0f172a;
+    }
+    .results-query-term {
+      color: var(--pwc-orange);
+      font-weight: 700;
+    }
+
+    /* Result Card */
+    .results-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .search-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 1.75rem;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+    .search-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+      border-color: #fed7aa;
+    }
+    .search-card-top {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+    .search-card-badge {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 0.25rem 0.65rem;
+      border-radius: 4px;
+      background: #fff7ed;
+      color: var(--pwc-orange);
+      border: 1px solid #fed7aa;
+    }
+    .search-card-cat {
+      font-size: 0.8rem;
+      color: #64748b;
+      font-weight: 500;
+    }
+    .search-card-title {
+      font-family: var(--font-serif);
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.3;
+      margin: 0 0 0.65rem;
+    }
+    .search-card-title a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .search-card-title a:hover {
+      color: var(--pwc-orange);
+      text-decoration: underline;
+    }
+    .search-card-desc {
+      font-size: 0.98rem;
+      color: #475569;
+      line-height: 1.6;
+      margin: 0 0 1.25rem;
+    }
+    .search-card-desc mark {
+      background: #fef08a;
+      color: #0f172a;
+      font-weight: 600;
+      padding: 0 2px;
+      border-radius: 2px;
+    }
+    .search-card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 1rem;
+      border-top: 1px solid #f1f5f9;
+      font-size: 0.88rem;
+    }
+    .search-card-url {
+      color: #94a3b8;
+      font-family: var(--font-mono, monospace);
+      font-size: 0.82rem;
+      text-decoration: none;
+    }
+    .search-card-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--pwc-orange);
+      font-weight: 700;
+      text-decoration: none;
+      transition: gap 0.2s;
+    }
+    .search-card-action:hover {
+      gap: 0.65rem;
+      text-decoration: underline;
+    }
+
+    /* Empty State */
+    .search-empty-state {
+      text-align: center;
+      padding: 4rem 1.5rem;
+      background: #ffffff;
+      border: 1px dashed #cbd5e1;
+      border-radius: 8px;
+    }
+    .search-empty-icon {
+      font-size: 3rem;
+      color: #cbd5e1;
+      margin-bottom: 1.25rem;
+    }
+    .search-empty-state h3 {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      color: #0f172a;
+      margin-bottom: 0.5rem;
+    }
+    .search-empty-state p {
+      color: #64748b;
+      font-size: 1rem;
+      max-width: 500px;
+      margin: 0 auto 2rem;
+    }
+    .popular-searches-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.75rem;
+    }
+    .popular-tags-wrap {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .popular-tag {
+      background: #f1f5f9;
+      color: #334155;
+      padding: 0.45rem 1rem;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      border: 1px solid transparent;
+      transition: all 0.2s;
+    }
+    .popular-tag:hover {
+      background: #ffffff;
+      border-color: var(--pwc-orange);
+      color: var(--pwc-orange);
+    }
+  </style>
+</head>
+<body>
+  <!-- Unified Site Header -->
+  <div id="site-header"></div>
+  <script src="js/header.js"></script>
+
+  <!-- Search Page Hero Header -->
+  <header class="search-page-hero">
+    <div class="search-page-hero-inner">
+      <div class="breadcrumbs" style="margin-bottom: 1rem; font-size: 0.85rem;">
+        <a href="index.html" style="color: #64748b; text-decoration: none;">Home</a>
+        <span style="margin: 0 0.4rem; color: #cbd5e1;">&gt;</span>
+        <span style="color: #0f172a; font-weight: 600;">Search Results</span>
+      </div>
+
+      <span class="search-page-kicker">ENTERPRISE SEARCH &bull; REGULATORY DIRECTORY</span>
+      <h1>Search Amstel Consulting</h1>
+      <p>Find statutory compliance filings, licensed DPCO solutions, NDPA 2023 regulations, and executive briefings.</p>
+
+      <!-- Search Input Form -->
+      <form id="searchPageForm" onsubmit="handleSearchSubmit(event)">
+        <div class="search-bar-container">
+          <i class="fa-solid fa-magnifying-glass search-main-icon"></i>
+          <input 
+            type="text" 
+            id="pageSearchInput" 
+            class="search-bar-input" 
+            placeholder="Search services, NDPA regulations, DPCO audit rules, DPO..." 
+            autocomplete="off"
+            autofocus
+            oninput="handleInputLive(this.value)">
+          <button type="button" id="searchClearBtn" class="search-clear-btn" onclick="clearSearchInput()" title="Clear search">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <button type="submit" class="search-submit-btn">
+            <span>Search</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </form>
+
+      <!-- Category Filter Pills -->
+      <div class="search-filter-strip">
+        <button type="button" class="filter-chip active" data-category="All" onclick="setFilterCategory('All')">All Results (<span id="countAll">0</span>)</button>
+        <button type="button" class="filter-chip" data-category="Solutions" onclick="setFilterCategory('Solutions')">Our Solutions (<span id="countSolutions">0</span>)</button>
+        <button type="button" class="filter-chip" data-category="Knowledge Hub" onclick="setFilterCategory('Knowledge Hub')">Knowledge Hub (<span id="countKnowledge">0</span>)</button>
+        <button type="button" class="filter-chip" data-category="Regulatory" onclick="setFilterCategory('Regulatory')">Regulatory &amp; NDPA (<span id="countRegulatory">0</span>)</button>
+        <button type="button" class="filter-chip" data-category="Organisation" onclick="setFilterCategory('Organisation')">Organisation (<span id="countOrg">0</span>)</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Search Results Output -->
+  <main class="search-results-section">
+    <div class="results-meta-header">
+      <div class="results-count-text" id="resultsCountText">
+        Enter a keyword above to search our enterprise directory.
+      </div>
+    </div>
+
+    <!-- Results Cards List -->
+    <div id="resultsList" class="results-list"></div>
+
+    <!-- Empty State Template -->
+    <div id="emptyState" class="search-empty-state" style="display: none;">
+      <div class="search-empty-icon">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <h3>No Matching Results Found</h3>
+      <p id="emptyStateMessage">We couldn't find any documents or services matching your query. Please verify spelling or explore our most requested solutions:</p>
+      
+      <div class="popular-searches-title">Popular Solutions &amp; Topics:</div>
+      <div class="popular-tags-wrap">
+        <button type="button" class="popular-tag" onclick="quickSearch('Compliance Audit Return')">Annual CAR Filing</button>
+        <button type="button" class="popular-tag" onclick="quickSearch('Outsourced DPO')">Outsourced DPO</button>
+        <button type="button" class="popular-tag" onclick="quickSearch('Data Protection Audit')">Data Protection Audit</button>
+        <button type="button" class="popular-tag" onclick="quickSearch('Data Privacy Training')">Data Privacy Training</button>
+        <button type="button" class="popular-tag" onclick="quickSearch('Complying With NDPA 2023')">NDPA 2023 Checklist</button>
+        <button type="button" class="popular-tag" onclick="quickSearch('Licensed DPCO')">Licensed DPCO Status</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Unified Site Footer -->
+  <div id="site-footer"></div>
+  <script src="js/footer.js"></script>
+
+  <!-- Scripts -->
+  <script src="js/search-data.js"></script>
+  <script src="js/compliance-form.js"></script>
+
+  <script>
+    let currentCategory = 'All';
+    let currentQuery = '';
+
+    // Initialize from URL parameters (e.g. ?q=audit)
+    window.addEventListener('DOMContentLoaded', function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      const q = urlParams.get('q') || '';
+      const cat = urlParams.get('cat') || 'All';
+      
+      const input = document.getElementById('pageSearchInput');
+      if (input) {
+        input.value = q;
+        toggleClearButton(q);
+      }
+      
+      currentCategory = cat;
+      currentQuery = q;
+      performSearch(q, currentCategory);
+    });
+
+    function toggleClearButton(val) {
+      const clearBtn = document.getElementById('searchClearBtn');
+      if (clearBtn) {
+        clearBtn.style.display = val && val.trim().length > 0 ? 'inline-block' : 'none';
+      }
+    }
+
+    function clearSearchInput() {
+      const input = document.getElementById('pageSearchInput');
+      if (input) {
+        input.value = '';
+        input.focus();
+        toggleClearButton('');
+        performSearch('', currentCategory);
+        updateUrlParams('', currentCategory);
+      }
+    }
+
+    function handleInputLive(val) {
+      toggleClearButton(val);
+      currentQuery = val;
+      // Debounce or real-time update
+      performSearch(val, currentCategory);
+    }
+
+    function handleSearchSubmit(e) {
+      if (e) e.preventDefault();
+      const input = document.getElementById('pageSearchInput');
+      const q = input ? input.value.trim() : '';
+      currentQuery = q;
+      updateUrlParams(q, currentCategory);
+      performSearch(q, currentCategory);
+    }
+
+    function quickSearch(term) {
+      const input = document.getElementById('pageSearchInput');
+      if (input) {
+        input.value = term;
+        toggleClearButton(term);
+        currentQuery = term;
+        currentCategory = 'All';
+        updateFilterChipsUI();
+        updateUrlParams(term, 'All');
+        performSearch(term, 'All');
+      }
+    }
+
+    function setFilterCategory(cat) {
+      currentCategory = cat;
+      updateFilterChipsUI();
+      updateUrlParams(currentQuery, cat);
+      performSearch(currentQuery, currentCategory);
+    }
+
+    function updateFilterChipsUI() {
+      document.querySelectorAll('.filter-chip').forEach(btn => {
+        if (btn.getAttribute('data-category') === currentCategory) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+    }
+
+    function updateUrlParams(q, cat) {
+      const params = new URLSearchParams();
+      if (q) params.set('q', q);
+      if (cat && cat !== 'All') params.set('cat', cat);
+      const newUrl = window.location.pathname + (params.toString() ? '?' + params.toString() : '');
+      window.history.replaceState({}, '', newUrl);
+    }
+
+    function highlightText(text, query) {
+      if (!query || !query.trim()) return text;
+      const terms = query.trim().split(/\s+/).filter(Boolean);
+      let pattern = terms.map(t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|');
+      if (!pattern) return text;
+      const regex = new RegExp(`(${pattern})`, 'gi');
+      return text.replace(regex, '<mark>$1</mark>');
+    }
+
+    function performSearch(query, category) {
+      const data = window.siteSearchIndex || [];
+      const trimmed = (query || '').trim().toLowerCase();
+      const terms = trimmed.split(/\s+/).filter(Boolean);
+
+      // 1. Calculate counts for filter tabs
+      let totalAll = 0;
+      let totalSolutions = 0;
+      let totalKnowledge = 0;
+      let totalRegulatory = 0;
+      let totalOrg = 0;
+
+      data.forEach(item => {
+        let matches = true;
+        if (terms.length > 0) {
+          const haystack = (item.title + ' ' + item.desc + ' ' + (item.keywords || '') + ' ' + (item.badge || '')).toLowerCase();
+          matches = terms.every(t => haystack.includes(t));
+        }
+        if (matches) {
+          totalAll++;
+          if (item.category === 'Solutions') totalSolutions++;
+          if (item.category === 'Knowledge Hub') totalKnowledge++;
+          if (item.category === 'Regulatory') totalRegulatory++;
+          if (item.category === 'Organisation') totalOrg++;
+        }
+      });
+
+      // Update pill count badges
+      document.getElementById('countAll').textContent = totalAll;
+      document.getElementById('countSolutions').textContent = totalSolutions;
+      document.getElementById('countKnowledge').textContent = totalKnowledge;
+      document.getElementById('countRegulatory').textContent = totalRegulatory;
+      document.getElementById('countOrg').textContent = totalOrg;
+
+      // 2. Filter matching items
+      let results = data.filter(item => {
+        // Category filter
+        if (category !== 'All' && item.category !== category) {
+          return false;
+        }
+        // Keyword filter
+        if (terms.length === 0) return true;
+        const haystack = (item.title + ' ' + item.desc + ' ' + (item.keywords || '') + ' ' + (item.badge || '')).toLowerCase();
+        return terms.every(t => haystack.includes(t));
+      });
+
+      // Sort: Title exact match > starts with > others
+      if (terms.length > 0) {
+        results.sort((a, b) => {
+          const aTitle = a.title.toLowerCase();
+          const bTitle = b.title.toLowerCase();
+          const aHasExact = aTitle.includes(trimmed);
+          const bHasExact = bTitle.includes(trimmed);
+          if (aHasExact && !bHasExact) return -1;
+          if (!aHasExact && bHasExact) return 1;
+          return 0;
+        });
+      }
+
+      // 3. Render Output
+      const resultsList = document.getElementById('resultsList');
+      const emptyState = document.getElementById('emptyState');
+      const countText = document.getElementById('resultsCountText');
+
+      if (results.length === 0) {
+        resultsList.style.display = 'none';
+        emptyState.style.display = 'block';
+        if (trimmed) {
+          countText.innerHTML = `No results found for <span class="results-query-term">&ldquo;${escapeHtml(query)}&rdquo;</span>`;
+          document.getElementById('emptyStateMessage').innerHTML = `We couldn't find any results matching <strong style="color:#0f172a;">&ldquo;${escapeHtml(query)}&rdquo;</strong>. Try adjusting your search term:`;
+        } else {
+          countText.innerHTML = `Showing 0 results`;
+          document.getElementById('emptyStateMessage').innerHTML = `Please type a keyword above or explore our popular solutions:`;
+        }
+        return;
+      }
+
+      emptyState.style.display = 'none';
+      resultsList.style.display = 'flex';
+
+      if (trimmed) {
+        countText.innerHTML = `Showing <strong>${results.length}</strong> matching result${results.length === 1 ? '' : 's'} for <span class="results-query-term">&ldquo;${escapeHtml(query)}&rdquo;</span>`;
+      } else {
+        countText.innerHTML = `Showing <strong>${results.length}</strong> total result${results.length === 1 ? '' : 's'}`;
+      }
+
+      resultsList.innerHTML = results.map(item => {
+        const highlightedTitle = highlightText(item.title, query);
+        const highlightedDesc = highlightText(item.desc, query);
+
+        let actionText = 'Explore Solution';
+        let iconClass = 'fa-arrow-right';
+        if (item.category === 'Knowledge Hub') {
+          actionText = 'Read Article';
+          iconClass = 'fa-newspaper';
+        } else if (item.category === 'Organisation') {
+          actionText = 'View Credentials';
+          iconClass = 'fa-building';
+        } else if (item.category === 'Contact') {
+          actionText = 'Initiate Consultation';
+          iconClass = 'fa-headset';
+        }
+
+        return `
+          <article class="search-card">
+            <div class="search-card-top">
+              <span class="search-card-badge">${item.badge || item.category}</span>
+              <span class="search-card-cat">&bull; ${item.category}</span>
+            </div>
+            <h3 class="search-card-title">
+              <a href="${item.url}">${highlightedTitle}</a>
+            </h3>
+            <p class="search-card-desc">
+              ${highlightedDesc}
+            </p>
+            <div class="search-card-footer">
+              <a href="${item.url}" class="search-card-url">amstelconsulting.ng/${item.url}</a>
+              <a href="${item.url}" class="search-card-action">
+                <span>${actionText}</span>
+                <i class="fa-solid ${iconClass}"></i>
+              </a>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+  </script>
+</body>
+</html>
