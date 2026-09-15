@@ -27,17 +27,7 @@
           </ul>
         </div>
 
-        <!-- Col 2: Knowledge Hub -->
-        <div class="footer-col">
-          <h5>Knowledge Hub</h5>
-          <ul>
-            <li><a href="${pfx}publication-detail.html">Complying With NDPA 2023</a></li>
-            <li><a href="${pfx}blog/index.html">Regulatory Guidance</a></li>
-            <li><a href="${pfx}blog/index.html#ai-tracker">Artificial Intelligence Tracker</a></li>
-          </ul>
-        </div>
-
-        <!-- Col 3: Our Organisation -->
+        <!-- Col 2: Our Organisation -->
         <div class="footer-col">
           <h5>Our Organisation</h5>
           <ul>
@@ -45,6 +35,16 @@
             <li><a href="${pfx}about.html#credentials">Licensed DPCO Status</a></li>
             <li><a href="${pfx}about.html#leadership">Team &amp; Advisory Board</a></li>
             <li><a href="${pfx}contact.html">Career &amp; Partnerships</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Knowledge Hub -->
+        <div class="footer-col">
+          <h5>Knowledge Hub</h5>
+          <ul>
+            <li><a href="${pfx}publication-detail.html">Complying With NDPA 2023</a></li>
+            <li><a href="${pfx}blog/index.html">Regulatory Guidance</a></li>
+            <li><a href="${pfx}blog/index.html#ai-tracker">Artificial Intelligence Tracker</a></li>
           </ul>
         </div>
 
