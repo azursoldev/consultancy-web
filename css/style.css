@@ -3231,8 +3231,9 @@ html body .mega-dropdown-grid,
        ========================================================================== */
 .pwc-hero-wrapper {
   position: relative;
-  height: 85vh;
-  min-height: 600px;
+  height: calc(100vh - 195px);
+  min-height: 460px;
+  max-height: 590px;
   background: #0a0a0a;
   display: flex;
   align-items: center;
@@ -10271,18 +10272,18 @@ footer.footer .footer-legal-links a:hover,
 
 /* Section 1: Hero Sub-headline and Buttons */
 .hero-subheadline {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   color: #e2e8f0;
-  line-height: 1.6;
+  line-height: 1.55;
   max-width: 780px;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
 }
 
 .hero-btn-group {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.85rem;
   align-items: center;
 }
 
@@ -10290,8 +10291,8 @@ footer.footer .footer-legal-links a:hover,
   background: var(--pwc-orange);
   color: #ffffff !important;
   border: none;
-  padding: 0.95rem 1.8rem;
-  font-size: 0.95rem;
+  padding: 0.85rem 1.6rem;
+  font-size: 0.92rem;
   font-weight: 700;
   border-radius: 4px;
   display: inline-flex;
@@ -10313,8 +10314,8 @@ footer.footer .footer-legal-links a:hover,
   backdrop-filter: blur(8px);
   color: #ffffff !important;
   border: 1px solid rgba(255, 255, 255, 0.6);
-  padding: 0.95rem 1.8rem;
-  font-size: 0.95rem;
+  padding: 0.85rem 1.6rem;
+  font-size: 0.92rem;
   font-weight: 700;
   border-radius: 4px;
   display: inline-flex;
@@ -10334,12 +10335,12 @@ footer.footer .footer-legal-links a:hover,
 
 .btn-hero-scroll {
   color: #cbd5e1 !important;
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   font-weight: 700;
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  padding: 0.95rem 1.25rem;
+  padding: 0.85rem 1rem;
   text-decoration: none;
   transition: all 0.2s ease;
 }
@@ -10353,7 +10354,7 @@ footer.footer .footer-legal-links a:hover,
 .trust-markers-strip {
   background: #ffffff;
   border-bottom: none;
-  padding: 1.75rem 0;
+  padding: 1.15rem 0;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
   position: relative;
   z-index: 10;
@@ -10362,14 +10363,14 @@ footer.footer .footer-legal-links a:hover,
 .trust-markers-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.25rem;
+  gap: 1rem;
 }
 
 .trust-marker-item {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  padding: 0.85rem 1.15rem;
+  gap: 0.85rem;
+  padding: 0.75rem 1rem;
   background: #f8fafc;
   border-radius: 6px;
   border: 1px solid #edf2f7;
