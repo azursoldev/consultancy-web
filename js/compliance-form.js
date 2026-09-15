@@ -31,9 +31,9 @@
     let showMessage = false;
 
     if (type === 'car') {
-      formTitle = 'Initiate Your CAR Filing';
+      formTitle = 'Initiate Compliance Audit Return (CAR)';
       formSubtitle = 'Connect with an NDPC-licensed DPCO lead auditor within 24 hours to secure your filing certificate.';
-      ctaText = 'Initiate CAR Filing Support Now ➔';
+      ctaText = 'Initiate Compliance Audit Return (CAR) ➔';
       showRadios = true;
       prechecked = 'car';
     } else if (type === 'audit') {
@@ -55,9 +55,9 @@
       showRadios = false;
       prechecked = 'training';
     } else if (type === 'readiness') {
-      formTitle = 'Schedule NDPA Readiness Assessment';
+      formTitle = 'Get FREE NDPA Gap Assessment';
       formSubtitle = 'Identify and close your NDPA 2023 compliance gaps with licensed DPCO experts.';
-      ctaText = 'Book NDPA Readiness Assessment ➔';
+      ctaText = 'Get FREE NDPA Gap Assessment ➔';
       showRadios = true;
       showMessage = true;
       prechecked = 'readiness';
@@ -284,17 +284,17 @@
       const titleEl = modalOverlay.querySelector('.modal-header h3');
       const subEl = modalOverlay.querySelector('.modal-header p');
 
-      if (precheckOption === 'readiness') {
-        if (badgeEl) badgeEl.textContent = 'NDPA 2023 Readiness Assessment';
-        if (titleEl) titleEl.textContent = 'Schedule an NDPA Readiness Assessment';
-        if (subEl) subEl.textContent = 'Connect with our accredited DPCO directors to identify and close your compliance gaps.';
-      } else if (precheckOption === 'pia' || precheckOption === 'audit') {
-        if (badgeEl) badgeEl.textContent = 'Privacy Impact Assessment';
-        if (titleEl) titleEl.textContent = 'Request a Privacy Impact Assessment';
-        if (subEl) subEl.textContent = 'Uncover compliance vulnerabilities and receive a tailored gap assessment within 24 hours.';
+      if (precheckOption === 'readiness' || precheckOption === 'gap' || precheckOption === 'pia') {
+        if (badgeEl) badgeEl.textContent = 'NDPA 2023 Gap Assessment';
+        if (titleEl) titleEl.textContent = 'Get FREE NDPA Gap Assessment';
+        if (subEl) subEl.textContent = 'Connect with our accredited DPCO directors to identify vulnerabilities and receive your tailored NDPA gap assessment within 24 hours.';
+      } else if (precheckOption === 'audit') {
+        if (badgeEl) badgeEl.textContent = 'Data Protection Audit';
+        if (titleEl) titleEl.textContent = 'Request Data Protection Audit';
+        if (subEl) subEl.textContent = 'Uncover compliance vulnerabilities and receive a tailored audit proposal within 24 hours.';
       } else if (precheckOption === 'car') {
         if (badgeEl) badgeEl.textContent = 'Statutory DPCO Filing';
-        if (titleEl) titleEl.textContent = 'Initiate CAR Filing Support';
+        if (titleEl) titleEl.textContent = 'Initiate Compliance Audit Return (CAR)';
         if (subEl) subEl.textContent = 'Connect with an NDPC-licensed DPCO lead auditor within 24 hours to secure your filing certificate.';
       } else {
         if (badgeEl) badgeEl.textContent = 'Confidential Consultation';
@@ -306,8 +306,11 @@
         const formType = precheckOption === 'readiness' ? 'readiness' : 'about';
         formContainer.innerHTML = generateFormHTML(formType, true);
 
-        // Pre-selection logic (map pia -> audit)
-        const targetValue = precheckOption === 'pia' ? 'audit' : precheckOption;
+        // Pre-selection logic (map pia/gap -> readiness)
+        let targetValue = precheckOption;
+        if (precheckOption === 'pia' || precheckOption === 'gap') {
+          targetValue = 'readiness';
+        }
         if (targetValue) {
           // Uncheck all first
           formContainer.querySelectorAll('input[name="objectives"]').forEach(cb => {
@@ -324,10 +327,10 @@
         // Contextual CTA button text
         const submitBtnSpan = formContainer.querySelector('.btn-compliance-submit span');
         if (submitBtnSpan) {
-          if (precheckOption === 'pia') {
-            submitBtnSpan.textContent = 'Request Free Privacy Impact Assessment ➔';
+          if (precheckOption === 'pia' || precheckOption === 'gap' || precheckOption === 'readiness') {
+            submitBtnSpan.textContent = 'Get FREE NDPA Gap Assessment ➔';
           } else if (precheckOption === 'car') {
-            submitBtnSpan.textContent = 'Initiate CAR Filing Support ➔';
+            submitBtnSpan.textContent = 'Initiate Compliance Audit Return (CAR) ➔';
           } else if (precheckOption === 'general') {
             submitBtnSpan.textContent = 'Initiate Secure Consultation ➔';
           }
