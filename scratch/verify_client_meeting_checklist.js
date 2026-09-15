@@ -43,7 +43,7 @@ async function runChecklist() {
   assert(home.body.includes('Licensed Data Protection Compliance Organization (DPCO)'), 'Trust Marker 1 present');
   assert(home.body.includes('Fully Registered with the NDPC'), 'Trust Marker 2 present');
   assert(home.body.includes('Authorized Statutory CAR Audit Portal Submissions'), 'Trust Marker 3 present');
-  assert(home.body.includes('Nigerian &amp; Foreign Consultants Living Across Nigeria, Europe, and America') || home.body.includes('Nigerian & Foreign Consultants Living Across Nigeria, Europe, and America'), 'Trust Marker 4 present');
+  assert(home.body.includes('Global Network of Consultants Across Nigeria, Europe &amp; the Americas') || home.body.includes('Global Network of Consultants Across Nigeria, Europe & the Americas'), 'Trust Marker 4 present');
   assert(home.body.includes('Annual Statutory CAR Filing Support'), 'Pillar 1 CAR present');
   assert(home.body.includes('Licensed Outsourced DPO-as-a-Service'), 'Pillar 2 DPO present');
   assert(home.body.includes('Data Protection Audits &amp; Governance') || home.body.includes('Data Protection Audits & Governance'), 'Pillar 3 Audits present');
