@@ -144,133 +144,91 @@
       url: 'services/compliance-audit-return.html',
       badge: 'Statutory Filing',
       desc: 'Statutory annual NDPA 2023 compliance audit return filing preparation, assurance & NDPC submission before March 15 statutory deadline.',
-      keywords: 'car filing compliance audit return ndpc ndpa 2023 statutory deadline penalty fines licensed dpco audit rules regulations returns'
+      keywords: 'car filing compliance audit return ndpc ndpa 2023 statutory deadline penalty fines licensed dpco audit rules regulations returns march 15 portal certificate assurance mandate'
     },
     {
-      title: 'Data Protection Audit',
+      title: 'Data Protection Audit & Governance',
       url: 'services/data-protection-audit.html',
       badge: 'Technical & Operational',
-      desc: 'Comprehensive Article 30/31 technical, organizational & physical security gap assessments under NDPA and DPCO audit rules.',
-      keywords: 'audit privacy assessment ndpa gap analysis security controls ndpc dpco audit rules regulations verification risk assessment'
+      desc: 'Comprehensive Article 30/31 technical, organizational & cybersecurity gap assessments, ROPA mapping, DPIAs, and breach response.',
+      keywords: 'audit privacy assessment ndpa gap analysis security controls ndpc dpco audit rules regulations verification risk assessment ropa record of processing activities dpia notices cybersecurity cyber penetration testing pen test breach response 72 hours incident protocol notification hardening section 39 section 40 vulnerability policies vendor dpa contracts cookie consent telemetry technical audit'
     },
     {
       title: 'Data Privacy Training & Capacity Building',
       url: 'services/data-privacy-training.html',
       badge: 'Workforce & DPO',
       desc: 'Certified executive and workforce data privacy training, employee awareness modules, and advanced DPO masterclasses.',
-      keywords: 'training education masterclass workforce awareness ndpa certification privacy skills compliance course elearning'
+      keywords: 'training education masterclass workforce awareness ndpa certification privacy skills compliance course elearning section 31 staff phish simulation certificate'
     },
     {
       title: 'Outsourced DPO (DPOaaS)',
       url: 'services/outsourced-dpo.html',
       badge: 'Designated Officer',
       desc: 'Accredited external Data Protection Officer statutory representation, compliance monitoring, and direct NDPC liaison.',
-      keywords: 'dpo outsourced data protection officer dpoaas representation contact liaison advisory ndpa officer'
+      keywords: 'dpo outsourced data protection officer dpoaas representation contact liaison advisory ndpa officer dcmi compliance legal privacy conflict'
     },
     {
-      title: 'DPIA & LIA Assessments',
-      url: 'service-dpia.html',
-      badge: 'Risk Assessment',
-      desc: 'Data Protection Impact Assessments (DPIA) and Legitimate Interest Assessments (LIA) for high-risk processing operations.',
-      keywords: 'dpia lia impact assessment risk assessment high risk legitimate interest ndpa section 28 processing'
-    },
-    {
-      title: 'ROPA Data Lineage & Inventory',
-      url: 'service-ropa.html',
-      badge: 'Article 24 Record',
-      desc: 'Article 24 Records of Processing Activities mapping, department data flow registries, and lawful basis documentation.',
-      keywords: 'ropa record of processing activities data mapping inventory data flow article 24 registers lineage data assets'
-    },
-    {
-      title: 'Privacy Policies & Notices',
-      url: 'service-policies.html',
-      badge: 'Legal Notices',
-      desc: 'Drafting statutory NDPA external privacy notices, employee handbooks, consent management charters and retention schedules.',
-      keywords: 'privacy policy notices transparent ndpa laws consent notices privacy notice employee policy'
-    },
-    {
-      title: 'Data Processing Agreements (DPAs)',
-      url: 'service-dpa.html',
-      badge: 'Vendor Contracts',
-      desc: 'Statutory Article 29 & Section 39 controller-to-processor covenants, vendor risk audits, standard contractual clauses and sub-processor agreements.',
-      keywords: 'dpa data processing agreements vendor contract supply chain scc standard contractual clauses subprocessor processor controller'
-    },
-    {
-      title: 'Cybersecurity & Pen-Testing',
-      url: 'service-cyber.html',
-      badge: 'Security Posture',
-      desc: 'Section 39 security posture hardening, external/internal vulnerability assessment, penetration testing, and breach drills.',
-      keywords: 'cybersecurity cyber penetration testing pen test vulnerability security hardening breach response posture technical audit'
-    },
-    {
-      title: 'Corporate Governance & Risk Advisory',
-      url: 'service-gov.html',
-      badge: 'Boardroom Advisory',
-      desc: 'Boardroom digital trust charters, fiduciary risk monitoring, and executive privacy governance matrices.',
-      keywords: 'governance boardroom corporate risk oversight leadership compliance fiduciary charter board'
-    },
-    {
-      title: 'AI Consulting & Compliance',
-      url: 'service-ai.html',
-      badge: 'Emerging Tech',
-      desc: 'Artificial intelligence compliance, algorithmic accountability, ethical AI safety, and automated decision rights.',
-      keywords: 'ai artificial intelligence machine learning algorithmic accountability automated decisions tech generative ai'
-    },
-    {
-      title: 'Cookie & Consent Compliance',
-      url: 'service-cookie.html',
-      badge: 'Consent CMP',
-      desc: 'Zero-party consent telemetry, Ketch-style tracking audits, and compliant cookie banner management.',
-      keywords: 'cookie consent cmp tracking cookies zero party banner telemetry opt in gdpr ndpa banner'
-    },
-    {
-      title: 'NDPA 2023 Statutory Laws & Regulations',
-      url: 'topics.html#ndpa-laws',
-      badge: 'Statutory Guidance',
-      desc: 'Full breakdown of the Nigeria Data Protection Act (NDPA) 2023 regulations, enforcement sections, and DPCO audit rules.',
-      keywords: 'ndpa regulations ndpa 2023 statutory laws rules act legislation nigeria data protection act section penalties legal regulatory'
-    },
-    {
-      title: 'Licensed DPCO Credentials & Governance',
-      url: 'organisation-governance.html',
-      badge: 'Accreditation',
-      desc: 'Amstel Consulting official licensed Data Protection Compliance Organization (DPCO) credentials and authorization under NDPC.',
-      keywords: 'dpco licensed licensed dpco accreditation ndpc authorization credentials compliance organization'
-    },
-    {
-      title: 'About Us & Leadership Values',
-      url: 'organisation-values.html',
-      badge: 'Company Profile',
-      desc: 'Our mission, ethical values, digital trust principles, and regulatory integrity commitments.',
-      keywords: 'about us values mission purpose ethics team leadership amstel consulting practice'
-    },
-    {
-      title: 'Consultants & Practice Directors',
-      url: 'organisation-consultants.html',
-      badge: 'Our Practice',
-      desc: 'Certified privacy engineers, legal counsels, accredited lead auditors, and enterprise security architects.',
-      keywords: 'consultants team auditors lawyers experts engineers partners practice directors staff'
-    },
-    {
-      title: 'Advisory Board',
-      url: 'organisation-board.html',
-      badge: 'Leadership',
-      desc: 'Distinguished governance and regulatory leadership advisory board guiding strategic compliance.',
-      keywords: 'advisory board directors governance leadership partners'
-    },
-    {
-      title: 'Regulatory Guidance: NDPC Updates',
+      title: 'NDPA 2023 Alignment: Strategic Executive Checklist',
       url: 'publication-detail.html',
-      badge: 'Publications',
-      desc: 'Official NDPC enforcement advisories, annual audit filing circulars, and regulatory compliance updates.',
-      keywords: 'publications regulatory guidance circulars ndpc enforcement news articles updates bulletins'
+      badge: 'Executive Briefing',
+      desc: 'Top 5 strategic NDPA requirements to mitigate regulatory risk, prevent statutory fines of up to 2% of annual revenue.',
+      keywords: 'checklist executive ndpa 2023 alignment strategic c-suite board directors fines 2 percent lawful basis breach 72 hours dpia dpo car filing audit circulars regulations'
+    },
+    {
+      title: 'Knowledge Hub: Insights & Regulatory Guidance',
+      url: 'blog/index.html',
+      badge: 'Regulatory Guidance',
+      desc: 'Explore legal analyses, empirical compliance checklists, and technical implementation playbooks published by licensed DPCO practitioners.',
+      keywords: 'knowledge hub regulatory guidance articles publications blog insights ndpc circulars research briefings legal intelligence'
+    },
+    {
+      title: 'Artificial Intelligence Tracker',
+      url: 'blog/index.html#ai-tracker',
+      badge: 'AI Tracker',
+      desc: 'Regulatory intelligence monitoring algorithmic accountability, AI ethics, automated decision systems, and emerging privacy frameworks.',
+      keywords: 'artificial intelligence tracker ai machine learning algorithms automated decisions generative ai tech governance llm compliance safety ethics'
+    },
+    {
+      title: 'Our Organisation: About Amstel Consulting',
+      url: 'about.html',
+      badge: 'Company Profile',
+      desc: 'Amstel Consulting Ltd is a premier licensed Data Protection Compliance Organisation (DPCO) bridging statutory regulations with corporate operations.',
+      keywords: 'about us organisation amstel consulting ltd mission principles leadership integrity corporate governance profile lagos abuja values'
+    },
+    {
+      title: 'Licensed DPCO Credentials & Statutory Authorization',
+      url: 'about.html#credentials',
+      badge: 'Accreditation',
+      desc: 'Our Credentials as a Licensed DPCO authorized by the Nigeria Data Protection Commission (NDPC) to verify and submit statutory returns.',
+      keywords: 'licensed dpco credentials authority ndpc registration certification authorization statutory compliance organization verification accreditation'
+    },
+    {
+      title: 'Multidisciplinary Advisory Board & Senior Leadership',
+      url: 'about.html#leadership',
+      badge: 'Board & Leadership',
+      desc: 'Multidisciplinary team of Nigerian data privacy attorneys, veteran cybersecurity architects, chartered accountants, and public policy advisors.',
+      keywords: 'leadership team advisory board emeka dan-ogun olufunke adeyemi fatima al-hassan tariq ibrahim kelechi okafor nnamdi okoli partners directors consultants experts practice'
     },
     {
       title: 'Contact Practice Offices & RFP Inquiries',
       url: 'contact.html',
-      badge: 'Contact',
-      desc: 'Direct engagement with licensed DPCO partners, request a free privacy assessment, or submit an RFP.',
-      keywords: 'contact help phone email office lagos abuja consult inquiry get in touch quote rfp assessment free'
+      badge: 'Advisory Desk',
+      desc: 'Direct engagement with licensed DPCO partners, request a scoped compliance assessment, or submit an RFP within 24 hours.',
+      keywords: 'contact help phone email office lagos abuja consult inquiry get in touch quote rfp assessment free consultation advisory desk'
+    },
+    {
+      title: 'Corporate Privacy & Legal Statement',
+      url: 'legal/privacy-statement.html',
+      badge: 'Statutory Notice',
+      desc: 'Official statement detailing our binding fiduciary commitments regarding collection, lawful basis, and data subject rights under NDPA 2023.',
+      keywords: 'privacy statement legal rights data subject sar lawful basis gdpr ndpa fiduciary compliance terms transparency notice'
+    },
+    {
+      title: 'Terms and Conditions of Engagement',
+      url: 'terms-and-conditions.html',
+      badge: 'Legal Terms',
+      desc: 'Terms of engagement, client obligations, statutory filing timelines, confidentiality covenants, and limitation of liability.',
+      keywords: 'terms conditions agreement legal retainer engagement liability disclaimer contract'
     }
   ];
 
