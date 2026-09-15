@@ -9475,23 +9475,8 @@ textarea.form-control {
 
 .leadership-matrix-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(320px, 360px));
   gap: 1.8rem;
-}
-
-.leadership-matrix-grid.single-leader,
-.leadership-matrix-grid:has(.leader-profile-card:only-child) {
-  grid-template-columns: 1fr;
-}
-
-@media (max-width: 900px) {
-  .leadership-matrix-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .leadership-matrix-grid.single-leader,
-  .leadership-matrix-grid:has(.leader-profile-card:only-child) {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (max-width: 600px) {
@@ -9508,12 +9493,19 @@ textarea.form-control {
   transition: all 0.25s ease;
   display: flex;
   flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 .leader-profile-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
-  border-color: #cbd5e1;
+  transform: translateY(-5px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
+  border-color: var(--pwc-orange);
+}
+
+.leader-profile-card:hover .leader-name {
+  color: var(--pwc-orange);
 }
 
 .leader-card-img {
@@ -9521,6 +9513,7 @@ textarea.form-control {
   height: 220px;
   object-fit: cover;
   background: #f1f5f9;
+  display: block;
 }
 
 .leader-card-body {
@@ -9540,10 +9533,11 @@ textarea.form-control {
 }
 
 .leader-name {
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   font-weight: 800;
   color: #0f172a;
   margin-bottom: 0.25rem;
+  transition: color 0.2s ease;
 }
 
 .leader-title {
@@ -9555,125 +9549,298 @@ textarea.form-control {
 }
 
 .leader-bio {
-  font-size: 0.85rem;
+  font-size: 0.88rem;
   color: #64748b;
-  line-height: 1.55;
-  margin-top: auto;
-}
-
-/* Featured Executive Profile (Single Leader Layout) */
-.leader-profile-card.featured-profile {
-  display: grid;
-  grid-template-columns: 360px 1fr;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-}
-
-.leader-profile-card.featured-profile .leader-card-img-wrap {
-  width: 100%;
-  height: 100%;
-  min-height: 480px;
-  position: relative;
-  background: #f8fafc;
-}
-
-.leader-profile-card.featured-profile .leader-card-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.leader-profile-card.featured-profile .leader-card-body {
-  padding: 2.25rem 2.75rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.leader-profile-card.featured-profile .leader-name {
-  font-size: 1.95rem;
-  font-weight: 800;
-  color: #0f172a;
-  margin-bottom: 0.35rem;
-}
-
-.leader-profile-card.featured-profile .leader-title {
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: var(--pwc-orange);
-  margin-bottom: 1.5rem;
-  line-height: 1.4;
-}
-
-.leader-bio-content {
-  margin-bottom: 1.5rem;
-}
-
-.leader-bio-content p {
-  font-size: 0.96rem;
-  color: #334155;
-  line-height: 1.7;
-  margin-bottom: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
   text-align: justify;
 }
 
-.leader-bio-content p:last-child {
-  margin-bottom: 0;
-}
-
-.leader-memberships {
-  padding-top: 1.35rem;
-  border-top: 1px solid #e2e8f0;
-}
-
-.membership-title {
-  font-size: 0.82rem;
+.leader-card-cta {
+  margin-top: auto;
+  font-size: 0.88rem;
   font-weight: 700;
-  color: #0f172a;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 0.75rem;
-}
-
-.membership-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.65rem;
-}
-
-.membership-pill {
+  color: var(--pwc-orange);
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  padding: 0.45rem 0.95rem;
-  background: #f8fafc;
-  border: 1px solid #cbd5e1;
-  border-radius: 6px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #1e293b;
+  transition: gap 0.2s ease;
 }
 
-.membership-pill i {
+.leader-profile-card:hover .leader-card-cta {
+  gap: 0.75rem;
+  color: var(--pwc-orange-dark);
+}
+
+/* ==========================================================================
+   PARTNER EXECUTIVE PROFILE DETAIL PAGE (charles-odetola.html)
+   ========================================================================== */
+.partner-profile-split {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+.partner-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.partner-portrait-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.partner-portrait-img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+}
+
+.partner-sidebar-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.partner-sidebar-name {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 0.3rem;
+}
+
+.partner-sidebar-title {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.45;
+  margin-bottom: 0.75rem;
+}
+
+.partner-firm-tag {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
   color: var(--pwc-orange);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.25rem;
 }
 
-@media (max-width: 960px) {
-  .leader-profile-card.featured-profile {
+.partner-cta-btn {
+  width: 100%;
+  justify-content: center;
+}
+
+.partner-memberships-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.partner-memberships-box h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.partner-membership-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.partner-membership-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.88rem;
+  color: #334155;
+  line-height: 1.4;
+}
+
+.partner-membership-list li i {
+  color: var(--pwc-orange);
+  margin-top: 0.2rem;
+  font-size: 0.95rem;
+}
+
+.partner-membership-list li strong {
+  display: block;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.partner-membership-list li span {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+/* Right Main Content */
+.partner-main-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.partner-header-intro {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.partner-hero-name {
+  font-family: var(--font-serif);
+  font-size: 2.85rem;
+  font-weight: 700;
+  color: var(--pwc-charcoal);
+  line-height: 1.15;
+  margin-top: 0.4rem;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.partner-hero-lead {
+  font-size: 1.2rem;
+  line-height: 1.65;
+  color: #334155;
+  font-weight: 500;
+  text-align: justify;
+}
+
+.partner-section-title {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 1.25rem;
+}
+
+.partner-body-paragraphs p {
+  font-size: 1.02rem;
+  color: #334155;
+  line-height: 1.75;
+  margin-bottom: 1.25rem;
+  text-align: justify;
+}
+
+.partner-competencies-section {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.competencies-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.competency-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 1.25rem;
+  transition: all 0.2s ease;
+}
+
+.competency-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.competency-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 6px;
+  background: var(--pwc-peach-light);
+  color: var(--pwc-orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.competency-card h4 {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.4rem;
+}
+
+.competency-card p {
+  font-size: 0.88rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+  text-align: left !important;
+}
+
+.partner-action-callout {
+  margin-top: 2.5rem;
+  padding: 2rem 2.25rem;
+  background: #0f172a;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  color: #ffffff;
+}
+
+.partner-action-callout h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.35rem;
+}
+
+.partner-action-callout p {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  margin: 0;
+  text-align: left !important;
+}
+
+.partner-action-callout .btn-hero-primary {
+  flex-shrink: 0;
+}
+
+@media (max-width: 992px) {
+  .partner-profile-split {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .partner-portrait-card {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+  .partner-memberships-box {
+    max-width: 420px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .competencies-grid {
     grid-template-columns: 1fr;
   }
-  .leader-profile-card.featured-profile .leader-card-img-wrap {
-    height: 340px;
-    min-height: 340px;
-  }
-  .leader-profile-card.featured-profile .leader-card-body {
-    padding: 1.75rem 1.5rem;
-  }
-  .leader-profile-card.featured-profile .leader-name {
-    font-size: 1.6rem;
+  .partner-action-callout {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 

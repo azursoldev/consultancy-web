@@ -203,11 +203,11 @@
       keywords: 'licensed dpco credentials authority ndpc registration certification authorization statutory compliance organization verification accreditation'
     },
     {
-      title: 'Multidisciplinary Advisory Board & Senior Leadership',
-      url: 'about.html#leadership',
-      badge: 'Board & Leadership',
-      desc: 'Multidisciplinary team of Nigerian data privacy attorneys, veteran cybersecurity architects, chartered accountants, and public policy advisors.',
-      keywords: 'leadership team advisory board emeka dan-ogun olufunke adeyemi fatima al-hassan tariq ibrahim kelechi okafor nnamdi okoli partners directors consultants experts practice'
+      title: 'Charles Odetola — Lead Privacy & Regulatory Practice Leader',
+      url: 'charles-odetola.html',
+      badge: 'Leadership',
+      desc: 'Data Protection, Privacy, Regulatory Compliance and Corporate Governance Specialist with over a decade of legal practice experience.',
+      keywords: 'charles odetola leadership practice leader lawyer attorney privacy data protection gdpr eprivacy ndpa toms corporate governance legal risk iapp law society cmi partner'
     },
     {
       title: 'Contact Practice Offices & RFP Inquiries',
