@@ -34,7 +34,7 @@
             <li><a href="${pfx}services/compliance-audit-return.html">Annual Compliance Audit Return Filing</a></li>
             <li><a href="${pfx}services/outsourced-dpo.html">Appoint Outsourced Certified DPO</a></li>
             <li><a href="${pfx}services/data-protection-audit.html">Data Protection Audit</a></li>
-            <li><a href="${pfx}services/data-privacy-training.html">Data Privacy Training</a></li>
+            <li><a href="javascript:void(0)" style="cursor: default; opacity: 0.75;">Data Privacy Training</a></li>
           </ul>
         </div>
       </li>
@@ -87,7 +87,7 @@
             <li><a href="${pfx}services/compliance-audit-return.html" onclick="toggleMobileMenu()">Annual Compliance Audit Return Filing <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
             <li><a href="${pfx}services/outsourced-dpo.html" onclick="toggleMobileMenu()">Appoint Outsourced Certified DPO <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
             <li><a href="${pfx}services/data-protection-audit.html" onclick="toggleMobileMenu()">Data Protection Audit <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
-            <li><a href="${pfx}services/data-privacy-training.html" onclick="toggleMobileMenu()">Data Privacy Training <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
+            <li><a href="javascript:void(0)" style="cursor: default; opacity: 0.75;">Data Privacy Training</a></li>
           </ul>
         </div>
 

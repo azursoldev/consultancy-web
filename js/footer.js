@@ -23,7 +23,7 @@
             <li><a href="${pfx}services/compliance-audit-return.html">Annual Compliance Audit Return (CAR)</a></li>
             <li><a href="${pfx}services/outsourced-dpo.html">Appoint Outsourced Certified DPO</a></li>
             <li><a href="${pfx}services/data-protection-audit.html">Data Protection Audit</a></li>
-            <li><a href="${pfx}services/data-privacy-training.html">Data Privacy Training</a></li>
+            <li><a href="javascript:void(0)" style="cursor: default; opacity: 0.75;">Data Privacy Training</a></li>
           </ul>
         </div>
 
@@ -43,8 +43,8 @@
           <h5>Knowledge Hub</h5>
           <ul>
             <li><a href="${pfx}publication-detail.html">Complying With NDPA 2023</a></li>
-            <li><a href="${pfx}blog/index.html">Regulatory Guidance</a></li>
-            <li><a href="${pfx}blog/index.html#ai-tracker">Artificial Intelligence Tracker</a></li>
+            <li><a href="javascript:void(0)" style="cursor: default; opacity: 0.75;">Regulatory Guidance</a></li>
+            <li><a href="javascript:void(0)" style="cursor: default; opacity: 0.75;">Artificial Intelligence Tracker</a></li>
           </ul>
         </div>
 
