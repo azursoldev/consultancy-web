@@ -82,25 +82,25 @@
           <!-- Universal Field 1: Full Name -->
           <div class="form-field-wrap">
             <label class="form-field-label">Full Name <span class="req">*</span></label>
-            <input type="text" name="fullName" class="compliance-input" placeholder="e.g. Tunde Adeyemi" required>
+            <input type="text" name="fullName" class="compliance-input" required>
           </div>
 
           <!-- Universal Field 2: Work Email -->
           <div class="form-field-wrap">
             <label class="form-field-label">Work Email Address <span class="req">*</span></label>
-            <input type="email" name="email" class="compliance-input" placeholder="tunde@organization.ng" required>
+            <input type="email" name="email" class="compliance-input" required>
           </div>
 
           <!-- Universal Field 3: Company Name & Industry -->
           <div class="form-field-wrap">
             <label class="form-field-label">Company Name &amp; Industry <span class="req">*</span></label>
-            <input type="text" name="company" class="compliance-input" placeholder="e.g. Apex FinTech PLC (Banking & Finance)" required>
+            <input type="text" name="company" class="compliance-input" required>
           </div>
 
           <!-- Universal Field 4: Direct Phone / WhatsApp (Optional) -->
           <div class="form-field-wrap">
             <label class="form-field-label">Phone Number / WhatsApp <span class="opt">(Optional)</span></label>
-            <input type="tel" name="phone" class="compliance-input" placeholder="+234 (0) 803 000 0000">
+            <input type="tel" name="phone" class="compliance-input">
           </div>
 
           <!-- Contextual Field 5: Estimated Records (Radio Buttons for CAR, Audit, & Readiness) -->
@@ -159,7 +159,7 @@
           ${showMessage ? `
           <div class="form-field-wrap">
             <label class="form-field-label">Message / Project Scope <span class="opt">(Optional)</span></label>
-            <textarea name="message" class="compliance-textarea" placeholder="Briefly describe your current timeline or business goals..."></textarea>
+            <textarea name="message" class="compliance-textarea"></textarea>
           </div>
           ` : ''}
 
@@ -171,7 +171,7 @@
 
           <div class="form-guarantee-note">
             <i class="fa-solid fa-shield-halved"></i>
-            <span>NDA Protected &bull; Licensed DPCO Verification Desk</span>
+            <span>NDA Protected &bull; Licensed DPCO</span>
           </div>
 
         </div>
