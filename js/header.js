@@ -134,6 +134,21 @@
     </div>
   </div>
 
+  <!-- 5. Universal Site Search Modal (Available on every page) -->
+  <div id="siteSearchModal" class="search-modal-overlay" onclick="if(event.target===this) window.closeSiteSearchModal()">
+    <div class="search-modal-card">
+      <div class="search-input-wrap">
+        <i class="fa-solid fa-magnifying-glass" onclick="window.navigateToSearchPage()" style="cursor: pointer;" title="Search"></i>
+        <input type="text" id="siteSearchInput" class="search-input" placeholder="Search services, NDPA regulations, DPCO audit rules, DPO..." autocomplete="off">
+        <button type="button" class="btn-modal-search-go" onclick="window.navigateToSearchPage()">
+          <span>Search</span> <i class="fa-solid fa-arrow-right"></i>
+        </button>
+        <button type="button" onclick="window.closeSiteSearchModal()" class="search-close-btn" aria-label="Close search">&times;</button>
+      </div>
+      <div id="searchResults" class="search-results-list"></div>
+    </div>
+  </div>
+
   `;
 
   // Mount Header to DOM
@@ -145,10 +160,18 @@
     } else {
       document.body.insertAdjacentHTML('afterbegin', headerHTML);
     }
-  } else if (!document.getElementById('mobileNavOverlay')) {
-    const drawerIdx = headerHTML.indexOf('<!-- 4. Responsive Mobile Slideout Drawer -->');
-    if (drawerIdx !== -1) {
-      document.body.insertAdjacentHTML('beforeend', headerHTML.slice(drawerIdx));
+  } else {
+    if (!document.getElementById('mobileNavOverlay')) {
+      const drawerIdx = headerHTML.indexOf('<!-- 4. Responsive Mobile Slideout Drawer -->');
+      if (drawerIdx !== -1) {
+        document.body.insertAdjacentHTML('beforeend', headerHTML.slice(drawerIdx));
+      }
+    }
+    if (!document.getElementById('siteSearchModal') && !document.getElementById('searchModalOverlay')) {
+      const modalIdx = headerHTML.indexOf('<!-- 5. Universal Site Search Modal');
+      if (modalIdx !== -1) {
+        document.body.insertAdjacentHTML('beforeend', headerHTML.slice(modalIdx));
+      }
     }
   }
 
@@ -379,7 +402,29 @@
 
   // Interactive Logic: Search Modal Triggering
   window.openSiteSearchModal = function () {
-    const overlay = document.getElementById('siteSearchModal') || document.getElementById('searchModalOverlay');
+    let overlay = document.getElementById('siteSearchModal') || document.getElementById('searchModalOverlay');
+    if (!overlay) {
+      const modalDiv = document.createElement('div');
+      modalDiv.id = 'siteSearchModal';
+      modalDiv.className = 'search-modal-overlay';
+      modalDiv.onclick = function (e) { if (e.target === this) window.closeSiteSearchModal(); };
+      modalDiv.innerHTML = `
+        <div class="search-modal-card">
+          <div class="search-input-wrap">
+            <i class="fa-solid fa-magnifying-glass" onclick="window.navigateToSearchPage()" style="cursor: pointer;" title="Search"></i>
+            <input type="text" id="siteSearchInput" class="search-input" placeholder="Search services, NDPA regulations, DPCO audit rules, DPO..." autocomplete="off">
+            <button type="button" class="btn-modal-search-go" onclick="window.navigateToSearchPage()">
+              <span>Search</span> <i class="fa-solid fa-arrow-right"></i>
+            </button>
+            <button type="button" onclick="window.closeSiteSearchModal()" class="search-close-btn" aria-label="Close search">&times;</button>
+          </div>
+          <div id="searchResults" class="search-results-list"></div>
+        </div>
+      `;
+      document.body.appendChild(modalDiv);
+      overlay = modalDiv;
+    }
+
     if (overlay) {
       overlay.classList.add('open');
       document.body.style.overflow = 'hidden';
@@ -426,7 +471,7 @@
   };
 
   window.closeSiteSearchModal = function () {
-    const overlays = document.querySelectorAll('.search-modal-overlay');
+    const overlays = document.querySelectorAll('.search-modal-overlay, #siteSearchModal');
     overlays.forEach(o => o.classList.remove('open'));
     document.body.style.overflow = '';
   };
