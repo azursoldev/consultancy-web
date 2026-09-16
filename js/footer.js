@@ -44,8 +44,9 @@
           <h5>Knowledge Hub</h5>
           <ul>
             <li><a href="${pfx}publication-detail.html">Complying With NDPA 2023</a></li>
-            <li><a href="javascript:void(0)" style="cursor: default; opacity: 0.75;">Regulatory Guidance</a></li>
-            <li><a href="javascript:void(0)" style="cursor: default; opacity: 0.75;">Artificial Intelligence Tracker</a></li>
+            <li><a href="${pfx}blog/index.html">Regulatory Guidance</a></li>
+            <li><a href="${pfx}blog/index.html">Artificial Intelligence Tracker</a></li>
+            <li><a href="${pfx}blog/index.html">View All</a></li>
           </ul>
         </div>
 

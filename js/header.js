@@ -45,9 +45,21 @@
         <a href="${pfx}about.html">Our Organization</a>
       </li>
 
-      <!-- 3. Knowledge Hub (Client Sitemap: Direct Link) -->
-      <li>
-        <a href="${pfx}blog/index.html">Knowledge Hub</a>
+      <!-- 3. Knowledge Hub Dropdown -->
+      <li class="nav-item-dropdown">
+        <a href="${pfx}blog/index.html" class="nav-dropdown-trigger">
+          <span>Knowledge Hub</span>
+          <i class="fa-solid fa-chevron-down nav-chevron"></i>
+        </a>
+
+        <div class="simple-dropdown-menu">
+          <ul class="simple-dropdown-list">
+            <li><a href="${pfx}publication-detail.html">Complying With NDPA 2023</a></li>
+            <li><a href="${pfx}blog/index.html">Regulatory Guidance</a></li>
+            <li><a href="${pfx}blog/index.html">Artificial Intelligence Tracker</a></li>
+            <li><a href="${pfx}blog/index.html">View All</a></li>
+          </ul>
+        </div>
       </li>
 
       <!-- 4. Contact Us (Client Sitemap: Direct Link) -->
@@ -93,12 +105,22 @@
           </ul>
         </div>
 
-        <!-- Navigation Links -->
+        <!-- Knowledge Hub -->
         <div>
-          <div class="mobile-nav-group-title">Navigation</div>
+          <div class="mobile-nav-group-title">Knowledge Hub</div>
+          <ul class="mobile-nav-links">
+            <li><a href="${pfx}publication-detail.html" onclick="toggleMobileMenu()">Complying With NDPA 2023 <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
+            <li><a href="${pfx}blog/index.html" onclick="toggleMobileMenu()">Regulatory Guidance <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
+            <li><a href="${pfx}blog/index.html" onclick="toggleMobileMenu()">Artificial Intelligence Tracker <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
+            <li><a href="${pfx}blog/index.html" onclick="toggleMobileMenu()">View All <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
+          </ul>
+        </div>
+
+        <!-- Organization & Contact -->
+        <div>
+          <div class="mobile-nav-group-title">Organization</div>
           <ul class="mobile-nav-links">
             <li><a href="${pfx}about.html" onclick="toggleMobileMenu()">Our Organization <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
-            <li><a href="${pfx}blog/index.html" onclick="toggleMobileMenu()">Knowledge Hub <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
             <li><a href="${pfx}contact.html" onclick="toggleMobileMenu()">Contact Us <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
           </ul>
         </div>
