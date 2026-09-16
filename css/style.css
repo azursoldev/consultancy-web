@@ -10904,7 +10904,7 @@ footer.footer .footer-legal-links a:hover,
    EXECUTIVE LEGAL & TERMS OF SERVICE STYLES
    ========================================================================== */
 .legal-page-container {
-  max-width: 1200px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 2rem 1.5rem 5rem;
 }
@@ -10915,7 +10915,7 @@ footer.footer .footer-legal-links a:hover,
   border-top: 4px solid var(--pwc-orange);
   border-radius: 8px;
   padding: 2.25rem 2.5rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
 }
 
@@ -10958,39 +10958,9 @@ footer.footer .footer-legal-links a:hover,
   color: #1e293b;
 }
 
-.legal-print-btn {
-  margin-left: auto;
-  background: #f1f5f9;
-  color: #334155;
-  border: 1px solid #cbd5e1;
-  padding: 0.45rem 0.95rem;
-  font-size: 0.85rem;
-  font-weight: 600;
-  border-radius: 4px;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  transition: all 0.15s ease;
-}
-
-.legal-print-btn:hover {
-  background: #e2e8f0;
-  color: #0f172a;
-}
-
 .legal-layout {
-  display: grid;
-  grid-template-columns: 290px 1fr;
-  gap: 2.5rem;
-  align-items: start;
-}
-
-@media (max-width: 980px) {
-  .legal-layout {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
+  display: block;
+  width: 100%;
 }
 
 .legal-toc-sidebar {
