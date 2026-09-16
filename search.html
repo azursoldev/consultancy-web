@@ -58,10 +58,13 @@
       align-items: center;
       background: #ffffff;
       border: 2px solid #cbd5e1;
-      border-radius: 8px;
-      padding: 0.35rem 0.5rem 0.35rem 1.25rem;
+      border-radius: 12px;
+      padding: 0.35rem 0.45rem 0.35rem 1.15rem;
       box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06);
       transition: border-color 0.2s, box-shadow 0.2s;
+      width: 100%;
+      box-sizing: border-box;
+      position: relative;
     }
     .search-bar-container:focus-within {
       border-color: var(--pwc-orange);
@@ -69,27 +72,33 @@
     }
     .search-bar-container i.search-main-icon {
       color: var(--pwc-orange);
-      font-size: 1.25rem;
-      margin-right: 0.85rem;
+      font-size: 1.15rem;
+      margin-right: 0.75rem;
+      flex-shrink: 0;
     }
     .search-bar-input {
-      flex: 1;
+      flex: 1 1 0%;
+      min-width: 0;
+      width: 100%;
       border: none;
       outline: none;
-      font-size: 1.15rem;
+      font-size: 1.05rem;
       font-family: var(--font-sans);
       color: #0f172a;
       background: transparent;
-      padding: 0.6rem 0;
+      padding: 0.65rem 0.35rem 0.65rem 0;
+      box-sizing: border-box;
     }
     .search-clear-btn {
       background: none;
       border: none;
       color: #94a3b8;
-      font-size: 1.15rem;
-      padding: 0.5rem 0.75rem;
+      font-size: 1.1rem;
+      padding: 0.4rem 0.55rem;
       cursor: pointer;
       display: none;
+      flex-shrink: 0;
+      line-height: 1;
     }
     .search-clear-btn:hover {
       color: #0f172a;
@@ -98,14 +107,16 @@
       background: var(--pwc-orange);
       color: #ffffff;
       border: none;
-      border-radius: 6px;
-      padding: 0.8rem 1.75rem;
+      border-radius: 8px;
+      padding: 0.65rem 1.35rem;
       font-weight: 700;
-      font-size: 1rem;
-      display: flex;
+      font-size: 0.95rem;
+      display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.45rem;
       cursor: pointer;
+      flex-shrink: 0;
+      white-space: nowrap;
       transition: background 0.2s ease, transform 0.1s ease;
       font-family: var(--font-sans);
     }
@@ -114,6 +125,53 @@
     }
     .search-submit-btn:active {
       transform: scale(0.98);
+    }
+
+    @media (max-width: 640px) {
+      .search-page-hero {
+        padding: 2.25rem 1rem 1.75rem;
+      }
+      .search-page-hero h1 {
+        font-size: 1.85rem;
+      }
+      .search-page-hero p {
+        font-size: 0.95rem;
+        margin-bottom: 1.25rem;
+      }
+      .search-bar-container {
+        padding: 0.3rem 0.35rem 0.3rem 0.85rem;
+        border-radius: 10px;
+      }
+      .search-bar-container i.search-main-icon {
+        font-size: 1rem;
+        margin-right: 0.5rem;
+      }
+      .search-bar-input {
+        font-size: 0.95rem;
+        padding: 0.55rem 0.2rem 0.55rem 0;
+      }
+      .search-clear-btn {
+        padding: 0.35rem 0.4rem;
+        font-size: 1rem;
+      }
+      .search-submit-btn {
+        padding: 0.55rem 0.95rem;
+        font-size: 0.88rem;
+        border-radius: 7px;
+        gap: 0.35rem;
+      }
+    }
+    @media (max-width: 440px) {
+      .search-bar-container {
+        padding: 0.25rem 0.25rem 0.25rem 0.75rem;
+      }
+      .search-submit-btn {
+        padding: 0.52rem 0.75rem;
+        font-size: 0.82rem;
+      }
+      .search-submit-btn i {
+        font-size: 0.75rem;
+      }
     }
 
     /* Category Filter Tabs */
@@ -512,20 +570,27 @@
     }
 
     function highlightText(text, query) {
-      if (!query || !query.trim()) return text;
+      if (!text || !query || !query.trim()) return text;
       const terms = query.trim().split(/\s+/).filter(Boolean);
-      let pattern = terms.map(t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|');
+      const allPatterns = [];
+      terms.forEach(t => {
+        allPatterns.push(t);
+        const norm = window.normalizeSearchTerm ? window.normalizeSearchTerm(t) : t;
+        if (norm && norm.length >= 4) {
+          allPatterns.push(norm);
+        }
+      });
+      let pattern = allPatterns.map(t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|');
       if (!pattern) return text;
-      const regex = new RegExp(`(${pattern})`, 'gi');
-      return text.replace(regex, '<mark>$1</mark>');
+      const regex = new RegExp(`\\b(${pattern})\\w*`, 'gi');
+      return text.replace(regex, '<mark>$&</mark>');
     }
 
     function performSearch(query, category) {
       const data = window.siteSearchIndex || [];
       const trimmed = (query || '').trim().toLowerCase();
-      const terms = trimmed.split(/\s+/).filter(Boolean);
 
-      // 1. Calculate counts for filter tabs
+      // 1. Calculate counts for filter tabs using smart matching
       let totalAll = 0;
       let totalSolutions = 0;
       let totalKnowledge = 0;
@@ -533,11 +598,7 @@
       let totalOrg = 0;
 
       data.forEach(item => {
-        let matches = true;
-        if (terms.length > 0) {
-          const haystack = (item.title + ' ' + item.desc + ' ' + (item.keywords || '') + ' ' + (item.badge || '')).toLowerCase();
-          matches = terms.every(t => haystack.includes(t));
-        }
+        let matches = window.matchSearchItem ? window.matchSearchItem(item, query) : true;
         if (matches) {
           totalAll++;
           if (item.category === 'Solutions') totalSolutions++;
@@ -554,27 +615,34 @@
       document.getElementById('countRegulatory').textContent = totalRegulatory;
       document.getElementById('countOrg').textContent = totalOrg;
 
+      // Subtle opacity indicator for tabs with 0 results
+      document.querySelectorAll('.filter-chip').forEach(chip => {
+        const cat = chip.getAttribute('data-category');
+        let count = totalAll;
+        if (cat === 'Solutions') count = totalSolutions;
+        else if (cat === 'Knowledge Hub') count = totalKnowledge;
+        else if (cat === 'Regulatory') count = totalRegulatory;
+        else if (cat === 'Organisation') count = totalOrg;
+        chip.style.opacity = (count === 0 && trimmed) ? '0.5' : '1';
+      });
+
       // 2. Filter matching items
       let results = data.filter(item => {
-        // Category filter
         if (category !== 'All' && item.category !== category) {
           return false;
         }
-        // Keyword filter
-        if (terms.length === 0) return true;
-        const haystack = (item.title + ' ' + item.desc + ' ' + (item.keywords || '') + ' ' + (item.badge || '')).toLowerCase();
-        return terms.every(t => haystack.includes(t));
+        return window.matchSearchItem ? window.matchSearchItem(item, query) : true;
       });
 
-      // Sort: Title exact match > starts with > others
-      if (terms.length > 0) {
+      // Sort: Exact title contains query > category priority > others
+      if (trimmed) {
         results.sort((a, b) => {
-          const aTitle = a.title.toLowerCase();
-          const bTitle = b.title.toLowerCase();
-          const aHasExact = aTitle.includes(trimmed);
-          const bHasExact = bTitle.includes(trimmed);
-          if (aHasExact && !bHasExact) return -1;
-          if (!aHasExact && bHasExact) return 1;
+          const aTitle = (a.title || '').toLowerCase();
+          const bTitle = (b.title || '').toLowerCase();
+          const aExact = aTitle.includes(trimmed);
+          const bExact = bTitle.includes(trimmed);
+          if (aExact && !bExact) return -1;
+          if (!aExact && bExact) return 1;
           return 0;
         });
       }
@@ -588,8 +656,21 @@
         resultsList.style.display = 'none';
         emptyState.style.display = 'block';
         if (trimmed) {
-          countText.innerHTML = `No results found for <span class="results-query-term">&ldquo;${escapeHtml(query)}&rdquo;</span>`;
-          document.getElementById('emptyStateMessage').innerHTML = `We couldn't find any results matching <strong style="color:#0f172a;">&ldquo;${escapeHtml(query)}&rdquo;</strong>. Try adjusting your search term:`;
+          if (category !== 'All' && totalAll > 0) {
+            countText.innerHTML = `No results found in <strong>${escapeHtml(category)}</strong> for <span class="results-query-term">&ldquo;${escapeHtml(query)}&rdquo;</span>`;
+            document.getElementById('emptyStateMessage').innerHTML = `
+              No results found under <strong>${escapeHtml(category)}</strong> for &ldquo;${escapeHtml(query)}&rdquo;.<br>
+              However, we found <strong style="color:var(--pwc-orange, #d04a02); font-size:1.05rem;">${totalAll}</strong> matching result${totalAll === 1 ? '' : 's'} in other sections of the website!
+              <div style="margin-top: 1.25rem;">
+                <button type="button" onclick="setFilterCategory('All')" style="background: var(--pwc-orange, #d04a02); color: #fff; border: none; border-radius: 9999px; padding: 0.65rem 1.5rem; font-weight: 700; font-size: 0.92rem; cursor: pointer;">
+                  View All ${totalAll} Result${totalAll === 1 ? '' : 's'} &rarr;
+                </button>
+              </div>
+            `;
+          } else {
+            countText.innerHTML = `No results found for <span class="results-query-term">&ldquo;${escapeHtml(query)}&rdquo;</span>`;
+            document.getElementById('emptyStateMessage').innerHTML = `We couldn't find any results matching <strong style="color:#0f172a;">&ldquo;${escapeHtml(query)}&rdquo;</strong>. Try adjusting your search term:`;
+          }
         } else {
           countText.innerHTML = `Showing 0 results`;
           document.getElementById('emptyStateMessage').innerHTML = `Please type a keyword above or explore our popular solutions:`;

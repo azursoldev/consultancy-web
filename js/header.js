@@ -164,81 +164,88 @@
   // 5. Site-Wide Comprehensive Search Engine
   const searchIndex = [
     {
+      title: 'Our Solutions: Enterprise Data Protection Compliance',
+      url: 'services/index.html',
+      badge: 'Our Solutions',
+      desc: 'Comprehensive data protection compliance, statutory CAR return filing, outsourced DPO services, audits, and workforce training.',
+      keywords: 'our solutions services all services enterprise data protection compliance security car filing outsourced dpo audits training advisory consultants nigeria ndpa 2023 alignment align comply complying compliant'
+    },
+    {
       title: 'Compliance Audit Return (CAR)',
       url: 'services/compliance-audit-return.html',
       badge: 'Statutory Filing',
       desc: 'Statutory annual NDPA 2023 compliance audit return filing preparation, assurance & NDPC submission before March 15 statutory deadline.',
-      keywords: 'car filing compliance audit return ndpc ndpa 2023 statutory deadline penalty fines licensed dpco audit rules regulations returns march 15 portal certificate assurance mandate'
+      keywords: 'car filing annual compliance audit return ndpc ndpa 2023 statutory deadline penalty fines licensed dpco audit rules regulations returns march 15 portal certificate assurance mandate comply complying compliant alignment align services solutions consulting consultant'
     },
     {
       title: 'Data Protection Audit & Governance',
       url: 'services/data-protection-audit.html',
       badge: 'Technical & Operational',
       desc: 'Comprehensive Article 30/31 technical, organizational & cybersecurity gap assessments, ROPA mapping, DPIAs, and breach response.',
-      keywords: 'audit privacy assessment ndpa gap analysis security controls ndpc dpco audit rules regulations verification risk assessment ropa record of processing activities dpia notices cybersecurity cyber penetration testing pen test breach response 72 hours incident protocol notification hardening section 39 section 40 vulnerability policies vendor dpa contracts cookie consent telemetry technical audit'
+      keywords: 'audit audits auditing assessment privacy assessment ndpa gap analysis security controls ndpc dpco audit rules regulations verification risk assessment ropa record of processing activities dpia notices cybersecurity cyber penetration testing pen test breach response 72 hours incident protocol notification hardening section 39 section 40 vulnerability policies vendor dpa contracts cookie consent telemetry technical audit comply compliance compliant alignment align services solutions consulting consultant'
     },
     {
       title: 'Data Privacy Training & Capacity Building',
       url: 'services/data-privacy-training.html',
       badge: 'Workforce & DPO',
       desc: 'Certified executive and workforce data privacy training, employee awareness modules, and advanced DPO masterclasses.',
-      keywords: 'training education masterclass workforce awareness ndpa certification privacy skills compliance course elearning section 31 staff phish simulation certificate'
+      keywords: 'training education masterclass workforce awareness staff training ndpa certification privacy skills compliance comply compliant course elearning section 31 staff phish simulation certificate alignment align services solutions capacity building'
     },
     {
       title: 'Outsourced DPO (DPOaaS)',
       url: 'services/outsourced-dpo.html',
       badge: 'Designated Officer',
       desc: 'Accredited external Data Protection Officer statutory representation, compliance monitoring, and direct NDPC liaison.',
-      keywords: 'dpo outsourced data protection officer dpoaas representation contact liaison advisory ndpa officer dcmi compliance legal privacy conflict'
+      keywords: 'dpo outsourced data protection officer dpoaas representation contact liaison advisory ndpa officer dcmi compliance comply compliant complying legal privacy conflict alignment align services solutions consulting consultant hire appoint'
     },
     {
       title: 'NDPA 2023 Alignment: Strategic Executive Checklist',
       url: 'publication-detail.html',
       badge: 'Executive Briefing',
       desc: 'Top 5 strategic NDPA requirements to mitigate regulatory risk, prevent statutory fines of up to 2% of annual revenue.',
-      keywords: 'checklist executive ndpa 2023 alignment strategic c-suite board directors fines 2 percent lawful basis breach 72 hours dpia dpo car filing audit circulars regulations ndpa alignment strategic checklist public sector private sector executives compliance guide proactive mitigation statutory requirements article publication complying with ndpa knowledge hub'
+      keywords: 'checklist executive ndpa 2023 alignment align aligning strategic c-suite board directors fines 2 percent lawful basis breach 72 hours dpia dpo car filing audit circulars regulations ndpa alignment strategic checklist public sector private sector executives compliance comply complying guide proactive mitigation statutory requirements article publication complying with ndpa knowledge hub'
     },
     {
       title: 'Knowledge Hub: Insights & Regulatory Guidance',
       url: 'blog/index.html',
       badge: 'Regulatory Guidance',
       desc: 'Explore legal analyses, empirical compliance checklists, and technical implementation playbooks published by licensed DPCO practitioners.',
-      keywords: 'knowledge hub regulatory guidance articles publications blog insights ndpc circulars research briefings legal intelligence'
+      keywords: 'knowledge hub regulatory guidance articles publications blog insights ndpc circulars research briefings legal intelligence comply compliance regulations artificial intelligence tracker'
     },
     {
       title: 'Artificial Intelligence Tracker',
       url: 'blog/index.html#ai-tracker',
       badge: 'AI Tracker',
       desc: 'Regulatory intelligence monitoring algorithmic accountability, AI ethics, automated decision systems, and emerging privacy frameworks.',
-      keywords: 'artificial intelligence tracker ai machine learning algorithms automated decisions generative ai tech governance llm compliance safety ethics'
+      keywords: 'artificial intelligence tracker ai machine learning algorithms automated decisions generative ai tech governance llm compliance safety ethics knowledge hub'
     },
     {
       title: 'Our Organisation: About Amstel Consulting',
       url: 'about.html',
       badge: 'Company Profile',
       desc: 'Amstel Consulting Ltd is a premier licensed Data Protection Compliance Organisation (DPCO) bridging statutory regulations with corporate operations.',
-      keywords: 'about us organisation amstel consulting ltd mission principles leadership integrity corporate governance profile lagos abuja values'
+      keywords: 'about us organisation organization amstel consulting ltd mission principles leadership integrity corporate governance profile lagos abuja values credentials team advisory board consultants alignment align comply compliance'
     },
     {
       title: 'Licensed DPCO Credentials & Statutory Authorization',
       url: 'about.html#credentials',
       badge: 'Accreditation',
       desc: 'Our Credentials as a Licensed DPCO authorized by the Nigeria Data Protection Commission (NDPC) to verify and submit statutory returns.',
-      keywords: 'licensed dpco credentials authority ndpc registration certification authorization statutory compliance organization verification accreditation'
+      keywords: 'licensed dpco credentials authority ndpc registration certification authorization statutory compliance organization verification accreditation license licensing comply compliant'
     },
     {
       title: 'Charles Odetola — Lead Privacy & Regulatory Practice Leader',
       url: 'charles-odetola.html',
       badge: 'Leadership',
       desc: 'Data Protection, Privacy, Regulatory Compliance and Corporate Governance Specialist with over a decade of legal practice experience.',
-      keywords: 'charles odetola leadership practice leader lawyer attorney privacy data protection gdpr eprivacy ndpa toms corporate governance legal risk iapp law society cmi partner'
+      keywords: 'charles odetola leadership practice leader lawyer attorney privacy data protection gdpr eprivacy ndpa toms corporate governance legal risk iapp law society cmi partner team advisor consultant'
     },
     {
       title: 'Contact Practice Offices & RFP Inquiries',
       url: 'contact.html',
       badge: 'Advisory Desk',
       desc: 'Direct engagement with licensed DPCO partners, request a scoped compliance assessment, or submit an RFP within 24 hours.',
-      keywords: 'contact help phone email office lagos abuja consult inquiry get in touch quote rfp assessment free consultation advisory desk'
+      keywords: 'contact help phone email office lagos abuja consult consultant consulting inquiry get in touch quote rfp assessment free consultation advisory desk talk to consultant initiate consultation'
     },
     {
       title: 'Corporate Privacy & Legal Statement',
@@ -297,8 +304,12 @@
       return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[m];
     });
 
+    const itemsToSearch = (window.siteSearchIndex && window.siteSearchIndex.length > 0) ? window.siteSearchIndex : searchIndex;
     const words = q.split(/\s+/).filter(Boolean);
-    const matched = searchIndex.filter(item => {
+    const matched = itemsToSearch.filter(item => {
+      if (typeof window.matchSearchItem === 'function') {
+        return window.matchSearchItem(item, q);
+      }
       const t = item.title ? item.title.toLowerCase() : '';
       const d = item.desc ? item.desc.toLowerCase() : '';
       const k = item.keywords ? item.keywords.toLowerCase() : '';
