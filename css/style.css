@@ -3350,24 +3350,29 @@ html body .mega-dropdown-grid,
 
 .video-pause-btn {
   position: absolute;
-  top: 1.5rem;
-  right: 3.5rem;
-  background: rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  bottom: 1.5rem;
+  right: 2.5rem;
+  top: auto;
+  left: auto;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   color: var(--pwc-white);
   width: 36px;
   height: 36px;
-  border-radius: 4px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 4;
-  transition: background 0.2s ease;
+  z-index: 5;
+  transition: all 0.2s ease;
 }
 
 .video-pause-btn:hover {
-  background: rgba(235, 95, 7, 0.8);
+  background: var(--pwc-orange);
+  border-color: var(--pwc-orange);
+  transform: scale(1.08);
 }
 
 /* ==========================================================================
@@ -10165,6 +10170,16 @@ footer.footer .footer-legal-links a:hover,
   .btn-hero-secondary {
     width: 100% !important;
     justify-content: center !important;
+  }
+
+  .video-pause-btn {
+    bottom: 0.85rem !important;
+    right: 1rem !important;
+    top: auto !important;
+    left: auto !important;
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 0.8rem !important;
   }
 
   /* 5. Inner Page Heroes */
