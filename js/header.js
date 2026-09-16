@@ -241,6 +241,13 @@
       keywords: 'charles odetola llm cipp e international privacy consultant lawyer attorney privacy data protection gdpr eprivacy ndpa toms corporate governance legal risk iapp law society cmi partner team advisor'
     },
     {
+      title: 'Martha Jowah, Esq — Head of Legal & Privacy Compliance',
+      url: 'martha-jowah.html',
+      badge: 'Leadership',
+      desc: 'Accomplished legal practitioner specializing in corporate and regulatory compliance, data protection and privacy, and contract management.',
+      keywords: 'martha jowah esq head of legal privacy compliance corporate regulatory contract management risk management legal practitioner lawyer attorney partner team advisor consultant'
+    },
+    {
       title: 'Contact Practice Offices & RFP Inquiries',
       url: 'contact.html',
       badge: 'Advisory Desk',

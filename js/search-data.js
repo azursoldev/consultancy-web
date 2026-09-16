@@ -181,6 +181,15 @@ window.siteSearchIndex = [
     keywords: 'charles odetola llm cipp e international privacy consultant lawyer attorney privacy data protection gdpr eprivacy ndpa toms corporate governance legal risk iapp law society cmi partner team advisor'
   },
   {
+    id: 'martha-jowah',
+    title: 'Martha Jowah, Esq — Head of Legal & Privacy Compliance',
+    url: 'martha-jowah.html',
+    category: 'Organisation',
+    badge: 'Leadership',
+    desc: 'Accomplished legal practitioner with expertise in corporate governance, regulatory compliance, data protection and privacy, and contract management.',
+    keywords: 'martha jowah esq head of legal privacy compliance corporate regulatory contract management risk management legal practitioner lawyer attorney partner team advisor consultant'
+  },
+  {
     id: 'car-regulatory-filing',
     title: 'Annual Statutory CAR Regulatory Filing Framework',
     url: 'services/compliance-audit-return.html',
