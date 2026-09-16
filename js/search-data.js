@@ -173,12 +173,12 @@ window.siteSearchIndex = [
   },
   {
     id: 'charles-odetola',
-    title: 'Charles Odetola — Lead Privacy & Regulatory Practice Leader',
+    title: 'Charles Odetola, LLM, CIPP/E — International Privacy Consultant',
     url: 'charles-odetola.html',
     category: 'Organisation',
     badge: 'Leadership',
-    desc: 'Data Protection, Privacy, Regulatory Compliance and Corporate Governance Specialist with over a decade of legal practice experience across EU, UK, and international markets.',
-    keywords: 'charles odetola leadership practice leader lawyer attorney privacy data protection gdpr eprivacy ndpa toms corporate governance legal risk iapp law society cmi partner team advisor consultant'
+    desc: 'International Privacy Consultant specializing in data protection, GDPR, NDPA compliance, and corporate governance with over a decade of legal practice experience.',
+    keywords: 'charles odetola llm cipp e international privacy consultant lawyer attorney privacy data protection gdpr eprivacy ndpa toms corporate governance legal risk iapp law society cmi partner team advisor'
   },
   {
     id: 'car-regulatory-filing',

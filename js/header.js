@@ -234,11 +234,11 @@
       keywords: 'licensed dpco credentials authority ndpc registration certification authorization statutory compliance organization verification accreditation license licensing comply compliant'
     },
     {
-      title: 'Charles Odetola — Lead Privacy & Regulatory Practice Leader',
+      title: 'Charles Odetola, LLM, CIPP/E — International Privacy Consultant',
       url: 'charles-odetola.html',
       badge: 'Leadership',
-      desc: 'Data Protection, Privacy, Regulatory Compliance and Corporate Governance Specialist with over a decade of legal practice experience.',
-      keywords: 'charles odetola leadership practice leader lawyer attorney privacy data protection gdpr eprivacy ndpa toms corporate governance legal risk iapp law society cmi partner team advisor consultant'
+      desc: 'International Privacy Consultant specializing in data protection, GDPR, NDPA compliance, and corporate governance with over a decade of legal practice experience.',
+      keywords: 'charles odetola llm cipp e international privacy consultant lawyer attorney privacy data protection gdpr eprivacy ndpa toms corporate governance legal risk iapp law society cmi partner team advisor'
     },
     {
       title: 'Contact Practice Offices & RFP Inquiries',
