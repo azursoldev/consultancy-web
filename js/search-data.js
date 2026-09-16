@@ -226,12 +226,12 @@ window.siteSearchIndex = [
     keywords: 'contact help phone email office lagos abuja consult consultant consulting inquiry get in touch quote rfp assessment free consultation advisory desk talk to consultant initiate consultation'
   },
   {
-    id: 'terms-conditions',
-    title: 'Terms and Conditions of Engagement',
-    url: 'terms-and-conditions.html',
+    id: 'terms-of-service',
+    title: 'Terms of Service',
+    url: 'terms-of-service.html',
     category: 'Legal',
     badge: 'Legal Terms',
-    desc: 'Terms of engagement, client obligations, statutory filing timelines, confidentiality covenants, and limitation of liability.',
-    keywords: 'terms conditions agreement legal retainer engagement liability disclaimer contract terms of service'
+    desc: 'Official Terms of Service for Amstel Tech Compliance and Consulting Limited. Governing website access, DPCO services, outsourced DPO, compliance audits, and professional advisory.',
+    keywords: 'terms of service terms and conditions agreement legal retainer engagement liability disclaimer contract dpco dpo amstel tech compliance'
   }
 ];

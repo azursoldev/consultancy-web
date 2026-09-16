@@ -320,11 +320,11 @@
       keywords: 'privacy statement legal rights data subject sar lawful basis gdpr ndpa fiduciary compliance terms transparency notice'
     },
     {
-      title: 'Terms and Conditions of Engagement',
-      url: 'terms-and-conditions.html',
+      title: 'Terms of Service',
+      url: 'terms-of-service.html',
       badge: 'Legal Terms',
-      desc: 'Terms of engagement, client obligations, statutory filing timelines, confidentiality covenants, and limitation of liability.',
-      keywords: 'terms conditions agreement legal retainer engagement liability disclaimer contract'
+      desc: 'Official Terms of Service for Amstel Tech Compliance and Consulting Limited. Governing website access, DPCO services, outsourced DPO, compliance audits, and professional advisory.',
+      keywords: 'terms of service terms and conditions agreement legal retainer engagement liability disclaimer contract dpco dpo amstel tech compliance'
     }
   ];
 

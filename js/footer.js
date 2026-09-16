@@ -56,7 +56,7 @@
           <ul>
             <li><a href="${pfx}legal/privacy-statement.html">Privacy Statement</a></li>
             <li><a href="javascript:void(0)">Cookie Policy</a></li>
-            <li><a href="javascript:void(0)">Term of Service</a></li>
+            <li><a href="${pfx}terms-of-service.html">Term of Service</a></li>
             <li><a href="javascript:void(0)">Legal Disclaimer</a></li>
             <li><a href="javascript:void(0)">FAQ</a></li>
             <li><a href="${pfx}contact.html">Contact</a></li>
