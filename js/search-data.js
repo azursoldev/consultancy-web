@@ -233,5 +233,14 @@ window.siteSearchIndex = [
     badge: 'Legal Terms',
     desc: 'Official Terms of Service for Amstel Tech Compliance and Consulting Limited. Governing website access, DPCO services, outsourced DPO, compliance audits, and professional advisory.',
     keywords: 'terms of service terms and conditions agreement legal retainer engagement liability disclaimer contract dpco dpo amstel tech compliance'
+  },
+  {
+    id: 'legal-disclaimer',
+    title: 'Legal Disclaimer',
+    url: 'legal-disclaimer.html',
+    category: 'Legal',
+    badge: 'Legal Notice',
+    desc: 'Official Legal Disclaimer of Amstel Tech Compliance and Consulting Ltd. Clarifying scope of website information, professional engagement, and regulatory advice.',
+    keywords: 'legal disclaimer regulatory status advice warranty liability intellectual property dpco dpo amstel consulting notice'
   }
 ];
