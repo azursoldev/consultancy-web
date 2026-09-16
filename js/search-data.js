@@ -239,8 +239,8 @@ window.siteSearchIndex = [
     title: 'Legal Disclaimer',
     url: 'legal-disclaimer.html',
     category: 'Legal',
-    badge: 'Legal Notice',
-    desc: 'Official Legal Disclaimer of Amstel Tech Compliance and Consulting Ltd. Clarifying scope of website information, professional engagement, and regulatory advice.',
-    keywords: 'legal disclaimer regulatory status advice warranty liability intellectual property dpco dpo amstel consulting notice'
+    badge: 'Legal Terms',
+    desc: 'Official Legal Disclaimer of Amstel Tech Compliance and Consulting Ltd. Regulatory guidance, DPCO advisory remit, professional engagement boundaries, and liability limitations.',
+    keywords: 'legal disclaimer regulatory advisory no legal advice liability warranty terms engagement amstel consulting ndpc ndpa'
   }
 ];
