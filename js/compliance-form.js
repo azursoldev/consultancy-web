@@ -25,7 +25,7 @@
   function generateFormHTML(type, isModal = false) {
     let formTitle = 'Appoint Your DPO Team';
     let formSubtitle = 'Fill out the form below to map out a tailored, fixed-fee DPCO architecture';
-    let ctaText = 'Initiate Secure Consultation ➔';
+    let ctaText = 'Initiate Secure Consultation';
     let showRadios = false;
     let prechecked = '';
     let showMessage = false;
@@ -33,44 +33,44 @@
     if (type === 'car') {
       formTitle = 'Initiate Compliance Audit Return (CAR)';
       formSubtitle = 'Connect with an NDPC-licensed DPCO lead auditor within 24 hours to secure your filing certificate.';
-      ctaText = 'Initiate Compliance Audit Return (CAR) ➔';
+      ctaText = 'Initiate Compliance Audit Return (CAR)';
       showRadios = true;
       prechecked = 'car';
     } else if (type === 'audit') {
       formTitle = 'Request Data Protection Audit';
       formSubtitle = 'Uncover compliance vulnerabilities and receive a tailored audit proposal within 24 hours.';
-      ctaText = 'Request Data Protection Audit ➔';
+      ctaText = 'Request Data Protection Audit';
       showRadios = true;
       prechecked = 'audit';
     } else if (type === 'dpo') {
       formTitle = 'Appoint Your DPO Team';
       formSubtitle = 'Fill out the form below to map out a tailored, fixed-fee DPCO architecture.';
-      ctaText = 'Appoint Your Certified Outsourced DPO ➔';
+      ctaText = 'Appoint Your Certified Outsourced DPO';
       showRadios = false;
       prechecked = 'dpo';
     } else if (type === 'training') {
       formTitle = 'Request Corporate Training';
       formSubtitle = 'Empower your leadership and staff with certified NDPA data privacy training programs.';
-      ctaText = 'Request Data Privacy Training ➔';
+      ctaText = 'Request Data Privacy Training';
       showRadios = false;
       prechecked = 'training';
     } else if (type === 'readiness') {
       formTitle = 'Get FREE NDPA Gap Assessment';
       formSubtitle = 'Identify and close your NDPA 2023 compliance gaps with licensed DPCO experts.';
-      ctaText = 'Get FREE NDPA Gap Assessment ➔';
+      ctaText = 'Get FREE NDPA Gap Assessment';
       showRadios = true;
       showMessage = true;
       prechecked = 'readiness';
     } else if (type === 'contact') {
       formTitle = 'Initiate Corporate Scoping';
       formSubtitle = 'Direct channel to our senior data privacy partners. Response within 2 business hours.';
-      ctaText = 'Initiate Secure Consultation ➔';
+      ctaText = 'Initiate Secure Consultation';
       showMessage = true;
       prechecked = 'dpo';
     } else if (type === 'about' || isModal) {
       formTitle = 'Speak with an Advisory Consultant';
       formSubtitle = 'Our senior partners provide boardroom-level guidance and rapid incident support.';
-      ctaText = 'Submit Consultation Request ➔';
+      ctaText = 'Submit Consultation Request';
       showMessage = true;
       prechecked = 'dpo'; // Yellow highlight: About Us modal automatically pre-checks DPO option!
     }
@@ -328,11 +328,11 @@
         const submitBtnSpan = formContainer.querySelector('.btn-compliance-submit span');
         if (submitBtnSpan) {
           if (precheckOption === 'pia' || precheckOption === 'gap' || precheckOption === 'readiness') {
-            submitBtnSpan.textContent = 'Get FREE NDPA Gap Assessment ➔';
+            submitBtnSpan.textContent = 'Get FREE NDPA Gap Assessment';
           } else if (precheckOption === 'car') {
-            submitBtnSpan.textContent = 'Initiate Compliance Audit Return (CAR) ➔';
+            submitBtnSpan.textContent = 'Initiate Compliance Audit Return (CAR)';
           } else if (precheckOption === 'general') {
-            submitBtnSpan.textContent = 'Initiate Secure Consultation ➔';
+            submitBtnSpan.textContent = 'Initiate Secure Consultation';
           }
         }
       }
