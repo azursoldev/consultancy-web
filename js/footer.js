@@ -54,8 +54,12 @@
         <div class="footer-col">
           <h5>Legal</h5>
           <ul>
-            <li><a href="${pfx}legal/privacy-statement.html">Privacy &amp; Legal Statement</a></li>
-            <li><a href="${pfx}contact.html">Contact Us</a></li>
+            <li><a href="${pfx}legal/privacy-statement.html">Privacy Statement</a></li>
+            <li><a href="javascript:void(0)">Cookie Policy</a></li>
+            <li><a href="javascript:void(0)">Term of Service</a></li>
+            <li><a href="javascript:void(0)">Legal Disclaimer</a></li>
+            <li><a href="javascript:void(0)">FAQ</a></li>
+            <li><a href="${pfx}contact.html">Contact</a></li>
           </ul>
         </div>
       </div>
