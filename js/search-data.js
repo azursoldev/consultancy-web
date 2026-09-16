@@ -190,6 +190,15 @@ window.siteSearchIndex = [
     keywords: 'martha jowah esq head of legal privacy compliance corporate regulatory contract management risk management legal practitioner lawyer attorney partner team advisor consultant'
   },
   {
+    id: 'career-partnerships',
+    title: 'Career & Strategic Advisory Partnerships',
+    url: 'about.html#partnerships',
+    category: 'Organisation',
+    badge: 'Partnership',
+    desc: 'Partner with Amstel Consulting or explore careers in data protection compliance, statutory audit return filing, and cybersecurity advisory.',
+    keywords: 'career partnerships partner advisory partnership join jobs team hiring strategic alliance collaborate contact alignment our organisation'
+  },
+  {
     id: 'car-regulatory-filing',
     title: 'Annual Statutory CAR Regulatory Filing Framework',
     url: 'services/compliance-audit-return.html',

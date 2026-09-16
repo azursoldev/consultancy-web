@@ -40,9 +40,20 @@
         </div>
       </li>
 
-      <!-- 2. Our Organization (Client Sitemap: Direct Link) -->
-      <li>
-        <a href="${pfx}about.html">Our Organization</a>
+      <!-- 2. Our Organisation Dropdown (Client Sitemap: Dropdown with direct link to about.html) -->
+      <li class="nav-item-dropdown">
+        <a href="${pfx}about.html" class="nav-dropdown-trigger">
+          <span>Our Organisation</span>
+          <i class="fa-solid fa-chevron-down nav-chevron"></i>
+        </a>
+        
+        <div class="simple-dropdown-menu">
+          <ul class="simple-dropdown-list">
+            <li><a href="${pfx}about.html#credentials">Licensed DPCO Status</a></li>
+            <li><a href="${pfx}about.html#leadership">Team &amp; Advisory Board</a></li>
+            <li><a href="${pfx}about.html#partnerships">Career &amp; Partnerships</a></li>
+          </ul>
+        </div>
       </li>
 
       <!-- 3. Knowledge Hub Dropdown -->
@@ -116,11 +127,21 @@
           </ul>
         </div>
 
-        <!-- Organization & Contact -->
+        <!-- Our Organisation -->
         <div>
-          <div class="mobile-nav-group-title">Organization</div>
+          <div class="mobile-nav-group-title">Our Organisation</div>
           <ul class="mobile-nav-links">
-            <li><a href="${pfx}about.html" onclick="toggleMobileMenu()">Our Organization <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
+            <li><a href="${pfx}about.html" onclick="toggleMobileMenu()">Our Organisation (Overview) <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
+            <li><a href="${pfx}about.html#credentials" onclick="toggleMobileMenu()">Licensed DPCO Status <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
+            <li><a href="${pfx}about.html#leadership" onclick="toggleMobileMenu()">Team &amp; Advisory Board <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
+            <li><a href="${pfx}about.html#partnerships" onclick="toggleMobileMenu()">Career &amp; Partnerships <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Us -->
+        <div>
+          <div class="mobile-nav-group-title">Contact</div>
+          <ul class="mobile-nav-links">
             <li><a href="${pfx}contact.html" onclick="toggleMobileMenu()">Contact Us <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
           </ul>
         </div>
@@ -254,7 +275,21 @@
       url: 'about.html#credentials',
       badge: 'Accreditation',
       desc: 'Our Credentials as a Licensed DPCO authorized by the Nigeria Data Protection Commission (NDPC) to verify and submit statutory returns.',
-      keywords: 'licensed dpco credentials authority ndpc registration certification authorization statutory compliance organization verification accreditation license licensing comply compliant'
+      keywords: 'licensed dpco credentials authority ndpc registration certification authorization statutory compliance organization verification accreditation license licensing comply compliant status'
+    },
+    {
+      title: 'Team & Advisory Board — Senior Compliance Consultants',
+      url: 'about.html#leadership',
+      badge: 'Advisory Board',
+      desc: 'Multidisciplinary Advisory Board and senior consultants delivering boardroom-level privacy, regulatory, and cybersecurity guidance.',
+      keywords: 'team advisory board leadership senior compliance consultants specialists charles odetola martha jowah lawyers legal risk governance our organisation'
+    },
+    {
+      title: 'Career & Strategic Advisory Partnerships',
+      url: 'about.html#partnerships',
+      badge: 'Partnership',
+      desc: 'Partner with Amstel Consulting or explore careers in data protection compliance, statutory audit return filing, and cybersecurity advisory.',
+      keywords: 'career partnerships partner advisory partnership join jobs team hiring strategic alliance collaborate contact alignment our organisation'
     },
     {
       title: 'Charles Odetola, LLM, CIPP/E — International Privacy Consultant',
