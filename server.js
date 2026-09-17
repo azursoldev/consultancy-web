@@ -39,6 +39,29 @@ const server = http.createServer((req, res) => {
     });
   }
 
+  // Legacy redirects for obsolete file cleanup
+  const legacyRedirects = {
+    '/service-car.html': '/services/compliance-audit-return.html',
+    '/service-car': '/services/compliance-audit-return.html',
+    '/service-dpo.html': '/services/outsourced-dpo.html',
+    '/service-dpo': '/services/outsourced-dpo.html',
+    '/service-audit.html': '/services/data-protection-audit.html',
+    '/service-audit': '/services/data-protection-audit.html',
+    '/data-protection-audit.html': '/services/data-protection-audit.html',
+    '/service-training.html': '/services/data-privacy-training.html',
+    '/service-training': '/services/data-privacy-training.html',
+    '/data-privacy-training.html': '/services/data-privacy-training.html',
+    '/services.html': '/services/index.html',
+    '/organisation.html': '/about.html',
+    '/organisation': '/about.html',
+    '/terms-and-conditions.html': '/terms-of-service.html',
+    '/topics.html': '/blog/index.html'
+  };
+  if (legacyRedirects[urlPath]) {
+    res.writeHead(301, { 'Location': legacyRedirects[urlPath] });
+    return res.end();
+  }
+
   // 1. Root
   if (urlPath === '/' || urlPath === '') {
     const rootIndex = path.join(__dirname, 'index.html');
