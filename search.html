@@ -21,14 +21,28 @@
   
   <style>
     /* Dedicated Search Page Styles */
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
     .search-page-hero {
       background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
       padding: 3.5rem 1.5rem 2.5rem;
       border-bottom: 1px solid #e2e8f0;
+      width: 100%;
+      box-sizing: border-box;
     }
     .search-page-hero-inner {
       max-width: 960px;
       margin: 0 auto;
+      width: 100%;
+      box-sizing: border-box;
     }
     .search-page-kicker {
       font-size: 0.8rem;
@@ -46,12 +60,14 @@
       font-weight: 700;
       line-height: 1.2;
       margin: 0 0 0.8rem;
+      word-break: break-word;
     }
     .search-page-hero p {
       font-size: 1.05rem;
       color: #475569;
       margin-bottom: 1.8rem;
       max-width: 720px;
+      line-height: 1.55;
     }
     .search-bar-container {
       display: flex;
@@ -63,6 +79,7 @@
       box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06);
       transition: border-color 0.2s, box-shadow 0.2s;
       width: 100%;
+      max-width: 100%;
       box-sizing: border-box;
       position: relative;
     }
@@ -127,59 +144,13 @@
       transform: scale(0.98);
     }
 
-    @media (max-width: 640px) {
-      .search-page-hero {
-        padding: 2.25rem 1rem 1.75rem;
-      }
-      .search-page-hero h1 {
-        font-size: 1.85rem;
-      }
-      .search-page-hero p {
-        font-size: 0.95rem;
-        margin-bottom: 1.25rem;
-      }
-      .search-bar-container {
-        padding: 0.3rem 0.35rem 0.3rem 0.85rem;
-        border-radius: 10px;
-      }
-      .search-bar-container i.search-main-icon {
-        font-size: 1rem;
-        margin-right: 0.5rem;
-      }
-      .search-bar-input {
-        font-size: 0.95rem;
-        padding: 0.55rem 0.2rem 0.55rem 0;
-      }
-      .search-clear-btn {
-        padding: 0.35rem 0.4rem;
-        font-size: 1rem;
-      }
-      .search-submit-btn {
-        padding: 0.55rem 0.95rem;
-        font-size: 0.88rem;
-        border-radius: 7px;
-        gap: 0.35rem;
-      }
-    }
-    @media (max-width: 440px) {
-      .search-bar-container {
-        padding: 0.25rem 0.25rem 0.25rem 0.75rem;
-      }
-      .search-submit-btn {
-        padding: 0.52rem 0.75rem;
-        font-size: 0.82rem;
-      }
-      .search-submit-btn i {
-        font-size: 0.75rem;
-      }
-    }
-
     /* Category Filter Tabs */
     .search-filter-strip {
       display: flex;
       gap: 0.5rem;
       flex-wrap: wrap;
       margin-top: 1.5rem;
+      width: 100%;
     }
     .filter-chip {
       background: #ffffff;
@@ -191,6 +162,8 @@
       font-weight: 600;
       cursor: pointer;
       transition: all 0.2s;
+      white-space: nowrap;
+      user-select: none;
     }
     .filter-chip:hover {
       border-color: #cbd5e1;
@@ -207,18 +180,24 @@
       max-width: 960px;
       margin: 0 auto;
       padding: 2.5rem 1.5rem 4.5rem;
+      width: 100%;
+      box-sizing: border-box;
     }
     .results-meta-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-bottom: 1.25rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
       border-bottom: 1px solid #e2e8f0;
-      margin-bottom: 2rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
     }
     .results-count-text {
       font-size: 1rem;
       color: #475569;
+      word-break: break-word;
+      overflow-wrap: break-word;
     }
     .results-count-text strong {
       color: #0f172a;
@@ -233,99 +212,115 @@
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
+      width: 100%;
     }
     .search-card {
       background: #ffffff;
       border: 1px solid #e2e8f0;
-      border-radius: 8px;
+      border-radius: 10px;
       padding: 1.75rem;
-      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+      box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05);
       transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
       display: flex;
       flex-direction: column;
+      width: 100%;
+      box-sizing: border-box;
+      overflow: hidden;
     }
     .search-card:hover {
       transform: translateY(-2px);
       box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
-      border-color: #fed7aa;
+      border-color: #cbd5e1;
     }
     .search-card-top {
       display: flex;
       align-items: center;
       gap: 0.75rem;
       margin-bottom: 0.75rem;
+      flex-wrap: wrap;
     }
     .search-card-badge {
       font-size: 0.75rem;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.06em;
-      padding: 0.25rem 0.65rem;
-      border-radius: 4px;
+      letter-spacing: 0.05em;
       background: #fff7ed;
       color: var(--pwc-orange);
       border: 1px solid #fed7aa;
+      padding: 0.25rem 0.65rem;
+      border-radius: 4px;
     }
     .search-card-cat {
       font-size: 0.8rem;
       color: #64748b;
-      font-weight: 500;
+      font-weight: 600;
     }
     .search-card-title {
       font-family: var(--font-serif);
-      font-size: 1.45rem;
+      font-size: 1.35rem;
       font-weight: 700;
       color: #0f172a;
       line-height: 1.3;
       margin: 0 0 0.65rem;
+      word-break: break-word;
+      overflow-wrap: break-word;
     }
     .search-card-title a {
       color: inherit;
       text-decoration: none;
+      transition: color 0.15s;
     }
     .search-card-title a:hover {
       color: var(--pwc-orange);
-      text-decoration: underline;
     }
     .search-card-desc {
-      font-size: 0.98rem;
+      font-size: 0.95rem;
       color: #475569;
       line-height: 1.6;
       margin: 0 0 1.25rem;
+      word-break: break-word;
+      overflow-wrap: break-word;
     }
     .search-card-desc mark {
       background: #fef08a;
       color: #0f172a;
-      font-weight: 600;
-      padding: 0 2px;
+      padding: 0.1rem 0.25rem;
       border-radius: 2px;
+      font-weight: 600;
     }
     .search-card-footer {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      margin-top: auto;
       padding-top: 1rem;
       border-top: 1px solid #f1f5f9;
       font-size: 0.88rem;
+      width: 100%;
+      box-sizing: border-box;
+      gap: 1rem;
     }
     .search-card-url {
       color: #94a3b8;
       font-family: var(--font-mono, monospace);
       font-size: 0.82rem;
       text-decoration: none;
+      word-break: break-all;
+      overflow-wrap: anywhere;
     }
     .search-card-action {
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
+      gap: 0.45rem;
       color: var(--pwc-orange);
       font-weight: 700;
       text-decoration: none;
       transition: gap 0.2s;
+      flex-shrink: 0;
+      white-space: nowrap;
     }
     .search-card-action:hover {
       gap: 0.65rem;
-      text-decoration: underline;
     }
 
     /* Empty State */
@@ -335,54 +330,306 @@
       background: #ffffff;
       border: 1px dashed #cbd5e1;
       border-radius: 8px;
+      width: 100%;
+      box-sizing: border-box;
     }
     .search-empty-icon {
       font-size: 3rem;
       color: #cbd5e1;
-      margin-bottom: 1.25rem;
+      margin-bottom: 1rem;
     }
     .search-empty-state h3 {
       font-family: var(--font-serif);
       font-size: 1.6rem;
       color: #0f172a;
       margin-bottom: 0.5rem;
+      word-break: break-word;
     }
     .search-empty-state p {
       color: #64748b;
       font-size: 1rem;
       max-width: 500px;
       margin: 0 auto 2rem;
+      line-height: 1.55;
     }
     .popular-searches-title {
       font-size: 0.85rem;
-      font-weight: 700;
-      color: #64748b;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 0.75rem;
+      letter-spacing: 0.08em;
+      color: #64748b;
+      font-weight: 700;
+      margin-bottom: 1rem;
     }
     .popular-tags-wrap {
       display: flex;
       gap: 0.5rem;
-      justify-content: center;
       flex-wrap: wrap;
+      justify-content: center;
     }
     .popular-tag {
       background: #f1f5f9;
+      border: 1px solid #e2e8f0;
       color: #334155;
       padding: 0.45rem 1rem;
       border-radius: 999px;
       font-size: 0.88rem;
       font-weight: 600;
       cursor: pointer;
-      text-decoration: none;
-      border: 1px solid transparent;
       transition: all 0.2s;
+      white-space: nowrap;
     }
     .popular-tag:hover {
       background: #ffffff;
       border-color: var(--pwc-orange);
       color: var(--pwc-orange);
+    }
+
+    /* ==========================================================================
+       MOBILE RESPONSIVE RULES (TABLET & SMARTPHONE)
+       ========================================================================== */
+    @media (max-width: 768px) {
+      .search-page-hero {
+        padding: 2.25rem 1.25rem 1.75rem;
+      }
+      .search-page-hero h1 {
+        font-size: 1.85rem;
+      }
+      .search-results-section {
+        padding: 1.75rem 1.25rem 3.5rem;
+      }
+      .search-card {
+        padding: 1.35rem 1.25rem;
+      }
+      .search-card-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.65rem;
+        padding-top: 0.85rem;
+      }
+      .search-card-url {
+        font-size: 0.8rem;
+        line-height: 1.4;
+        width: 100%;
+        max-width: 100%;
+      }
+      .search-card-action {
+        font-size: 0.85rem;
+        font-weight: 700;
+        align-self: flex-start;
+        background: #fff7ed;
+        border: 1px solid #fed7aa;
+        padding: 0.42rem 0.85rem;
+        border-radius: 4px;
+        color: var(--pwc-orange);
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        box-sizing: border-box;
+      }
+      .search-card-action:hover {
+        background: var(--pwc-orange);
+        color: #ffffff;
+        border-color: var(--pwc-orange);
+        text-decoration: none;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .search-page-hero {
+        padding: 1.75rem 1rem 1.35rem;
+      }
+      .search-page-hero h1 {
+        font-size: 1.6rem;
+        line-height: 1.25;
+        margin-bottom: 0.5rem;
+      }
+      .search-page-hero p {
+        font-size: 0.92rem;
+        line-height: 1.5;
+        margin-bottom: 1.15rem;
+      }
+      .search-bar-container {
+        padding: 0.3rem 0.35rem 0.3rem 0.75rem;
+        border-radius: 10px;
+        gap: 0.35rem;
+      }
+      .search-bar-container i.search-main-icon {
+        font-size: 0.95rem;
+        margin-right: 0.4rem;
+      }
+      .search-bar-input {
+        font-size: 0.92rem;
+        min-width: 0;
+        padding: 0.5rem 0.2rem 0.5rem 0;
+      }
+      .search-clear-btn {
+        padding: 0.3rem 0.35rem;
+        font-size: 0.95rem;
+      }
+      .search-submit-btn {
+        padding: 0.52rem 0.85rem;
+        font-size: 0.86rem;
+        border-radius: 6px;
+        gap: 0.35rem;
+      }
+
+      /* Filter Chips */
+      .search-filter-strip {
+        gap: 0.4rem;
+        margin-top: 1.1rem;
+      }
+      .filter-chip {
+        padding: 0.38rem 0.75rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+      }
+
+      /* Results Section */
+      .search-results-section {
+        padding: 1.25rem 1rem 3rem;
+      }
+      .results-meta-header {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 1.25rem;
+        padding-bottom: 0.75rem;
+      }
+      .results-count-text {
+        font-size: 0.9rem;
+      }
+      .results-list {
+        gap: 1rem;
+      }
+
+      /* Result Cards */
+      .search-card {
+        padding: 1.15rem 1rem;
+        border-radius: 8px;
+      }
+      .search-card-top {
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+      .search-card-badge {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.5rem;
+      }
+      .search-card-cat {
+        font-size: 0.75rem;
+      }
+      .search-card-title {
+        font-size: 1.2rem;
+        line-height: 1.35;
+        margin-bottom: 0.45rem;
+      }
+      .search-card-desc {
+        font-size: 0.9rem;
+        line-height: 1.55;
+        margin-bottom: 0.85rem;
+      }
+
+      /* Card Footer: Column Layout & Tap-friendly Action Button */
+      .search-card-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.65rem;
+        padding-top: 0.75rem;
+      }
+      .search-card-url {
+        font-size: 0.78rem;
+        line-height: 1.4;
+        width: 100%;
+        max-width: 100%;
+      }
+      .search-card-action {
+        font-size: 0.85rem;
+        font-weight: 700;
+        align-self: flex-start;
+        background: #fff7ed;
+        border: 1px solid #fed7aa;
+        padding: 0.42rem 0.85rem;
+        border-radius: 4px;
+        color: var(--pwc-orange);
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        box-sizing: border-box;
+      }
+      .search-card-action:hover {
+        background: var(--pwc-orange);
+        color: #ffffff;
+        border-color: var(--pwc-orange);
+        text-decoration: none;
+      }
+
+      /* Empty State */
+      .search-empty-state {
+        padding: 2.25rem 1rem;
+      }
+      .search-empty-icon {
+        font-size: 2.25rem;
+        margin-bottom: 0.85rem;
+      }
+      .search-empty-state h3 {
+        font-size: 1.35rem;
+      }
+      .search-empty-state p {
+        font-size: 0.9rem;
+        margin-bottom: 1.25rem;
+      }
+      .popular-tag {
+        padding: 0.35rem 0.75rem;
+        font-size: 0.8rem;
+      }
+    }
+
+    @media (max-width: 440px) {
+      .search-page-hero h1 {
+        font-size: 1.45rem;
+      }
+      .search-bar-container {
+        padding: 0.25rem 0.25rem 0.25rem 0.65rem;
+      }
+      .search-submit-btn {
+        padding: 0.5rem 0.7rem;
+        font-size: 0.82rem;
+      }
+      .search-submit-btn i {
+        font-size: 0.75rem;
+      }
+      .filter-chip {
+        padding: 0.32rem 0.65rem;
+        font-size: 0.75rem;
+      }
+      .search-card {
+        padding: 1rem 0.85rem;
+      }
+      .search-card-title {
+        font-size: 1.1rem;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .search-page-hero {
+        padding: 1.5rem 0.85rem 1.2rem;
+      }
+      .search-results-section {
+        padding: 1rem 0.85rem 2.5rem;
+      }
+      .search-submit-btn span {
+        display: none;
+      }
+      .search-submit-btn {
+        padding: 0.5rem 0.65rem;
+      }
+      .search-card {
+        padding: 0.9rem 0.75rem;
+      }
     }
   </style>
 </head>
