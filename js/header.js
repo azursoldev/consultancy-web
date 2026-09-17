@@ -50,9 +50,9 @@
         <div class="simple-dropdown-menu">
           <ul class="simple-dropdown-list">
             <li><a href="${pfx}about.html">About Us</a></li>
-            <li><a href="${pfx}about.html#credentials">Licensed DPCO Status</a></li>
-            <li><a href="${pfx}about.html#leadership">Team &amp; Advisory Board</a></li>
-            <li><a href="${pfx}about.html#partnerships">Career &amp; Partnerships</a></li>
+            <li><span class="dropdown-item-disabled">Licensed DPCO Status</span></li>
+            <li><span class="dropdown-item-disabled">Team &amp; Advisory Board</span></li>
+            <li><span class="dropdown-item-disabled">Career &amp; Partnerships</span></li>
           </ul>
         </div>
       </li>
@@ -133,9 +133,9 @@
           <div class="mobile-nav-group-title">Our Organisation</div>
           <ul class="mobile-nav-links">
             <li><a href="${pfx}about.html" onclick="toggleMobileMenu()">About Us <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
-            <li><a href="${pfx}about.html#credentials" onclick="toggleMobileMenu()">Licensed DPCO Status <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
-            <li><a href="${pfx}about.html#leadership" onclick="toggleMobileMenu()">Team &amp; Advisory Board <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
-            <li><a href="${pfx}about.html#partnerships" onclick="toggleMobileMenu()">Career &amp; Partnerships <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
+            <li><span class="mobile-nav-disabled">Licensed DPCO Status</span></li>
+            <li><span class="mobile-nav-disabled">Team &amp; Advisory Board</span></li>
+            <li><span class="mobile-nav-disabled">Career &amp; Partnerships</span></li>
           </ul>
         </div>
 

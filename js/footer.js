@@ -33,9 +33,9 @@
           <h5>Our Organisation</h5>
           <ul>
             <li><a href="${pfx}about.html">About Us</a></li>
-            <li><a href="${pfx}about.html#credentials">Licensed DPCO Status</a></li>
-            <li><a href="${pfx}about.html#leadership">Team &amp; Advisory Board</a></li>
-            <li><a href="${pfx}about.html#partnerships">Career &amp; Partnerships</a></li>
+            <li><span style="color: #94a3b8; font-size: 0.85rem; cursor: default; user-select: none;">Licensed DPCO Status</span></li>
+            <li><span style="color: #94a3b8; font-size: 0.85rem; cursor: default; user-select: none;">Team &amp; Advisory Board</span></li>
+            <li><span style="color: #94a3b8; font-size: 0.85rem; cursor: default; user-select: none;">Career &amp; Partnerships</span></li>
           </ul>
         </div>
 
