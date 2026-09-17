@@ -54,9 +54,9 @@
         <div class="footer-col">
           <h5>Legal</h5>
           <ul>
-            <li><a href="${pfx}legal/privacy-statement.html">Privacy Statement</a></li>
-            <li><a href="javascript:void(0)">Cookie Policy</a></li>
-            <li><a href="${pfx}terms-of-service.html">Term of Service</a></li>
+            <li><a href="${pfx}privacy-statement.html">Privacy Statement</a></li>
+            <li><a href="${pfx}cookie-policy.html">Cookie Policy</a></li>
+            <li><a href="${pfx}terms-of-service.html">Terms of Service</a></li>
             <li><a href="${pfx}legal-disclaimer.html">Legal Disclaimer</a></li>
             <li><a href="${pfx}faq.html">FAQ</a></li>
             <li><a href="${pfx}contact.html">Contact</a></li>
