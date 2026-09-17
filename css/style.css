@@ -9975,37 +9975,93 @@ footer.footer .container,
 
 .pwc-footer-columns {
   display: grid !important;
-  grid-template-columns: 1.4fr 1.3fr 1.1fr 1fr !important;
-  gap: 3rem !important;
+  grid-template-columns: repeat(5, 1fr) !important;
+  gap: 2.25rem !important;
   padding-bottom: 3.5rem !important;
   border-bottom: 1px solid #e0e0e0 !important;
 }
 
-footer.footer .footer-top {
-  display: grid;
-  grid-template-columns: 1.3fr 3fr;
-  gap: 3.5rem;
-  padding-bottom: 3rem;
-  border-bottom: 1px solid #e0e0e0;
-  margin-bottom: 2rem;
+@media (max-width: 1200px) {
+  .pwc-footer-columns {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 2.5rem !important;
+  }
 }
 
-@media (max-width: 900px) {
-  footer.footer .footer-top {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-
+@media (max-width: 800px) {
   .pwc-footer-columns {
-    grid-template-columns: 1fr 1fr !important;
+    grid-template-columns: repeat(2, 1fr) !important;
     gap: 2rem !important;
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 540px) {
   .pwc-footer-columns {
     grid-template-columns: 1fr !important;
+    gap: 2rem !important;
   }
+}
+
+/* Contact Information Column in Footer */
+.footer-col-contact {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.footer-contact-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.95rem !important;
+}
+
+.footer-contact-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.75rem !important;
+}
+
+.footer-contact-icon-box {
+  background: var(--pwc-orange, #d04a02) !important;
+  color: #ffffff !important;
+  height: 38px !important;
+  min-width: 38px !important;
+  padding: 0 0.5rem !important;
+  border-radius: 6px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.45rem !important;
+  flex-shrink: 0 !important;
+}
+
+.footer-contact-icon-box .footer-icon-sub {
+  color: #ffffff !important;
+  font-size: 0.95rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-decoration: none !important;
+  transition: transform 0.15s ease, opacity 0.15s ease !important;
+}
+
+.footer-contact-icon-box .footer-icon-sub:hover {
+  opacity: 0.85 !important;
+  transform: scale(1.15) !important;
+  color: #ffffff !important;
+}
+
+.footer-contact-link {
+  color: var(--pwc-orange, #d04a02) !important;
+  font-size: 0.88rem !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  transition: opacity 0.15s ease, color 0.15s ease !important;
+  word-break: break-all !important;
+}
+
+.footer-contact-link:hover {
+  color: var(--pwc-orange-dark, #b84500) !important;
+  text-decoration: underline !important;
 }
 
 footer.footer .footer-brand {
