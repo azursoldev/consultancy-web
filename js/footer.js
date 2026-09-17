@@ -58,7 +58,7 @@
             <li><a href="javascript:void(0)">Cookie Policy</a></li>
             <li><a href="${pfx}terms-of-service.html">Term of Service</a></li>
             <li><a href="${pfx}legal-disclaimer.html">Legal Disclaimer</a></li>
-            <li><a href="javascript:void(0)">FAQ</a></li>
+            <li><a href="${pfx}faq.html">FAQ</a></li>
             <li><a href="${pfx}contact.html">Contact</a></li>
           </ul>
         </div>
