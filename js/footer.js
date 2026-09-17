@@ -68,26 +68,20 @@
           <h5>Contact Information</h5>
           <div class="footer-contact-list">
             <div class="footer-contact-item">
-              <a href="tel:+2347070228766" class="footer-contact-icon-box" title="Call">
-                <i class="fa-solid fa-phone"></i>
+              <a href="https://wa.me/2347070228766" target="_blank" rel="noopener noreferrer" class="footer-contact-icon-box" title="WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i>
               </a>
               <div class="footer-contact-text-group">
                 <a href="tel:+2347070228766" class="footer-contact-link">+2347070228766</a>
-                <a href="https://wa.me/2347070228766" target="_blank" rel="noopener noreferrer" class="footer-wa-indicator" title="Chat on WhatsApp">
-                  <i class="fa-brands fa-whatsapp"></i>
-                </a>
               </div>
             </div>
 
             <div class="footer-contact-item">
-              <a href="tel:+2349116904723" class="footer-contact-icon-box" title="Call">
-                <i class="fa-solid fa-phone"></i>
+              <a href="https://wa.me/2349116904723" target="_blank" rel="noopener noreferrer" class="footer-contact-icon-box" title="WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i>
               </a>
               <div class="footer-contact-text-group">
                 <a href="tel:+2349116904723" class="footer-contact-link">+2349116904723</a>
-                <a href="https://wa.me/2349116904723" target="_blank" rel="noopener noreferrer" class="footer-wa-indicator" title="Chat on WhatsApp">
-                  <i class="fa-brands fa-whatsapp"></i>
-                </a>
               </div>
             </div>
 
