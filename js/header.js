@@ -24,7 +24,7 @@
     <ul class="main-nav">
       <!-- 1. Our Solutions Dropdown (Client Sitemap: Exactly 4 Core Services) -->
       <li class="nav-item-dropdown">
-        <a href="${pfx}services/index.html" class="nav-dropdown-trigger">
+        <a href="javascript:void(0)" class="nav-dropdown-trigger">
           <span>Services</span>
           <i class="fa-solid fa-chevron-down nav-chevron"></i>
         </a>
@@ -35,14 +35,14 @@
             <li><a href="${pfx}services/outsourced-dpo.html">Appoint Outsourced Certified DPO</a></li>
             <li><a href="${pfx}services/data-protection-audit.html">Data Protection Audit</a></li>
             <li><a href="${pfx}services/data-privacy-training.html">Data Privacy Training</a></li>
-            <li><a href="${pfx}services/index.html">All Services</a></li>
+            <li><a href="${pfx}services/index.html">View All</a></li>
           </ul>
         </div>
       </li>
 
       <!-- 2. Our Organisation Dropdown (Dropdown with direct link to about.html) -->
       <li class="nav-item-dropdown">
-        <a href="${pfx}about.html" class="nav-dropdown-trigger">
+        <a href="javascript:void(0)" class="nav-dropdown-trigger">
           <span>Our Organisation</span>
           <i class="fa-solid fa-chevron-down nav-chevron"></i>
         </a>
@@ -50,16 +50,16 @@
         <div class="simple-dropdown-menu">
           <ul class="simple-dropdown-list">
             <li><a href="${pfx}about.html">About Us</a></li>
-            <li><span class="dropdown-item-disabled">Licensed DPCO Status</span></li>
-            <li><span class="dropdown-item-disabled">Team &amp; Advisory Board</span></li>
-            <li><span class="dropdown-item-disabled">Career &amp; Partnerships</span></li>
+            <li><a href="javascript:void(0)">Licensed DPCO Status</a></li>
+            <li><a href="javascript:void(0)">Team &amp; Advisory Board</a></li>
+            <li><a href="javascript:void(0)">Career &amp; Partnerships</a></li>
           </ul>
         </div>
       </li>
 
       <!-- 3. Knowledge Hub Dropdown -->
       <li class="nav-item-dropdown">
-        <a href="${pfx}blog/index.html" class="nav-dropdown-trigger">
+        <a href="javascript:void(0)" class="nav-dropdown-trigger">
           <span>Knowledge Hub</span>
           <i class="fa-solid fa-chevron-down nav-chevron"></i>
         </a>
@@ -67,8 +67,8 @@
         <div class="simple-dropdown-menu">
           <ul class="simple-dropdown-list">
             <li><a href="${pfx}publication-detail.html">Complying With NDPA 2023</a></li>
-            <li><a href="${pfx}blog/index.html">Regulatory Guidance</a></li>
-            <li><a href="${pfx}blog/index.html">Artificial Intelligence Tracker</a></li>
+            <li><a href="javascript:void(0)">Regulatory Guidance</a></li>
+            <li><a href="javascript:void(0)">Artificial Intelligence Tracker</a></li>
             <li><a href="${pfx}blog/index.html">View All</a></li>
           </ul>
         </div>
@@ -113,7 +113,7 @@
             <li><a href="${pfx}services/outsourced-dpo.html" onclick="toggleMobileMenu()">Appoint Outsourced Certified DPO <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
             <li><a href="${pfx}services/data-protection-audit.html" onclick="toggleMobileMenu()">Data Protection Audit <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
             <li><a href="${pfx}services/data-privacy-training.html" onclick="toggleMobileMenu()">Data Privacy Training <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
-            <li><a href="${pfx}services/index.html" onclick="toggleMobileMenu()">All Services <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
+            <li><a href="${pfx}services/index.html" onclick="toggleMobileMenu()">View All <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
           </ul>
         </div>
 
@@ -122,8 +122,8 @@
           <div class="mobile-nav-group-title">Knowledge Hub</div>
           <ul class="mobile-nav-links">
             <li><a href="${pfx}publication-detail.html" onclick="toggleMobileMenu()">Complying With NDPA 2023 <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
-            <li><a href="${pfx}blog/index.html" onclick="toggleMobileMenu()">Regulatory Guidance <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
-            <li><a href="${pfx}blog/index.html" onclick="toggleMobileMenu()">Artificial Intelligence Tracker <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
+            <li><a href="javascript:void(0)">Regulatory Guidance</a></li>
+            <li><a href="javascript:void(0)">Artificial Intelligence Tracker</a></li>
             <li><a href="${pfx}blog/index.html" onclick="toggleMobileMenu()">View All <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
           </ul>
         </div>
@@ -133,9 +133,9 @@
           <div class="mobile-nav-group-title">Our Organisation</div>
           <ul class="mobile-nav-links">
             <li><a href="${pfx}about.html" onclick="toggleMobileMenu()">About Us <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
-            <li><span class="mobile-nav-disabled">Licensed DPCO Status</span></li>
-            <li><span class="mobile-nav-disabled">Team &amp; Advisory Board</span></li>
-            <li><span class="mobile-nav-disabled">Career &amp; Partnerships</span></li>
+            <li><a href="javascript:void(0)">Licensed DPCO Status</a></li>
+            <li><a href="javascript:void(0)">Team &amp; Advisory Board</a></li>
+            <li><a href="javascript:void(0)">Career &amp; Partnerships</a></li>
           </ul>
         </div>
 

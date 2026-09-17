@@ -24,7 +24,7 @@
             <li><a href="${pfx}services/outsourced-dpo.html">Appoint Outsourced Certified DPO</a></li>
             <li><a href="${pfx}services/data-protection-audit.html">Data Protection Audit</a></li>
             <li><a href="${pfx}services/data-privacy-training.html">Data Privacy Training</a></li>
-            <li><a href="${pfx}services/index.html">All Services</a></li>
+            <li><a href="${pfx}services/index.html">View All</a></li>
           </ul>
         </div>
 
@@ -33,9 +33,9 @@
           <h5>Our Organisation</h5>
           <ul>
             <li><a href="${pfx}about.html">About Us</a></li>
-            <li><span style="color: #94a3b8; font-size: 0.85rem; cursor: default; user-select: none;">Licensed DPCO Status</span></li>
-            <li><span style="color: #94a3b8; font-size: 0.85rem; cursor: default; user-select: none;">Team &amp; Advisory Board</span></li>
-            <li><span style="color: #94a3b8; font-size: 0.85rem; cursor: default; user-select: none;">Career &amp; Partnerships</span></li>
+            <li><a href="javascript:void(0)">Licensed DPCO Status</a></li>
+            <li><a href="javascript:void(0)">Team &amp; Advisory Board</a></li>
+            <li><a href="javascript:void(0)">Career &amp; Partnerships</a></li>
           </ul>
         </div>
 
@@ -44,8 +44,8 @@
           <h5>Knowledge Hub</h5>
           <ul>
             <li><a href="${pfx}publication-detail.html">Complying With NDPA 2023</a></li>
-            <li><a href="${pfx}blog/index.html">Regulatory Guidance</a></li>
-            <li><a href="${pfx}blog/index.html">Artificial Intelligence Tracker</a></li>
+            <li><a href="javascript:void(0)">Regulatory Guidance</a></li>
+            <li><a href="javascript:void(0)">Artificial Intelligence Tracker</a></li>
             <li><a href="${pfx}blog/index.html">View All</a></li>
           </ul>
         </div>
