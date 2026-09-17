@@ -110,6 +110,13 @@ button *,
 .article-breadcrumbs,
 .readiness-banner-content h3,
 .download-box-text h3,
+.hero-subheadline,
+.problem-box p,
+.solution-box p,
+.why-board-card p,
+.intl-perspective-card p,
+.bottom-nudge-content p,
+.trust-marker-text,
 h1, h2, h3, h4, h5, h6 {
   text-align: left !important;
 }
@@ -3443,29 +3450,29 @@ html body .mega-dropdown-grid,
        PwC SECTION HEADERS & CONTENT CONTAINERS
        ========================================================================== */
 .section-container {
-  max-width: 1280px;
-  margin: 0 auto 6rem;
-  padding: 0 3.5rem;
+  max-width: 1200px;
+  margin: 1.75rem auto 2.25rem;
+  padding: 0 2rem;
 }
 
 .pwc-section-header {
-  margin-bottom: 3rem;
+  margin-bottom: 1.25rem;
   border-top: none;
   padding-top: 0;
 }
 
 .pwc-section-header h2 {
   font-family: var(--font-serif);
-  font-size: 2.75rem;
+  font-size: 2.35rem;
   font-weight: 700;
   color: var(--pwc-charcoal);
-  line-height: 1.15;
+  line-height: 1.2;
 }
 
 .pwc-section-header p {
   font-size: 1.05rem;
   color: var(--pwc-gray-text);
-  margin-top: 0.5rem;
+  margin-top: 0.35rem;
   max-width: 800px;
 }
 
@@ -10118,12 +10125,12 @@ footer.footer .footer-legal-links a:hover,
   /* 2. Homepage Section Containers & Headers */
   .section-container {
     padding: 0 1.5rem !important;
-    margin: 0 auto 3.5rem !important;
+    margin: 1.5rem auto 2rem !important;
   }
 
   .pwc-section-header {
-    margin-bottom: 2rem !important;
-    padding-top: 1.75rem !important;
+    margin-bottom: 1.25rem !important;
+    padding-top: 0 !important;
   }
 
   .pwc-section-header h2 {
@@ -10247,7 +10254,7 @@ footer.footer .footer-legal-links a:hover,
   /* 9. Homepage Container & Header Adjustments */
   .section-container {
     padding: 0 1rem !important;
-    margin: 0 auto 2.5rem !important;
+    margin: 1.25rem auto 1.75rem !important;
   }
 
   .pwc-section-header h2 {
@@ -10546,7 +10553,7 @@ footer.footer .footer-legal-links a:hover,
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.25rem;
-  margin-top: 1.25rem;
+  margin-top: 0;
 }
 
 .intent-service-card {
@@ -10680,18 +10687,18 @@ footer.footer .footer-legal-links a:hover,
 
 /* Section 4: Why Corporate Boards Choose Amstel Consulting */
 .why-boards-section {
-  padding: 1.75rem 0;
+  padding: 2.25rem 0;
   background: #f8fafc;
-  border-top: none;
-  border-bottom: none;
-  margin-top: 1.5rem;
+  border-top: 1px solid #f1f5f9;
+  border-bottom: 1px solid #f1f5f9;
+  margin: 0;
 }
 
 .why-boards-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
-  margin-top: 1.25rem;
+  margin-top: 0;
 }
 
 .why-board-card {
@@ -10741,7 +10748,7 @@ footer.footer .footer-legal-links a:hover,
 /* Section 4B: Nigerian Regulatory Expertise. International Perspective. */
 .intl-perspective-section {
   padding: 0 2rem;
-  margin: 1.5rem auto 1rem;
+  margin: 2rem auto 1.5rem;
   max-width: 1200px;
 }
 
@@ -10772,7 +10779,7 @@ footer.footer .footer-legal-links a:hover,
 
 /* Section 5: Final High-Contrast CTA Banner */
 .bottom-nudge-section {
-  margin: 1.5rem auto 2rem;
+  margin: 0 auto 2.5rem;
   padding: 0 2rem;
   max-width: 1200px;
 }
@@ -10850,7 +10857,7 @@ footer.footer .footer-legal-links a:hover,
 
   .bottom-nudge-section {
     padding: 0 1.5rem;
-    margin: 4rem auto 3rem;
+    margin: 1.75rem auto 2rem;
   }
 
   .bottom-nudge-banner {
@@ -10894,7 +10901,7 @@ footer.footer .footer-legal-links a:hover,
 
   .bottom-nudge-section {
     padding: 0 1rem;
-    margin: 3rem auto 2.5rem;
+    margin: 1.25rem auto 1.75rem;
   }
 
   .bottom-nudge-banner {
