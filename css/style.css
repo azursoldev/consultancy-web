@@ -10791,15 +10791,6 @@ footer.footer .footer-legal-links a:hover,
   overflow: hidden;
 }
 
-.nudge-badge {
-  display: inline-block;
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--pwc-orange);
-  margin-bottom: 0.85rem;
-}
 
 .bottom-nudge-content h2 {
   font-family: var(--font-serif);
