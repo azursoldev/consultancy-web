@@ -668,7 +668,6 @@
           </button>
           <button type="submit" class="search-submit-btn">
             <span>Search</span>
-            <i class="fa-solid fa-arrow-right"></i>
           </button>
         </div>
       </form>
@@ -910,7 +909,7 @@
               However, we found <strong style="color:var(--pwc-orange, #d04a02); font-size:1.05rem;">${totalAll}</strong> matching result${totalAll === 1 ? '' : 's'} in other sections of the website!
               <div style="margin-top: 1.25rem;">
                 <button type="button" onclick="setFilterCategory('All')" style="background: var(--pwc-orange, #d04a02); color: #fff; border: none; border-radius: 9999px; padding: 0.65rem 1.5rem; font-weight: 700; font-size: 0.92rem; cursor: pointer;">
-                  View All ${totalAll} Result${totalAll === 1 ? '' : 's'} &rarr;
+                  View All ${totalAll} Result${totalAll === 1 ? '' : 's'}
                 </button>
               </div>
             `;
@@ -939,16 +938,12 @@
         const highlightedDesc = highlightText(item.desc, query);
 
         let actionText = 'Explore Solution';
-        let iconClass = 'fa-arrow-right';
         if (item.category === 'Knowledge Hub') {
           actionText = 'Read Article';
-          iconClass = 'fa-newspaper';
         } else if (item.category === 'Organisation') {
           actionText = 'View Credentials';
-          iconClass = 'fa-building';
         } else if (item.category === 'Contact') {
           actionText = 'Initiate Consultation';
-          iconClass = 'fa-headset';
         }
 
         return `
@@ -967,7 +962,6 @@
               <a href="${item.url}" class="search-card-url">amstelconsulting.ng/${item.url}</a>
               <a href="${item.url}" class="search-card-action">
                 <span>${actionText}</span>
-                <i class="fa-solid ${iconClass}"></i>
               </a>
             </div>
           </article>

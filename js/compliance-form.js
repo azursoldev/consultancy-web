@@ -166,7 +166,6 @@
           <!-- Submit CTA Button -->
           <button type="submit" class="btn-compliance-submit">
             <span>${ctaText}</span>
-            <i class="fa-solid fa-arrow-right"></i>
           </button>
 
           <div class="form-guarantee-note">

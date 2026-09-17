@@ -144,7 +144,6 @@
       <div class="mobile-drawer-footer">
         <a href="${pfx}services/compliance-audit-return.html" onclick="toggleMobileMenu()" class="btn-mobile-car">
           <span>FILE YOUR CAR</span>
-          <i class="fa-solid fa-arrow-right"></i>
         </a>
       </div>
     </div>
@@ -157,7 +156,7 @@
         <i class="fa-solid fa-magnifying-glass" onclick="window.navigateToSearchPage()" style="cursor: pointer;" title="Search"></i>
         <input type="text" id="siteSearchInput" class="search-input" placeholder="Search services, NDPA regulations, DPCO audit rules, DPO..." autocomplete="off">
         <button type="button" class="btn-modal-search-go" onclick="window.navigateToSearchPage()">
-          <span>Search</span> <i class="fa-solid fa-arrow-right"></i>
+          <span>Search</span>
         </button>
         <button type="button" onclick="window.closeSiteSearchModal()" class="search-close-btn" aria-label="Close search">&times;</button>
       </div>
@@ -398,11 +397,10 @@
             </p>
             <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
               <button type="button" onclick="window.navigateToSearchPage('${safeQ}')" style="background: var(--pwc-orange); color: #fff; padding: 0.55rem 1.25rem; border-radius: 9999px; border: none; font-weight: 700; font-size: 0.85rem; cursor: pointer;">
-                Open Full Search Page &rarr;
+                Open Full Search Page
               </button>
               <a href="${pfx}contact.html" style="display: inline-flex; align-items: center; gap: 0.45rem; background: #fff5ee; color: var(--pwc-orange, #d04a02); padding: 0.55rem 1.15rem; border-radius: 9999px; text-decoration: none; font-weight: 700; font-size: 0.85rem; border: 1px solid #fed7aa;">
                 <span>Advisory Desk</span>
-                <i class="fa-solid fa-arrow-right text-xs"></i>
               </a>
             </div>
           </div>
@@ -415,7 +413,6 @@
       <!-- Top Call-to-Action to Full Search Page -->
       <a href="${pfx}search.html?q=${encodeURIComponent(q)}" style="display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1rem; background: #fff7ed; border: 1px solid #fed7aa; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.88rem; color: var(--pwc-orange, #d04a02); margin-bottom: 0.85rem; transition: background 0.15s ease;" onmouseover="this.style.background='#ffedd5'" onmouseout="this.style.background='#fff7ed'">
         <span><i class="fa-solid fa-arrow-up-right-from-square" style="margin-right: 0.45rem;"></i> View all matching results for &ldquo;${safeQ}&rdquo; in Dedicated Search Page</span>
-        <i class="fa-solid fa-arrow-right"></i>
       </a>
 
       <div style="font-size: 0.75rem; font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.6rem; padding-left: 0.25rem;">
@@ -451,7 +448,7 @@
             <i class="fa-solid fa-magnifying-glass" onclick="window.navigateToSearchPage()" style="cursor: pointer;" title="Search"></i>
             <input type="text" id="siteSearchInput" class="search-input" placeholder="Search services, NDPA regulations, DPCO audit rules, DPO..." autocomplete="off">
             <button type="button" class="btn-modal-search-go" onclick="window.navigateToSearchPage()">
-              <span>Search</span> <i class="fa-solid fa-arrow-right"></i>
+              <span>Search</span>
             </button>
             <button type="button" onclick="window.closeSiteSearchModal()" class="search-close-btn" aria-label="Close search">&times;</button>
           </div>
@@ -472,7 +469,7 @@
         const goBtn = document.createElement('button');
         goBtn.type = 'button';
         goBtn.className = 'btn-modal-search-go';
-        goBtn.innerHTML = '<span>Search</span> <i class="fa-solid fa-arrow-right"></i>';
+        goBtn.innerHTML = '<span>Search</span>';
         goBtn.onclick = function (e) {
           e.preventDefault();
           window.navigateToSearchPage();
