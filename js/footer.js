@@ -68,26 +68,36 @@
           <h5>Contact Information</h5>
           <div class="footer-contact-list">
             <div class="footer-contact-item">
-              <div class="footer-contact-icon-box" title="Phone & WhatsApp">
-                <a href="tel:+2347070228766" class="footer-icon-sub" title="Call"><i class="fa-solid fa-phone"></i></a>
-                <a href="https://wa.me/2347070228766" target="_blank" rel="noopener noreferrer" class="footer-icon-sub" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+              <a href="tel:+2347070228766" class="footer-contact-icon-box" title="Call">
+                <i class="fa-solid fa-phone"></i>
+              </a>
+              <div class="footer-contact-text-group">
+                <a href="tel:+2347070228766" class="footer-contact-link">+2347070228766</a>
+                <a href="https://wa.me/2347070228766" target="_blank" rel="noopener noreferrer" class="footer-wa-indicator" title="Chat on WhatsApp">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </a>
               </div>
-              <a href="tel:+2347070228766" class="footer-contact-link">+2347070228766</a>
             </div>
 
             <div class="footer-contact-item">
-              <div class="footer-contact-icon-box" title="Phone & WhatsApp">
-                <a href="tel:+2349116904723" class="footer-icon-sub" title="Call"><i class="fa-solid fa-phone"></i></a>
-                <a href="https://wa.me/2349116904723" target="_blank" rel="noopener noreferrer" class="footer-icon-sub" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+              <a href="tel:+2349116904723" class="footer-contact-icon-box" title="Call">
+                <i class="fa-solid fa-phone"></i>
+              </a>
+              <div class="footer-contact-text-group">
+                <a href="tel:+2349116904723" class="footer-contact-link">+2349116904723</a>
+                <a href="https://wa.me/2349116904723" target="_blank" rel="noopener noreferrer" class="footer-wa-indicator" title="Chat on WhatsApp">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </a>
               </div>
-              <a href="tel:+2349116904723" class="footer-contact-link">+2349116904723</a>
             </div>
 
             <div class="footer-contact-item">
-              <div class="footer-contact-icon-box" title="Email">
-                <a href="mailto:info@amstelconsulting.ng" class="footer-icon-sub" title="Email Us"><i class="fa-solid fa-envelope"></i></a>
+              <a href="mailto:info@amstelconsulting.ng" class="footer-contact-icon-box" title="Email Us">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+              <div class="footer-contact-text-group">
+                <a href="mailto:info@amstelconsulting.ng" class="footer-contact-link">info@amstelconsulting.ng</a>
               </div>
-              <a href="mailto:info@amstelconsulting.ng" class="footer-contact-link">info@amstelconsulting.ng</a>
             </div>
           </div>
         </div>
