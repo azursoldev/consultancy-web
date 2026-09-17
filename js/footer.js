@@ -35,7 +35,7 @@
             <li><a href="${pfx}about.html">About Us</a></li>
             <li><a href="${pfx}about.html#credentials">Licensed DPCO Status</a></li>
             <li><a href="${pfx}about.html#leadership">Team &amp; Advisory Board</a></li>
-            <li><a href="${pfx}contact.html">Career &amp; Partnerships</a></li>
+            <li><a href="${pfx}about.html#partnerships">Career &amp; Partnerships</a></li>
           </ul>
         </div>
 
