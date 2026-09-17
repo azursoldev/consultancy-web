@@ -222,7 +222,7 @@ window.siteSearchIndex = [
     url: 'contact.html',
     category: 'Contact',
     badge: 'Advisory Desk',
-    desc: 'Connect with our senior advisory team within 24 hours. Scoped compliance consultation, gap checks, and direct RFP engagement at our Abuja corporate offices.',
+    desc: 'Connect with our senior advisory team within 4 business hours. Scoped compliance consultation, gap checks, and direct RFP engagement at our Abuja corporate offices.',
     keywords: 'contact help phone email office lagos abuja consult consultant consulting inquiry get in touch quote rfp assessment free consultation advisory desk talk to consultant initiate consultation'
   },
   {

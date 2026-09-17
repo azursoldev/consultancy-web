@@ -304,7 +304,7 @@
       title: 'Contact Practice Offices & RFP Inquiries',
       url: 'contact.html',
       badge: 'Advisory Desk',
-      desc: 'Direct engagement with licensed DPCO partners, request a scoped compliance assessment, or submit an RFP within 24 hours.',
+      desc: 'Direct engagement with licensed DPCO partners, request a scoped compliance assessment, or submit an RFP within 4 business hours.',
       keywords: 'contact help phone email office lagos abuja consult consultant consulting inquiry get in touch quote rfp assessment free consultation advisory desk talk to consultant initiate consultation'
     },
     {
