@@ -10545,15 +10545,15 @@ footer.footer .footer-legal-links a:hover,
 .intent-service-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  margin-top: 2.5rem;
+  gap: 1.5rem;
+  margin-top: 1.75rem;
 }
 
 .intent-service-card {
   background: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 8px;
-  padding: 2.4rem;
+  padding: 1.85rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -10680,25 +10680,25 @@ footer.footer .footer-legal-links a:hover,
 
 /* Section 4: Why Corporate Boards Choose Amstel Consulting */
 .why-boards-section {
-  padding: 4.5rem 0;
+  padding: 3rem 0;
   background: #f8fafc;
   border-top: none;
   border-bottom: none;
-  margin-top: 4rem;
+  margin-top: 2.75rem;
 }
 
 .why-boards-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin-top: 2.5rem;
+  gap: 1.5rem;
+  margin-top: 1.75rem;
 }
 
 .why-board-card {
   background: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 8px;
-  padding: 2.2rem 2rem;
+  padding: 1.75rem 1.6rem;
   transition: all 0.2s ease;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
   text-align: left;
@@ -10711,36 +10711,36 @@ footer.footer .footer-legal-links a:hover,
 }
 
 .why-board-icon-wrap {
-  width: 54px;
-  height: 54px;
+  width: 50px;
+  height: 50px;
   border-radius: 8px;
   background: #fff5ee;
   color: var(--pwc-orange);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
-  margin-bottom: 1.25rem;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
 }
 
 .why-board-card h3 {
   font-family: var(--font-serif);
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   font-weight: 700;
   color: #1e293b;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.65rem;
 }
 
 .why-board-card p {
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-size: 0.93rem;
+  line-height: 1.55;
   color: #475569;
   margin: 0;
 }
 
 /* Section 5: Final High-Contrast CTA Banner */
 .bottom-nudge-section {
-  margin: 5rem auto 4rem;
+  margin: 3.5rem auto 3rem;
   padding: 0 2rem;
   max-width: 1200px;
 }
@@ -10748,11 +10748,11 @@ footer.footer .footer-legal-links a:hover,
 .bottom-nudge-banner {
   background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
   border-radius: 12px;
-  padding: 3.5rem;
+  padding: 2.75rem 3rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 3rem;
+  gap: 2.5rem;
   box-shadow: 0 20px 50px rgba(15, 23, 42, 0.25);
   border: 1px solid rgba(255, 255, 255, 0.1);
   position: relative;
