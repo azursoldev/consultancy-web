@@ -173,12 +173,12 @@ window.siteSearchIndex = [
   },
   {
     id: 'charles-odetola',
-    title: 'Charles Odetola, LLM, CIPP/E — International Privacy Consultant',
+    title: 'Charles Odetola — Senior Data Protection & Privacy Advisor',
     url: 'charles-odetola.html',
     category: 'Organisation',
     badge: 'Leadership',
-    desc: 'International Privacy Consultant specializing in data protection, GDPR, NDPA compliance, and corporate governance with over a decade of legal practice experience.',
-    keywords: 'charles odetola llm cipp e international privacy consultant lawyer attorney privacy data protection gdpr eprivacy ndpa toms corporate governance legal risk iapp law society cmi partner team advisor'
+    desc: 'Senior Data Protection & Privacy Advisor specialising in data protection, GDPR, NDPA compliance, and corporate governance with over a decade of legal practice experience.',
+    keywords: 'charles odetola senior data protection privacy advisor international privacy consultant lawyer attorney privacy data protection gdpr eprivacy ndpa toms corporate governance legal risk iapp law society cmi partner team advisor'
   },
   {
     id: 'martha-jowah',
@@ -186,16 +186,16 @@ window.siteSearchIndex = [
     url: 'martha-jowah.html',
     category: 'Organisation',
     badge: 'Leadership',
-    desc: 'Accomplished legal practitioner with expertise in corporate governance, regulatory compliance, data protection and privacy, and contract management.',
+    desc: 'Accomplished legal practitioner specialising in corporate and regulatory compliance, data protection and privacy, contract management and legal risk.',
     keywords: 'martha jowah esq head of legal privacy compliance corporate regulatory contract management risk management legal practitioner lawyer attorney partner team advisor consultant'
   },
   {
     id: 'career-partnerships',
-    title: 'Career & Strategic Advisory Partnerships',
+    title: 'Build a Trusted Advisory Partnership',
     url: 'about.html#partnerships',
     category: 'Organisation',
     badge: 'Partnership',
-    desc: 'Partner with Amstel Consulting or explore careers in data protection compliance, statutory audit return filing, and cybersecurity advisory.',
+    desc: 'Partner with Amstel Consulting or explore advisory partnerships in data protection compliance, statutory audit return filing, and cybersecurity advisory.',
     keywords: 'career partnerships partner advisory partnership join jobs team hiring strategic alliance collaborate contact alignment our organisation'
   },
   {
@@ -210,7 +210,7 @@ window.siteSearchIndex = [
   {
     id: 'privacy-statement',
     title: 'Corporate Privacy Statement',
-    url: 'legal/privacy-statement.html',
+    url: 'privacy-statement.html',
     category: 'Regulatory',
     badge: 'Statutory Notice',
     desc: 'Official statement detailing our binding fiduciary commitments regarding collection, processing lawful basis, and data subject rights under NDPA 2023.',
