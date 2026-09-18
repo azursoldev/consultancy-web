@@ -173,12 +173,12 @@ window.siteSearchIndex = [
   },
   {
     id: 'charles-odetola',
-    title: 'Charles Odetola — Senior Data Protection & Privacy Advisor',
+    title: 'Charles Odetola, LLM, CIPP/E — International Privacy Consultant',
     url: 'charles-odetola.html',
     category: 'Organisation',
     badge: 'Leadership',
-    desc: 'Senior Data Protection & Privacy Advisor specialising in data protection, GDPR, NDPA compliance, and corporate governance with over a decade of legal practice experience.',
-    keywords: 'charles odetola senior data protection privacy advisor international privacy consultant lawyer attorney privacy data protection gdpr eprivacy ndpa toms corporate governance legal risk iapp law society cmi partner team advisor'
+    desc: 'International Privacy Consultant specialising in data protection, GDPR, NDPA compliance, and corporate governance with over a decade of legal practice experience.',
+    keywords: 'charles odetola llm cipp/e international privacy consultant lawyer attorney privacy data protection gdpr eprivacy ndpa toms corporate governance legal risk iapp law society cmi partner team advisor'
   },
   {
     id: 'martha-jowah',
