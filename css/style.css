@@ -9834,7 +9834,7 @@ textarea.form-control {
   font-size: 1.15rem;
   line-height: 1.8;
   color: #334155;
-  max-width: 950px;
+  max-width: 100%;
   margin-bottom: 1.2rem;
 }
 
@@ -9842,7 +9842,7 @@ textarea.form-control {
   font-size: 1.05rem;
   line-height: 1.7;
   color: #64748b;
-  max-width: 950px;
+  max-width: 100%;
 }
 
 .solutions-pillars-grid {
