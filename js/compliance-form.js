@@ -50,7 +50,7 @@
       prechecked = 'dpo';
     } else if (type === 'training') {
       formTitle = 'Request Corporate Training';
-      formSubtitle = 'Empower your leadership and staff with certified NDPA data privacy training programs.';
+      formSubtitle = 'Empower your leadership and staff with certified NDPA data privacy training programmes.';
       ctaText = 'Request Data Privacy Training';
       showRadios = false;
       prechecked = 'training';

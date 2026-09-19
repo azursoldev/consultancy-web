@@ -1,10 +1,10 @@
 /**
- * Amstel Consulting — Centralized Search Data Index & Matcher
+ * Amstel Consulting — Centralised Search Data Index & Matcher
  * Single Source of Truth for Search Queries across Modal and Dedicated Search Page
  * Contains active, approved website pages (Core Solutions, Knowledge Hub, Organisation, Legal, Contact)
  */
 
-// Universal search normalizer / stemmer for robust query matching
+// Universal search normaliser / stemmer for robust query matching
 window.normalizeSearchTerm = function (word) {
   if (!word) return '';
   let w = word.toLowerCase().trim();
@@ -64,7 +64,7 @@ window.matchSearchItem = function (item, query) {
     // 1. Direct substring match
     if (rawHaystack.includes(term)) return true;
     
-    // 2. Normalized stem match
+    // 2. Normalised stem match
     const nTerm = normTerms[idx];
     if (!nTerm) return false;
     return normHaystackWords.some(hw => hw === nTerm || hw.startsWith(nTerm) || nTerm.startsWith(hw));
@@ -105,7 +105,7 @@ window.siteSearchIndex = [
     url: 'services/data-protection-audit.html',
     category: 'Solutions',
     badge: 'Technical Audit',
-    desc: 'End-to-end evaluation of organizational data flows, technical cybersecurity posture, penetration testing, ROPA mapping, DPIAs, breach response protocols, and corporate Privacy Notices.',
+    desc: 'End-to-end evaluation of organisational data flows, technical cybersecurity posture, penetration testing, ROPA mapping, DPIAs, breach response protocols, and corporate Privacy Notices.',
     keywords: 'audit audits auditing assessment privacy assessment ndpa gap analysis security controls ndpc dpco audit rules regulations verification risk assessment ropa record of processing activities dpia notices cybersecurity cyber penetration testing pen test breach response 72 hours incident protocol notification hardening section 39 section 40 vulnerability policies vendor dpa contracts cookie consent telemetry technical audit comply compliance compliant alignment align services solutions consulting consultant'
   },
   {
@@ -114,7 +114,7 @@ window.siteSearchIndex = [
     url: 'services/data-privacy-training.html',
     category: 'Solutions',
     badge: 'Capacity Building',
-    desc: 'Fulfill your statutory training requirements under Section 31 of the NDPA without disrupting business operations. Practical workforce awareness, compliance certificate tracking, and simulated breach drills.',
+    desc: 'Fulfil your statutory training requirements under Section 31 of the NDPA without disrupting business operations. Practical workforce awareness, compliance certificate tracking, and simulated breach drills.',
     keywords: 'training education masterclass workforce awareness staff training ndpa certification privacy skills compliance comply compliant course elearning section 31 staff phish simulation certificate alignment align services solutions capacity building executive training'
   },
   {
@@ -150,8 +150,8 @@ window.siteSearchIndex = [
     url: 'about.html',
     category: 'Organisation',
     badge: 'Company Profile',
-    desc: 'Amstel Consulting Ltd is a premier licensed Data Protection Compliance Organisation (DPCO) bridging statutory regulations with corporate operations, providing plain-language compliance and cybersecurity defense.',
-    keywords: 'about us organisation organization amstel consulting ltd mission principles leadership integrity corporate governance profile lagos abuja values credentials team advisory board consultants alignment align comply compliance'
+    desc: 'Amstel Consulting Ltd is a premier licensed Data Protection Compliance Organisation (DPCO) bridging statutory regulations with corporate operations, providing plain-language compliance and cybersecurity defence.',
+    keywords: 'about us organisation amstel consulting ltd mission principles leadership integrity corporate governance profile lagos abuja values credentials team advisory board consultants alignment align comply compliance'
   },
   {
     id: 'dpco-credentials',
@@ -159,8 +159,8 @@ window.siteSearchIndex = [
     url: 'about.html#credentials',
     category: 'Organisation',
     badge: 'Accreditation',
-    desc: 'Our Credentials as a Licensed DPCO authorized by the Nigeria Data Protection Commission (NDPC) to verify, assure, and submit statutory returns with institutional validity.',
-    keywords: 'licensed dpco credentials authority ndpc registration certification authorization statutory compliance organization verification accreditation license licensing comply compliant legal official'
+    desc: 'Our Credentials as a Licensed DPCO authorised by the Nigeria Data Protection Commission (NDPC) to verify, assure, and submit statutory returns with institutional validity.',
+    keywords: 'licensed dpco credentials authority ndpc registration certification authorisation statutory compliance organisation verification accreditation licence licensing comply compliant legal official'
   },
   {
     id: 'leadership-team',

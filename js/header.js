@@ -225,7 +225,7 @@
       title: 'Data Protection Audit & Governance',
       url: 'services/data-protection-audit.html',
       badge: 'Technical & Operational',
-      desc: 'Comprehensive Article 30/31 technical, organizational & cybersecurity gap assessments, ROPA mapping, DPIAs, and breach response.',
+      desc: 'Comprehensive Article 30/31 technical, organisational & cybersecurity gap assessments, ROPA mapping, DPIAs, and breach response.',
       keywords: 'audit audits auditing assessment privacy assessment ndpa gap analysis security controls ndpc dpco audit rules regulations verification risk assessment ropa record of processing activities dpia notices cybersecurity cyber penetration testing pen test breach response 72 hours incident protocol notification hardening section 39 section 40 vulnerability policies vendor dpa contracts cookie consent telemetry technical audit comply compliance compliant alignment align services solutions consulting consultant'
     },
     {
@@ -268,14 +268,14 @@
       url: 'about.html',
       badge: 'Company Profile',
       desc: 'Amstel Consulting Ltd is a premier licensed Data Protection Compliance Organisation (DPCO) bridging statutory regulations with corporate operations.',
-      keywords: 'about us organisation organization amstel consulting ltd mission principles leadership integrity corporate governance profile lagos abuja values credentials team advisory board consultants alignment align comply compliance'
+      keywords: 'about us organisation amstel consulting ltd mission principles leadership integrity corporate governance profile lagos abuja values credentials team advisory board consultants alignment align comply compliance'
     },
     {
-      title: 'Licensed DPCO Credentials & Statutory Authorization',
+      title: 'Licensed DPCO Credentials & Statutory Authorisation',
       url: 'about.html#credentials',
       badge: 'Accreditation',
-      desc: 'Our Credentials as a Licensed DPCO authorized by the Nigeria Data Protection Commission (NDPC) to verify and submit statutory returns.',
-      keywords: 'licensed dpco credentials authority ndpc registration certification authorization statutory compliance organization verification accreditation license licensing comply compliant status'
+      desc: 'Our Credentials as a Licensed DPCO authorised by the Nigeria Data Protection Commission (NDPC) to verify and submit statutory returns.',
+      keywords: 'licensed dpco credentials authority ndpc registration certification authorisation statutory compliance organisation verification accreditation licence licensing comply compliant status'
     },
     {
       title: 'Team & Advisory Board — Senior Compliance Consultants',
@@ -295,22 +295,22 @@
       title: 'Charles Odetola, LLM, CIPP/E — International Privacy Consultant',
       url: 'charles-odetola.html',
       badge: 'Leadership',
-      desc: 'International Privacy Consultant specializing in data protection, GDPR, NDPA compliance, and corporate governance with over a decade of legal practice experience.',
+      desc: 'International Privacy Consultant specialising in data protection, GDPR, NDPA compliance, and corporate governance with over a decade of legal practice experience.',
       keywords: 'charles odetola llm cipp e international privacy consultant lawyer attorney privacy data protection gdpr eprivacy ndpa toms corporate governance legal risk iapp law society cmi partner team advisor'
     },
     {
       title: 'Martha Jowah, Esq — Head of Legal & Privacy Compliance',
       url: 'martha-jowah.html',
       badge: 'Leadership',
-      desc: 'Accomplished legal practitioner specializing in corporate and regulatory compliance, data protection and privacy, and contract management.',
+      desc: 'Accomplished legal practitioner specialising in corporate and regulatory compliance, data protection and privacy, and contract management.',
       keywords: 'martha jowah esq head of legal privacy compliance corporate regulatory contract management risk management legal practitioner lawyer attorney partner team advisor consultant'
     },
     {
-      title: 'Contact Practice Offices & RFP Inquiries',
+      title: 'Contact Practice Offices & RFP Enquiries',
       url: 'contact.html',
       badge: 'Advisory Desk',
       desc: 'Direct engagement with licensed DPCO partners, request a scoped compliance assessment, or submit an RFP within 4 business hours.',
-      keywords: 'contact help phone email office lagos abuja consult consultant consulting inquiry get in touch quote rfp assessment free consultation advisory desk talk to consultant initiate consultation'
+      keywords: 'contact help phone email office lagos abuja consult consultant consulting enquiry get in touch quote rfp assessment free consultation advisory desk talk to consultant initiate consultation'
     },
     {
       title: 'Corporate Privacy & Legal Statement',

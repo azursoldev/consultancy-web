@@ -8835,8 +8835,8 @@ textarea.form-control {
    11. CENTRALIZED UTILITY & COMPONENT CLASSES (Replacing inline styles)
    ========================================================================== */
 .footer-disclaimer {
-  max-width: 620px;
-  line-height: 1.5;
+  max-width: none;
+  line-height: 1.45;
 }
 
 .text-orange {
@@ -10218,9 +10218,28 @@ footer.footer .footer-legal-links a:hover,
 
 .footer-disclaimer {
   color: #64748b !important;
-  font-size: 0.78rem !important;
-  max-width: 620px;
-  line-height: 1.5;
+  font-size: 0.72rem !important;
+  max-width: none !important;
+  line-height: 1.5 !important;
+  text-align: right !important;
+}
+
+.footer-disclaimer p {
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1.5 !important;
+  text-align: right !important;
+}
+
+.footer-disclaimer .footer-license-text {
+  color: #64748b !important;
+  font-size: 0.72rem !important;
+}
+
+.footer-disclaimer .footer-copyright-text {
+  color: #94a3b8 !important;
+  font-size: 0.72rem !important;
+  margin-top: 0.25rem !important;
 }
 
 /* ==========================================================================
@@ -10505,6 +10524,14 @@ footer.footer .footer-legal-links a:hover,
     align-items: flex-start !important;
     gap: 1rem !important;
   }
+
+  .footer-disclaimer {
+    text-align: left !important;
+  }
+
+  .footer-disclaimer p {
+    text-align: left !important;
+  }
 }
 
 @media (max-width: 420px) {
@@ -10713,16 +10740,6 @@ footer.footer .footer-legal-links a:hover,
   overflow: hidden;
 }
 
-.intent-service-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  background: var(--pwc-orange);
-}
-
 .intent-service-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
@@ -10809,22 +10826,24 @@ footer.footer .footer-legal-links a:hover,
 }
 
 .btn-intent-action {
-  display: inline-flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  background: #1e293b;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  width: 100% !important;
+  background: #1e293b !important;
   color: #ffffff !important;
-  padding: 0.85rem 1.25rem;
-  font-size: 0.9rem;
-  font-weight: 700;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: all 0.2s ease;
+  padding: 0.85rem 1.25rem !important;
+  font-size: 0.9rem !important;
+  font-weight: 700 !important;
+  border-radius: 4px !important;
+  text-decoration: none !important;
+  border: none !important;
+  transition: all 0.2s ease !important;
 }
 
 .btn-intent-action:hover {
-  background: var(--pwc-orange);
+  background: var(--pwc-orange) !important;
+  color: #ffffff !important;
   transform: translateY(-2px);
 }
 

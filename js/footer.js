@@ -10,7 +10,7 @@
 
   const footerHTML = `
   <!-- ==========================================================================
-       PwC MULTI-COLUMN MEGA FOOTER (Standardized Across All Pages)
+       PwC MULTI-COLUMN MEGA FOOTER (Standardised Across All Pages)
        ========================================================================== -->
   <footer class="pwc-footer">
     <div class="pwc-footer-container">
@@ -104,7 +104,8 @@
           <span class="brand-logo-text"><span class="brand-mstel">mstel</span> <span class="brand-consulting">Consulting</span></span>
         </div>
         <div class="footer-disclaimer">
-          Licensed as a Data Protection Compliance Organization (DPCO) by the Nigeria Data Protection Commission | License No: DPCO/XXXX/2026. &copy; 2026 Amstel Tech Compliance and Consulting Ltd. All rights reserved.
+          <p class="footer-license-text">Licensed as a Data Protection Compliance Organisation (DPCO) by the Nigeria Data Protection Commission. License No: DPCO/XXXX/2026.</p>
+          <p class="footer-copyright-text">&copy; 2026 Amstel Tech Compliance and Consulting Ltd. All rights reserved.</p>
         </div>
       </div>
     </div>
