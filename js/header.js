@@ -105,47 +105,63 @@
         <button class="mobile-drawer-close" onclick="toggleMobileMenu()" aria-label="Close menu">&times;</button>
       </div>
       <div class="mobile-drawer-body">
-        <!-- Our Solutions (Client Sitemap) -->
-        <div>
-          <div class="mobile-nav-group-title">Services</div>
-          <ul class="mobile-nav-links">
-            <li><a href="${pfx}services/compliance-audit-return.html" onclick="toggleMobileMenu()">Annual Compliance Audit Return Filing <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
-            <li><a href="${pfx}services/outsourced-dpo.html" onclick="toggleMobileMenu()">Appoint Outsourced Certified DPO <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
-            <li><a href="${pfx}services/data-protection-audit.html" onclick="toggleMobileMenu()">Data Protection Audit <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
-            <li><a href="${pfx}services/data-privacy-training.html" onclick="toggleMobileMenu()">Data Privacy Training <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
-            <li><a href="${pfx}services/index.html" onclick="toggleMobileMenu()">View All <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
-          </ul>
-        </div>
+        <nav class="mobile-nav-menu">
+          <!-- 1. Services Dropdown -->
+          <div class="mobile-nav-item has-dropdown">
+            <button type="button" class="mobile-nav-trigger" onclick="toggleMobileDropdown(this)" aria-expanded="false">
+              <span>Services</span>
+              <i class="fa-solid fa-chevron-down mobile-nav-chevron"></i>
+            </button>
+            <div class="mobile-submenu">
+              <ul class="mobile-submenu-list">
+                <li><a href="${pfx}services/compliance-audit-return.html" onclick="toggleMobileMenu()">Annual Compliance Audit Return Filing</a></li>
+                <li><a href="${pfx}services/outsourced-dpo.html" onclick="toggleMobileMenu()">Appoint Outsourced Certified DPO</a></li>
+                <li><a href="${pfx}services/data-protection-audit.html" onclick="toggleMobileMenu()">Data Protection Audit</a></li>
+                <li><a href="${pfx}services/data-privacy-training.html" onclick="toggleMobileMenu()">Data Privacy Training</a></li>
+                <li><a href="${pfx}services/index.html" onclick="toggleMobileMenu()">View All</a></li>
+              </ul>
+            </div>
+          </div>
 
-        <!-- Knowledge Hub -->
-        <div>
-          <div class="mobile-nav-group-title">Knowledge Hub</div>
-          <ul class="mobile-nav-links">
-            <li><a href="${pfx}publication-detail.html" onclick="toggleMobileMenu()">Complying With NDPA 2023 <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
-            <li><a href="javascript:void(0)">Regulatory Guidance</a></li>
-            <li><a href="javascript:void(0)">Artificial Intelligence Tracker</a></li>
-            <li><a href="${pfx}blog/index.html" onclick="toggleMobileMenu()">View All <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
-          </ul>
-        </div>
+          <!-- 2. Our Organisation Dropdown -->
+          <div class="mobile-nav-item has-dropdown">
+            <button type="button" class="mobile-nav-trigger" onclick="toggleMobileDropdown(this)" aria-expanded="false">
+              <span>Our Organisation</span>
+              <i class="fa-solid fa-chevron-down mobile-nav-chevron"></i>
+            </button>
+            <div class="mobile-submenu">
+              <ul class="mobile-submenu-list">
+                <li><a href="${pfx}about.html" onclick="toggleMobileMenu()">About Us</a></li>
+                <li><a href="javascript:void(0)">Licensed DPCO Status</a></li>
+                <li><a href="javascript:void(0)">Team &amp; Advisory Board</a></li>
+                <li><a href="javascript:void(0)">Career &amp; Partnerships</a></li>
+              </ul>
+            </div>
+          </div>
 
-        <!-- Our Organisation -->
-        <div>
-          <div class="mobile-nav-group-title">Our Organisation</div>
-          <ul class="mobile-nav-links">
-            <li><a href="${pfx}about.html" onclick="toggleMobileMenu()">About Us <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
-            <li><a href="javascript:void(0)">Licensed DPCO Status</a></li>
-            <li><a href="javascript:void(0)">Team &amp; Advisory Board</a></li>
-            <li><a href="javascript:void(0)">Career &amp; Partnerships</a></li>
-          </ul>
-        </div>
+          <!-- 3. Knowledge Hub Dropdown -->
+          <div class="mobile-nav-item has-dropdown">
+            <button type="button" class="mobile-nav-trigger" onclick="toggleMobileDropdown(this)" aria-expanded="false">
+              <span>Knowledge Hub</span>
+              <i class="fa-solid fa-chevron-down mobile-nav-chevron"></i>
+            </button>
+            <div class="mobile-submenu">
+              <ul class="mobile-submenu-list">
+                <li><a href="${pfx}publication-detail.html" onclick="toggleMobileMenu()">Complying With NDPA 2023</a></li>
+                <li><a href="javascript:void(0)">Regulatory Guidance</a></li>
+                <li><a href="javascript:void(0)">Artificial Intelligence Tracker</a></li>
+                <li><a href="${pfx}blog/index.html" onclick="toggleMobileMenu()">View All</a></li>
+              </ul>
+            </div>
+          </div>
 
-        <!-- Contact Us -->
-        <div>
-          <div class="mobile-nav-group-title">Contact</div>
-          <ul class="mobile-nav-links">
-            <li><a href="${pfx}contact.html" onclick="toggleMobileMenu()">Contact Us <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
-          </ul>
-        </div>
+          <!-- 4. Contact Us (Direct Link) -->
+          <div class="mobile-nav-item">
+            <a href="${pfx}contact.html" class="mobile-nav-trigger mobile-nav-direct-link" onclick="toggleMobileMenu()">
+              <span>Contact Us</span>
+            </a>
+          </div>
+        </nav>
       </div>
       <div class="mobile-drawer-footer">
         <a href="${pfx}services/compliance-audit-return.html" onclick="toggleMobileMenu()" class="btn-mobile-car">
@@ -200,8 +216,33 @@
   window.toggleMobileMenu = function () {
     const overlay = document.getElementById('mobileNavOverlay');
     if (overlay) {
+      const willOpen = !overlay.classList.contains('open');
       overlay.classList.toggle('open');
-      document.body.style.overflow = overlay.classList.contains('open') ? 'hidden' : '';
+      document.body.style.overflow = willOpen ? 'hidden' : '';
+    }
+  };
+
+  // Interactive Logic: Mobile Dropdown Accordion
+  window.toggleMobileDropdown = function (button) {
+    const parent = button.closest('.mobile-nav-item');
+    if (!parent) return;
+    const wasOpen = parent.classList.contains('open');
+
+    // Close any other open dropdowns for smooth accordion feel
+    document.querySelectorAll('.mobile-nav-item.has-dropdown').forEach(function (item) {
+      if (item !== parent) {
+        item.classList.remove('open');
+        const trigger = item.querySelector('.mobile-nav-trigger');
+        if (trigger) trigger.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    if (wasOpen) {
+      parent.classList.remove('open');
+      button.setAttribute('aria-expanded', 'false');
+    } else {
+      parent.classList.add('open');
+      button.setAttribute('aria-expanded', 'true');
     }
   };
 

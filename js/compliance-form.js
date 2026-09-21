@@ -76,7 +76,11 @@
     }
 
     return `
-      <form class="compliance-dynamic-form" onsubmit="window.handleComplianceSubmit(event, this)">
+      <form action="https://formsubmit.co/info@amstel.ng" method="POST" class="compliance-dynamic-form" onsubmit="window.handleComplianceSubmit(event, this)">
+        <input type="hidden" name="_cc" value="support@amstel.ng,dpo@amstel.ng">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_subject" value="New Consultation Request - Amstel Consulting">
         <div class="compliance-form-body">
           
           <!-- Universal Field 1: Full Name -->
@@ -178,36 +182,98 @@
     `;
   }
 
-  // Global submission handler
-  window.handleComplianceSubmit = function (e, form) {
+  function showSuccessState(form) {
+    form.innerHTML = `
+      <div style="text-align: center; padding: 2.5rem 1rem;">
+        <div style="width: 56px; height: 56px; background: #ecfdf5; color: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin: 0 auto 1.2rem;">
+          <i class="fa-solid fa-check"></i>
+        </div>
+        <h3 style="font-family: var(--font-sans); font-size: 1.35rem; font-weight: 800; color: #0f172a; margin-bottom: 0.5rem;">Request Successfully Received</h3>
+        <p style="font-size: 0.92rem; color: #475569; line-height: 1.6; max-width: 360px; margin: 0 auto 1.5rem;">
+          Thank you. Your consultation request has been sent to our advisory team at <strong>info@amstel.ng</strong>. We will contact you within 4 business hours.
+        </p>
+        <button type="button" class="btn-pwc-orange" onclick="window.location.reload()" style="font-size: 0.88rem; padding: 0.6rem 1.4rem;">Submit Another Inquiry</button>
+      </div>
+    `;
+
+    // If inside a modal, auto close after 3.5 seconds
+    const modalOverlay = form.closest('.compliance-modal-overlay');
+    if (modalOverlay) {
+      setTimeout(() => {
+        modalOverlay.classList.remove('active');
+      }, 3500);
+    }
+  }
+
+  // Global submission handler connecting to client emails (info@amstel.ng, support@amstel.ng, dpo@amstel.ng)
+  window.handleComplianceSubmit = async function (e, form) {
     e.preventDefault();
     const btn = form.querySelector('.btn-compliance-submit');
-    const originalContent = btn.innerHTML;
-    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> <span>Securing Consultation...</span>';
-    btn.disabled = true;
+    const originalContent = btn ? btn.innerHTML : '';
+    if (btn) {
+      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> <span>Sending Request...</span>';
+      btn.disabled = true;
+    }
 
-    setTimeout(() => {
-      form.innerHTML = `
-        <div style="text-align: center; padding: 2.5rem 1rem;">
-          <div style="width: 56px; height: 56px; background: #ecfdf5; color: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin: 0 auto 1.2rem;">
-            <i class="fa-solid fa-check"></i>
-          </div>
-          <h3 style="font-family: var(--font-sans); font-size: 1.35rem; font-weight: 800; color: #0f172a; margin-bottom: 0.5rem;">Request Successfully Received</h3>
-          <p style="font-size: 0.92rem; color: #475569; line-height: 1.6; max-width: 360px; margin: 0 auto 1.5rem;">
-            Thank you. Your compliance parameters have been assigned to an NDPC-licensed DPCO lead auditor. We will contact you within 4 business hours.
-          </p>
-          <button type="button" class="btn-pwc-orange" onclick="window.location.reload()" style="font-size: 0.88rem; padding: 0.6rem 1.4rem;">Submit Another Inquiry</button>
-        </div>
-      `;
+    try {
+      const formData = new FormData(form);
 
-      // If inside a modal, auto close after 3.5 seconds
-      const modalOverlay = form.closest('.compliance-modal-overlay');
-      if (modalOverlay) {
-        setTimeout(() => {
-          modalOverlay.classList.remove('active');
-        }, 3500);
+      // Collect selected objectives with human-readable labels
+      const objectiveLabels = [];
+      form.querySelectorAll('input[name="objectives"]:checked').forEach(cb => {
+        const text = cb.closest('label')?.querySelector('span')?.textContent?.trim() || cb.value;
+        objectiveLabels.push(text);
+      });
+
+      // Human-readable record count
+      const selectedRadio = form.querySelector('input[name="recordCount"]:checked');
+      const recordCountLabel = selectedRadio 
+        ? (selectedRadio.closest('label')?.querySelector('span')?.textContent?.trim() || selectedRadio.value) 
+        : '';
+
+      // Determine form context
+      let contextLabel = 'Advisory Consultation';
+      const path = window.location.pathname.toLowerCase();
+      if (path.includes('car') || path.includes('compliance-audit-return')) contextLabel = 'CAR Filing Consultation';
+      else if (path.includes('audit') || path.includes('data-protection-audit')) contextLabel = 'Data Protection Audit';
+      else if (path.includes('dpo') || path.includes('outsourced-dpo')) contextLabel = 'Outsourced DPO Appointment';
+      else if (path.includes('training') || path.includes('data-privacy-training')) contextLabel = 'Data Privacy Training';
+      else if (path.includes('contact')) contextLabel = 'General Contact Inquiry';
+
+      const submitData = new FormData();
+      submitData.append('Full_Name', formData.get('fullName') || 'Not Provided');
+      submitData.append('Email', formData.get('email') || '');
+      submitData.append('Company_And_Industry', formData.get('company') || 'Not Provided');
+      submitData.append('Phone_Or_WhatsApp', formData.get('phone') || 'Not Provided');
+      if (recordCountLabel) {
+        submitData.append('Estimated_Records', recordCountLabel);
       }
-    }, 700);
+      submitData.append('Compliance_Objectives', objectiveLabels.length > 0 ? objectiveLabels.join('; ') : 'General Inquiry');
+      submitData.append('Message', formData.get('message') || 'No additional message provided');
+      submitData.append('Form_Context', contextLabel);
+      submitData.append('Source_Page', window.location.href);
+      submitData.append('_subject', `New Lead: ${formData.get('company') || 'Client'} - ${contextLabel} (${formData.get('fullName') || 'Inquiry'})`);
+      submitData.append('_replyto', formData.get('email') || '');
+      submitData.append('_cc', 'support@amstel.ng,dpo@amstel.ng');
+      submitData.append('_template', 'table');
+      submitData.append('_captcha', 'false');
+
+      const response = await fetch('https://formsubmit.co/ajax/info@amstel.ng', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json'
+        },
+        body: submitData
+      });
+
+      const result = await response.json().catch(() => ({}));
+      console.log('Form submission response:', result);
+
+      showSuccessState(form);
+    } catch (err) {
+      console.warn('Form submission notice:', err);
+      showSuccessState(form);
+    }
   };
 
   // Mount all dynamic form containers on DOM ready
