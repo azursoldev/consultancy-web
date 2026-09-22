@@ -174,7 +174,7 @@
 
           <div class="form-guarantee-note">
             <i class="fa-solid fa-shield-halved"></i>
-            <span>NDA Protected &bull; Licensed DPCO</span>
+            <span>Licensed DPCO</span>
           </div>
 
         </div>
