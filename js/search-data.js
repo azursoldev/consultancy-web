@@ -190,6 +190,15 @@ window.siteSearchIndex = [
     keywords: 'martha jowah esq head of legal privacy compliance corporate regulatory contract management risk management legal practitioner lawyer attorney partner team advisor consultant'
   },
   {
+    id: 'esmee-de-jong',
+    title: 'Esmee de Jong — Advisory Board Member (International Expansion, Media & Communications)',
+    url: 'esmee-de-jong.html',
+    category: 'Organisation',
+    badge: 'Advisory Board',
+    desc: 'Creative entrepreneur and communications specialist advising on international expansion, audience engagement, storytelling, and corporate training design.',
+    keywords: 'esmee de jong advisory board member international expansion media communications netherlands creative entrepreneurship training awareness storytelling public relations stakeholder relations partner team advisor'
+  },
+  {
     id: 'career-partnerships',
     title: 'Build a Trusted Advisory Partnership',
     url: 'about.html#partnerships',

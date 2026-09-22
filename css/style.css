@@ -117,7 +117,12 @@ button *,
 .intl-perspective-card p,
 .bottom-nudge-content p,
 .trust-marker-text,
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-align: left !important;
 }
 
@@ -802,7 +807,7 @@ html body .mega-dropdown-grid,
 
 .mobile-nav-trigger:hover,
 .mobile-nav-trigger:focus,
-.mobile-nav-item.open > .mobile-nav-trigger {
+.mobile-nav-item.open>.mobile-nav-trigger {
   color: var(--pwc-orange);
   background: #fff8f5;
 }
@@ -814,7 +819,7 @@ html body .mega-dropdown-grid,
   pointer-events: none;
 }
 
-.mobile-nav-item.open > .mobile-nav-trigger .mobile-nav-chevron {
+.mobile-nav-item.open>.mobile-nav-trigger .mobile-nav-chevron {
   transform: rotate(180deg);
   color: var(--pwc-orange);
 }
@@ -828,7 +833,7 @@ html body .mega-dropdown-grid,
   border-left: 3px solid var(--pwc-orange);
 }
 
-.mobile-nav-item.open > .mobile-submenu {
+.mobile-nav-item.open>.mobile-submenu {
   display: block;
   animation: mobileDropdownSlide 0.2s ease-out;
 }
@@ -838,6 +843,7 @@ html body .mega-dropdown-grid,
     opacity: 0;
     transform: translateY(-4px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -6875,14 +6881,17 @@ html body .mega-dropdown-grid,
 }
 
 @media (max-width: 768px) {
+
   /* Container & Layout */
   .article-container {
     padding: 1.5rem 1.1rem 3.5rem;
   }
+
   .article-hero-split {
     grid-template-columns: 1fr;
     gap: 1.25rem;
   }
+
   .article-hero-img-wrap {
     height: 220px;
     border-radius: 4px;
@@ -6896,30 +6905,35 @@ html body .mega-dropdown-grid,
     margin-bottom: 0.75rem;
     display: inline-block;
   }
+
   .article-hero-title {
     font-size: 1.65rem;
     line-height: 1.25;
     letter-spacing: -0.015em;
     margin-bottom: 0.85rem;
   }
+
   .article-lead-muted {
     font-size: 0.95rem;
     line-height: 1.65;
     color: #475569;
     margin-bottom: 0;
   }
+
   .article-lead-text {
     font-size: 1.12rem;
     line-height: 1.55;
     margin-bottom: 1.5rem;
     color: #1e293b;
   }
+
   .article-body-p {
     font-size: 0.96rem;
     line-height: 1.68;
     margin-bottom: 1.25rem;
     color: #334155;
   }
+
   .article-pullquote {
     font-size: 1.05rem;
     line-height: 1.6;
@@ -6927,6 +6941,7 @@ html body .mega-dropdown-grid,
     margin: 1.75rem 0;
     border-left-width: 4px;
   }
+
   .analysis-section-banner {
     font-size: 1.12rem;
     line-height: 1.35;
@@ -6934,6 +6949,7 @@ html body .mega-dropdown-grid,
     margin: 2rem 0 1rem;
     border-left-width: 4px;
   }
+
   .article-bullet-list {
     margin: 1rem 0 1.5rem 1rem;
     padding-left: 0.5rem;
@@ -6950,11 +6966,13 @@ html body .mega-dropdown-grid,
     padding: 0.85rem 0;
     margin-bottom: 1.75rem;
   }
+
   .article-meta-info {
     flex-wrap: wrap;
     gap: 0.5rem 0.85rem;
     font-size: 0.82rem;
   }
+
   .article-share-actions {
     gap: 0.75rem;
     font-size: 0.85rem;
@@ -6966,13 +6984,16 @@ html body .mega-dropdown-grid,
     gap: 0.85rem;
     margin: 1.25rem 0 1.5rem;
   }
+
   .dept-card {
     padding: 1rem 1.15rem;
   }
+
   .dept-card h5 {
     font-size: 0.98rem;
     margin-bottom: 0.35rem;
   }
+
   .dept-card p {
     font-size: 0.88rem;
     line-height: 1.5;
@@ -6987,12 +7008,14 @@ html body .mega-dropdown-grid,
     margin: 1.25rem 0 1.75rem;
     border-left-width: 4px;
   }
+
   .strategic-action-box .action-badge {
     margin-top: 0;
     align-self: flex-start;
     font-size: 0.7rem;
     padding: 0.3rem 0.6rem;
   }
+
   .strategic-action-box p {
     font-size: 0.92rem;
     line-height: 1.55;
@@ -7008,16 +7031,19 @@ html body .mega-dropdown-grid,
     margin: 2rem 0;
     border-radius: 6px;
   }
+
   .readiness-banner-content h3 {
     font-size: 1.35rem;
     line-height: 1.28;
     margin-bottom: 0.5rem;
   }
+
   .readiness-banner-content p {
     font-size: 0.92rem;
     line-height: 1.55;
     margin-bottom: 0;
   }
+
   .btn-readiness-cta {
     width: 100%;
     justify-content: center;
@@ -7035,15 +7061,18 @@ html body .mega-dropdown-grid,
     padding: 1.5rem 1.25rem;
     margin: 2rem 0 2rem;
   }
+
   .download-box-text h3 {
     font-size: 1.25rem;
     line-height: 1.3;
     margin-bottom: 0.5rem;
   }
+
   .download-box-text p {
     font-size: 0.92rem;
     line-height: 1.55;
   }
+
   .btn-download-guide {
     width: 100%;
     justify-content: center;
@@ -9667,8 +9696,8 @@ textarea.form-control {
 
 .leadership-matrix-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  max-width: 840px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  max-width: 1080px;
   gap: 2rem;
 }
 
@@ -9848,10 +9877,12 @@ textarea.form-control {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
+
   .partner-portrait-card {
     max-width: 380px;
     margin: 0 auto;
   }
+
   .partner-portrait-img {
     height: 380px;
   }
@@ -9950,7 +9981,7 @@ textarea.form-control {
    29. OUR SOLUTIONS INDEX HUB PAGE
    ========================================================================== */
 .solutions-hub-hero {
-  background: linear-gradient(to bottom, #fff7ed 0%, #ffffff 100%);
+
   padding: 4rem 2rem 3rem;
   border-bottom: 1px solid #fed7aa;
 }
@@ -11700,12 +11731,15 @@ footer.footer .footer-legal-links a:hover,
     grid-template-columns: 1fr;
     gap: 0.85rem;
   }
+
   .faq-page-container {
     padding: 1.5rem 1rem 4rem;
   }
+
   .faq-header-card {
     padding: 1.5rem 1.25rem;
   }
+
   .faq-title {
     font-size: 1.85rem;
   }
@@ -11880,6 +11914,7 @@ footer.footer .footer-legal-links a:hover,
     transform: scale(0.95);
     opacity: 0;
   }
+
   to {
     transform: scale(1);
     opacity: 1;
@@ -12042,11 +12077,11 @@ footer.footer .footer-legal-links a:hover,
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
 }
 
-.cookie-switch input:checked + .cookie-slider {
+.cookie-switch input:checked+.cookie-slider {
   background-color: var(--pwc-orange, #d04a02);
 }
 
-.cookie-switch input:checked + .cookie-slider:before {
+.cookie-switch input:checked+.cookie-slider:before {
   transform: translateX(20px);
 }
 
@@ -12106,32 +12141,39 @@ footer.footer .footer-legal-links a:hover,
     border-radius: 14px 14px 0 0;
     border-bottom: none;
   }
+
   .cookie-banner-inner {
     padding: 1.2rem 1.1rem;
   }
+
   .cookie-banner-actions {
     flex-direction: column;
     align-items: stretch;
   }
+
   .cookie-banner-actions .btn-cookie {
     width: 100%;
     text-align: center;
   }
+
   .cookie-modal-card {
     max-height: 95vh;
   }
+
   .cookie-modal-footer {
     flex-direction: column;
     align-items: stretch;
   }
+
   .cookie-modal-footer .btn-cookie {
     width: 100%;
     text-align: center;
   }
+
   .cookie-reopen-pill {
     bottom: 0.85rem;
     left: 0.85rem;
     padding: 0.4rem 0.65rem;
     font-size: 0.72rem;
   }
-}
+}
