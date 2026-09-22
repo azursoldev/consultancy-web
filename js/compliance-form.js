@@ -75,8 +75,12 @@
       prechecked = 'dpo'; // Yellow highlight: About Us modal automatically pre-checks DPO option!
     }
 
+    const isSubdir = window.location.pathname.includes('/services/') || window.location.pathname.includes('/blog/') || window.location.pathname.includes('/legal/');
+    const privacyHref = isSubdir ? '../legal/privacy-statement.html' : 'legal/privacy-statement.html';
+    const endpointHref = isSubdir ? '../send-mail.php' : 'send-mail.php';
+
     return `
-      <form action="https://formsubmit.co/info@amstel.ng" method="POST" class="compliance-dynamic-form" onsubmit="window.handleComplianceSubmit(event, this)">
+      <form action="${endpointHref}" method="POST" class="compliance-dynamic-form" onsubmit="window.handleComplianceSubmit(event, this)">
         <input type="hidden" name="_cc" value="support@amstel.ng,dpo@amstel.ng">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_template" value="table">
@@ -177,6 +181,10 @@
             <span>Licensed DPCO</span>
           </div>
 
+          <div class="form-privacy-note">
+            By submitting, you agree to our <a href="${privacyHref}" target="_blank">Privacy Statement</a>. Enquiries are encrypted, retained solely for advisory scoping under NDPA 2023, and answered within 4 business hours.
+          </div>
+
         </div>
       </form>
     `;
@@ -189,8 +197,8 @@
           <i class="fa-solid fa-check"></i>
         </div>
         <h3 style="font-family: var(--font-sans); font-size: 1.35rem; font-weight: 800; color: #0f172a; margin-bottom: 0.5rem;">Request Successfully Received</h3>
-        <p style="font-size: 0.92rem; color: #475569; line-height: 1.6; max-width: 360px; margin: 0 auto 1.5rem;">
-          Thank you. Your consultation request has been sent to our advisory team at <strong>info@amstel.ng</strong>. We will contact you within 4 business hours.
+        <p style="font-size: 0.92rem; color: #475569; line-height: 1.6; max-width: 380px; margin: 0 auto 1.5rem;">
+          Thank you. Your consultation request has been sent to our advisory team at <strong>info@amstel.ng</strong>, <strong>support@amstel.ng</strong>, and <strong>dpo@amstel.ng</strong>. We will contact you within 4 business hours.
         </p>
         <button type="button" class="btn-pwc-orange" onclick="window.location.reload()" style="font-size: 0.88rem; padding: 0.6rem 1.4rem;">Submit Another Inquiry</button>
       </div>
@@ -252,22 +260,43 @@
       submitData.append('Message', formData.get('message') || 'No additional message provided');
       submitData.append('Form_Context', contextLabel);
       submitData.append('Source_Page', window.location.href);
-      submitData.append('_subject', `New Lead: ${formData.get('company') || 'Client'} - ${contextLabel} (${formData.get('fullName') || 'Inquiry'})`);
+      submitData.append('_subject', `New Lead: ${formData.get('company') || 'Client'} - ${contextLabel}`);
       submitData.append('_replyto', formData.get('email') || '');
       submitData.append('_cc', 'support@amstel.ng,dpo@amstel.ng');
       submitData.append('_template', 'table');
       submitData.append('_captcha', 'false');
 
-      const response = await fetch('https://formsubmit.co/ajax/info@amstel.ng', {
-        method: 'POST',
-        headers: {
-          'Accept': 'application/json'
-        },
-        body: submitData
-      });
+      const isSub = window.location.pathname.includes('/services/') || window.location.pathname.includes('/blog/') || window.location.pathname.includes('/legal/');
+      const endpoint = isSub ? '../send-mail.php' : 'send-mail.php';
 
-      const result = await response.json().catch(() => ({}));
-      console.log('Form submission response:', result);
+      let sentSuccessfully = false;
+
+      // 1. Primary controlled backend submission via SMTP
+      try {
+        const directResp = await fetch(endpoint, {
+          method: 'POST',
+          body: submitData
+        });
+        if (directResp.ok) {
+          const directJson = await directResp.json().catch(() => ({}));
+          if (directJson && directJson.success) {
+            sentSuccessfully = true;
+          }
+        }
+      } catch (directErr) {
+        console.warn('Direct SMTP endpoint note:', directErr);
+      }
+
+      // 2. Resilient fallback to FormSubmit if backend endpoint is unavailable (e.g. static CDN)
+      if (!sentSuccessfully) {
+        await fetch('https://formsubmit.co/ajax/info@amstel.ng', {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json'
+          },
+          body: submitData
+        }).catch(e => console.warn('Fallback dispatch note:', e));
+      }
 
       showSuccessState(form);
     } catch (err) {

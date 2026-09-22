@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://consultancy-web-x98r.vercel.app/sitemap.xml
+Sitemap: https://amstel.ng/sitemap.xml

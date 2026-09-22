@@ -56,6 +56,7 @@
           <ul>
             <li><a href="${pfx}privacy-statement.html">Privacy Statement</a></li>
             <li><a href="${pfx}cookie-policy.html">Cookie Policy</a></li>
+            <li><a href="javascript:void(0)" onclick="window.openCookiePreferences &amp;&amp; window.openCookiePreferences()">Cookie Preferences</a></li>
             <li><a href="${pfx}terms-of-service.html">Terms of Service</a></li>
             <li><a href="${pfx}legal-disclaimer.html">Legal Disclaimer</a></li>
             <li><a href="${pfx}faq.html">FAQ</a></li>
@@ -123,5 +124,13 @@
     } else {
       document.body.insertAdjacentHTML('beforeend', footerHTML);
     }
+  }
+
+  // Automatically initialize Cookie Consent Banner & Preference Centre across all pages
+  if (!document.getElementById('amstel-cookie-script')) {
+    const cookieScript = document.createElement('script');
+    cookieScript.id = 'amstel-cookie-script';
+    cookieScript.src = `${pfx}js/cookie-banner.js`;
+    document.body.appendChild(cookieScript);
   }
 })();
