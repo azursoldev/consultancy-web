@@ -11752,7 +11752,7 @@ footer.footer .footer-legal-links a:hover,
 .amstel-cookie-banner {
   position: fixed;
   bottom: 1.5rem;
-  left: 1.5rem;
+  right: 1.5rem;
   max-width: 580px;
   width: calc(100% - 3rem);
   background: #ffffff;
@@ -12136,6 +12136,7 @@ footer.footer .footer-legal-links a:hover,
   .amstel-cookie-banner {
     bottom: 0;
     left: 0;
+    right: 0;
     width: 100%;
     max-width: 100%;
     border-radius: 14px 14px 0 0;
