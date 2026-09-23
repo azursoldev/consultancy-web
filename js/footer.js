@@ -33,7 +33,7 @@
           <h5>Our Organisation</h5>
           <ul>
             <li><a href="${pfx}about.html">About Us</a></li>
-            <li><a href="javascript:void(0)">Licensed DPCO Status</a></li>
+            <li><a href="${pfx}licensed-dpco-status.html">Licensed DPCO Status</a></li>
             <li><a href="javascript:void(0)">Team &amp; Advisory Board</a></li>
             <li><a href="javascript:void(0)">Career &amp; Partnerships</a></li>
           </ul>
@@ -56,7 +56,7 @@
           <ul>
             <li><a href="${pfx}privacy-statement.html">Privacy Statement</a></li>
             <li><a href="${pfx}cookie-policy.html">Cookie Policy</a></li>
-            <li><a href="javascript:void(0)" onclick="window.openCookiePreferences &amp;&amp; window.openCookiePreferences()">Cookie Preferences</a></li>
+            <li><a href="javascript:void(0)" onclick="window.openCookiePreferences &amp;&amp; window.openCookiePreferences(); return false;">Cookie Preferences</a></li>
             <li><a href="${pfx}terms-of-service.html">Terms of Service</a></li>
             <li><a href="${pfx}legal-disclaimer.html">Legal Disclaimer</a></li>
             <li><a href="${pfx}faq.html">FAQ</a></li>
@@ -106,7 +106,12 @@
         </div>
         <div class="footer-disclaimer">
           <p class="footer-license-text">Licensed as a Data Protection Compliance Organisation (DPCO) by the Nigeria Data Protection Commission. License No: DPCO/XXXX/2026.</p>
-          <p class="footer-copyright-text">&copy; 2026 Amstel Tech Compliance and Consulting Ltd. All rights reserved.</p>
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.35rem;">
+            <p class="footer-copyright-text" style="margin: 0;">&copy; 2026 Amstel Tech Compliance and Consulting Ltd. All rights reserved.</p>
+            <button type="button" class="footer-cookie-pref-btn" onclick="window.openCookiePreferences &amp;&amp; window.openCookiePreferences(); return false;" title="Manage Cookie Preferences">
+              <i class="fa-solid fa-cookie-bite"></i> Cookie Preferences
+            </button>
+          </div>
         </div>
       </div>
     </div>

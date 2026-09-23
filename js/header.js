@@ -50,7 +50,7 @@
         <div class="simple-dropdown-menu">
           <ul class="simple-dropdown-list">
             <li><a href="${pfx}about.html">About Us</a></li>
-            <li><a href="javascript:void(0)">Licensed DPCO Status</a></li>
+            <li><a href="${pfx}licensed-dpco-status.html">Licensed DPCO Status</a></li>
             <li><a href="javascript:void(0)">Team &amp; Advisory Board</a></li>
             <li><a href="javascript:void(0)">Career &amp; Partnerships</a></li>
           </ul>
@@ -132,7 +132,7 @@
             <div class="mobile-submenu">
               <ul class="mobile-submenu-list">
                 <li><a href="${pfx}about.html" onclick="toggleMobileMenu()">About Us</a></li>
-                <li><a href="javascript:void(0)">Licensed DPCO Status</a></li>
+                <li><a href="${pfx}licensed-dpco-status.html" onclick="toggleMobileMenu()">Licensed DPCO Status</a></li>
                 <li><a href="javascript:void(0)">Team &amp; Advisory Board</a></li>
                 <li><a href="javascript:void(0)">Career &amp; Partnerships</a></li>
               </ul>

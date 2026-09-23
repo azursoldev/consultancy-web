@@ -154,6 +154,15 @@ window.siteSearchIndex = [
     keywords: 'about us organisation amstel consulting ltd mission principles leadership integrity corporate governance profile lagos abuja values credentials team advisory board consultants alignment align comply compliance'
   },
   {
+    id: 'dpco-status',
+    title: 'Licensed DPCO Status & Regulatory Verification',
+    url: 'licensed-dpco-status.html',
+    category: 'Organisation',
+    badge: 'Statutory Credential',
+    desc: 'Official licensing status, RC number, DPCO licence number, issuing authority, and NDPC registry verification details for Amstel Consulting.',
+    keywords: 'licensed dpco status rc number licence number credentials verification ndpc authority issuing renewal date register compliance audit organisation'
+  },
+  {
     id: 'dpco-credentials',
     title: 'AMSTEL CONSULTING IS AN NDPC LICENSED DPCO',
     url: 'about.html#credentials',

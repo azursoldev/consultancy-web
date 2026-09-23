@@ -9845,6 +9845,12 @@ textarea.form-control {
   display: block;
 }
 
+/* Ensure Esmee's full head and hair remain comfortably inside the circular frame */
+.leader-card-img[src*="esmee"],
+.partner-portrait-img[src*="esmee"] {
+  object-position: center 10%;
+}
+
 .partner-main-content {
   display: flex;
   flex-direction: column;
@@ -9879,12 +9885,15 @@ textarea.form-control {
   }
 
   .partner-portrait-card {
-    max-width: 380px;
+    max-width: 320px;
     margin: 0 auto;
   }
 
   .partner-portrait-img {
-    height: 380px;
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    aspect-ratio: 1 / 1;
   }
 }
 
@@ -12095,41 +12104,34 @@ footer.footer .footer-legal-links a:hover,
   border-top: 1px solid #e2e8f0;
 }
 
-/* Reopen pill button */
-.cookie-reopen-pill {
-  position: fixed;
-  bottom: 1.25rem;
-  left: 1.25rem;
-  z-index: 99990;
-  background: #ffffff;
+/* Footer Cookie Preferences Button */
+.footer-cookie-pref-btn {
+  background: #f8fafc;
   border: 1px solid #cbd5e1;
-  border-radius: 30px;
-  padding: 0.45rem 0.85rem;
-  font-size: 0.76rem;
-  font-weight: 700;
   color: #334155;
-  display: flex;
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.35rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  cursor: pointer;
-  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.12);
   transition: all 0.2s ease;
+  line-height: 1.3;
 }
 
-.cookie-reopen-pill i {
+.footer-cookie-pref-btn:hover {
+  background: #ffffff;
   color: var(--pwc-orange, #d04a02);
-  font-size: 0.85rem;
+  border-color: var(--pwc-orange, #d04a02);
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.08);
 }
 
-.cookie-reopen-pill:hover {
-  background: #0f172a;
-  color: #ffffff;
-  border-color: #0f172a;
-  transform: translateY(-1px);
-}
-
-.cookie-reopen-pill:hover i {
-  color: #ffffff;
+.footer-cookie-pref-btn i {
+  color: var(--pwc-orange, #d04a02);
+  font-size: 0.82rem;
 }
 
 @media (max-width: 640px) {
@@ -12170,11 +12172,269 @@ footer.footer .footer-legal-links a:hover,
     width: 100%;
     text-align: center;
   }
+}
 
-  .cookie-reopen-pill {
-    bottom: 0.85rem;
-    left: 0.85rem;
-    padding: 0.4rem 0.65rem;
-    font-size: 0.72rem;
+/* ==========================================================================
+   LICENSED DPCO STATUS & REGULATORY VERIFICATION PAGE
+   ========================================================================== */
+
+.dpco-status-container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 5rem;
+}
+
+.dpco-hero-header {
+  margin-bottom: 2.5rem;
+}
+
+.dpco-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fde68a;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.4rem 0.9rem;
+  border-radius: 9999px;
+  margin-bottom: 1.25rem;
+}
+
+.dpco-status-badge.verified {
+  background: #ecfdf5;
+  color: #065f46;
+  border-color: #a7f3d0;
+}
+
+.dpco-page-title {
+  font-family: var(--font-serif);
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.dpco-lead-desc {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #475569;
+  max-width: 840px;
+}
+
+/* Verification Registry Card */
+.dpco-registry-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.08);
+  overflow: hidden;
+  margin-bottom: 3rem;
+}
+
+.dpco-registry-header {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #ffffff;
+  padding: 1.75rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-bottom: 3px solid var(--pwc-orange, #d04a02);
+}
+
+.dpco-registry-header-title {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.dpco-registry-header-title i {
+  font-size: 1.6rem;
+  color: #fb923c;
+}
+
+.dpco-registry-header-title h2 {
+  font-family: var(--font-sans);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.dpco-live-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(34, 197, 94, 0.2);
+  color: #86efac;
+  border: 1px solid rgba(34, 197, 94, 0.4);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 0.8rem;
+  border-radius: 9999px;
+}
+
+.dpco-live-dot {
+  width: 8px;
+  height: 8px;
+  background: #22c55e;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #22c55e;
+}
+
+/* Table / Data Grid */
+.dpco-registry-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dpco-registry-table tr {
+  border-bottom: 1px solid #f1f5f9;
+  transition: background 0.15s ease;
+}
+
+.dpco-registry-table tr:hover {
+  background: #f8fafc;
+}
+
+.dpco-registry-table tr:last-child {
+  border-bottom: none;
+}
+
+.dpco-registry-label {
+  width: 34%;
+  padding: 1.25rem 2rem;
+  font-size: 0.94rem;
+  font-weight: 700;
+  color: #1e293b;
+  vertical-align: top;
+  background: #fafafa;
+}
+
+.dpco-registry-value {
+  width: 66%;
+  padding: 1.25rem 2rem;
+  font-size: 0.98rem;
+  color: #334155;
+  vertical-align: top;
+}
+
+.dpco-highlight-val {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--pwc-orange, #d04a02);
+  background: #fff7ed;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  border: 1px solid #ffedd5;
+  display: inline-block;
+}
+
+.dpco-verification-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--pwc-orange, #d04a02);
+  color: #ffffff !important;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(208, 74, 2, 0.25);
+}
+
+.dpco-verification-link-btn:hover {
+  background: #b83d02;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(208, 74, 2, 0.35);
+}
+
+.dpco-notice-box {
+  background: #f8fafc;
+  border-left: 4px solid var(--pwc-orange, #d04a02);
+  padding: 1.4rem 1.8rem;
+  border-radius: 0 8px 8px 0;
+  margin: 2.5rem 0;
+}
+
+.dpco-notice-box h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 0.5rem;
+}
+
+.dpco-notice-box p {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.dpco-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2.5rem 0;
+}
+
+.dpco-info-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 1.6rem 1.8rem;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+}
+
+.dpco-info-card h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0 0 0.75rem;
+}
+
+.dpco-info-card h4 i {
+  color: var(--pwc-orange, #d04a02);
+}
+
+.dpco-info-card p {
+  font-size: 0.92rem;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .dpco-page-title {
+    font-size: 1.85rem;
+  }
+  .dpco-registry-table,
+  .dpco-registry-table tbody,
+  .dpco-registry-table tr,
+  .dpco-registry-table td {
+    display: block;
+    width: 100%;
+  }
+  .dpco-registry-label {
+    background: #f8fafc;
+    padding: 1rem 1.25rem 0.4rem;
+    border-bottom: none;
+  }
+  .dpco-registry-value {
+    padding: 0.2rem 1.25rem 1.2rem;
   }
 }

@@ -1,7 +1,8 @@
 /**
  * Amstel Consulting — Standardized Cookie Consent Banner & Preference Centre
  * Compliant with Nigeria Data Protection Act (NDPA) 2023 & NDPC GAID 2025.
- * Provides granular user choice: Necessary (Always active), Analytics (Optional), Marketing (Optional).
+ * Strictly necessary cookies only without consent. Granular user choice for optional cookies.
+ * Does NOT leave any persistent floating icon on screen. Re-configurable via footer link.
  */
 
 (function () {
@@ -30,6 +31,35 @@
     return null;
   }
 
+  // Purge any non-strictly necessary cookies if optional consent is not granted or revoked
+  function clearOptionalCookies() {
+    try {
+      const cookies = document.cookie.split(';');
+      for (let i = 0; i < cookies.length; i++) {
+        const cookie = cookies[i].trim();
+        const eqPos = cookie.indexOf('=');
+        const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+        // Keep only strictly necessary consent cookie
+        if (name && name !== CONSENT_KEY) {
+          const host = window.location.hostname;
+          const hostParts = host.split('.');
+          const paths = ['/', window.location.pathname];
+          const domains = ['', host, '.' + host];
+          if (hostParts.length > 2) {
+            domains.push('.' + hostParts.slice(-2).join('.'));
+          }
+
+          paths.forEach(p => {
+            domains.forEach(d => {
+              const domPart = d ? ` Domain=${d};` : '';
+              document.cookie = `${name}=; Path=${p};${domPart} Expires=Thu, 01 Jan 1970 00:00:01 GMT; SameSite=Lax;`;
+            });
+          });
+        }
+      }
+    } catch (e) {}
+  }
+
   // Save consent to both localStorage and cookie (12 months validity)
   function saveConsent(data) {
     const payload = {
@@ -44,23 +74,63 @@
       localStorage.setItem(CONSENT_KEY, JSON.stringify(payload));
     } catch (e) {}
 
-    // 12 months = 31536000 seconds
+    // 12 months = 31536000 seconds (Strictly necessary functional cookie to record compliance)
     document.cookie = `${CONSENT_KEY}=${encodeURIComponent(JSON.stringify(payload))}; Max-Age=31536000; path=/; SameSite=Lax; Secure`;
 
-    // Apply consent changes (e.g. enable/disable telemetry)
+    // Ensure non-necessary cookies are cleared if optional categories were not consented to
+    if (!payload.analytics || !payload.marketing) {
+      clearOptionalCookies();
+    }
+
+    // Apply consent changes (e.g. enable consented scripts)
     applyConsentState(payload);
 
     hideBanner();
     hidePreferencesModal();
   }
 
+  // Activate dynamic script tags that were held pending consent
+  function enableConsentedScripts(consent) {
+    if (consent.analytics) {
+      document.querySelectorAll('script[type="text/plain"][data-cookie-category="analytics"]').forEach(s => {
+        const newScript = document.createElement('script');
+        Array.from(s.attributes).forEach(attr => {
+          if (attr.name !== 'type') newScript.setAttribute(attr.name, attr.value);
+        });
+        newScript.removeAttribute('data-cookie-category');
+        newScript.textContent = s.textContent;
+        s.parentNode.replaceChild(newScript, s);
+      });
+    }
+    if (consent.marketing) {
+      document.querySelectorAll('script[type="text/plain"][data-cookie-category="marketing"]').forEach(s => {
+        const newScript = document.createElement('script');
+        Array.from(s.attributes).forEach(attr => {
+          if (attr.name !== 'type') newScript.setAttribute(attr.name, attr.value);
+        });
+        newScript.removeAttribute('data-cookie-category');
+        newScript.textContent = s.textContent;
+        s.parentNode.replaceChild(newScript, s);
+      });
+    }
+  }
+
   function applyConsentState(consent) {
     window.AmstelCookieConsent = consent;
-    // Dispatch custom event in case analytics or scripts want to listen
+    enableConsentedScripts(consent);
+    // Dispatch custom event in case external analytics or scripts want to listen
     window.dispatchEvent(new CustomEvent('amstel:cookie-consent-updated', { detail: consent }));
   }
 
-  // Render Banner and Modal into DOM
+  // Global helper to check consent status
+  window.hasCookieConsent = function (category) {
+    if (category === 'necessary') return true;
+    const consent = getConsent();
+    if (!consent) return false;
+    return !!consent[category];
+  };
+
+  // Render Banner and Modal into DOM (No persistent floating badge/icon)
   function injectCookieUI() {
     if (document.getElementById('amstel-cookie-banner-wrap')) return;
 
@@ -76,7 +146,7 @@
               Your privacy choices
             </h4>
             <p class="cookie-banner-desc">
-              We use necessary cookies to operate and secure this website. With your permission, we may also use analytics cookies to understand how visitors use the website and improve our services. You can accept all cookies, reject optional cookies or manage your preferences. You can change your choice at any time through our <a href="${pfx}cookie-policy.html" class="cookie-policy-link">Cookie Policy</a>.
+              We use necessary cookies to operate and secure this website. With your permission, we may also use analytics cookies to understand how visitors use the website and improve our services. You can accept all cookies, reject optional cookies or manage your preferences. You can change your choice at any time through our <a href="${pfx}cookie-policy.html" class="cookie-policy-link">Cookie Policy</a> or the Cookie Preferences link in the footer.
             </p>
           </div>
           <div class="cookie-banner-actions">
@@ -160,12 +230,6 @@
           </div>
         </div>
       </div>
-
-      <!-- 3. Persistent Floating Privacy Badge (Allows Reopening) -->
-      <button type="button" id="amstelCookieReopenBtn" class="cookie-reopen-pill" title="Manage Cookie Preferences" aria-label="Manage Cookie Preferences">
-        <i class="fa-solid fa-cookie-bite"></i>
-        <span>Cookie Preferences</span>
-      </button>
     `;
 
     document.body.appendChild(container);
@@ -184,7 +248,6 @@
     const btnModalAcceptAll = document.getElementById('btnModalAcceptAll');
     const btnModalRejectOptional = document.getElementById('btnModalRejectOptional');
     const modalOverlay = document.getElementById('amstelCookieModal');
-    const reopenBtn = document.getElementById('amstelCookieReopenBtn');
 
     if (btnAcceptAll) {
       btnAcceptAll.addEventListener('click', () => {
@@ -234,12 +297,6 @@
       });
     }
 
-    if (reopenBtn) {
-      reopenBtn.addEventListener('click', () => {
-        showPreferencesModal();
-      });
-    }
-
     // Keyboard ESC to close modal
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && modalOverlay && modalOverlay.classList.contains('active')) {
@@ -263,6 +320,9 @@
   }
 
   function showPreferencesModal() {
+    // Ensure UI is injected if triggered early
+    injectCookieUI();
+
     const modal = document.getElementById('amstelCookieModal');
     const current = getConsent() || { analytics: false, marketing: false };
     
@@ -286,7 +346,7 @@
     }
   }
 
-  // Global helper to trigger modal from footer link
+  // Global helper to trigger modal from footer link or policy pages
   window.openCookiePreferences = function () {
     showPreferencesModal();
   };

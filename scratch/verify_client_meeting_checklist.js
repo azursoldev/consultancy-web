@@ -41,7 +41,7 @@ async function runChecklist() {
   assert(home.body.includes('Initiate Compliance Audit Return Filing Support'), 'Hero Button 2 is present');
   assert(home.body.includes('Explore Solutions'), 'Hero Button 3 (scroll) is present');
   assert(home.body.includes('Licensed Data Protection Compliance Organization (DPCO)'), 'Trust Marker 1 present');
-  assert(home.body.includes('Fully Registered with the NDPC'), 'Trust Marker 2 present');
+  assert(home.body.includes('Verified on the Official NDPC DPCO Register') || home.body.includes('Fully Registered with the NDPC'), 'Trust Marker 2 present');
   assert(home.body.includes('Authorized Statutory CAR Audit Portal Submissions'), 'Trust Marker 3 present');
   assert(home.body.includes('Global Network of Consultants Across Nigeria, Europe &amp; the Americas') || home.body.includes('Global Network of Consultants Across Nigeria, Europe & the Americas'), 'Trust Marker 4 present');
   assert(home.body.includes('Annual Statutory CAR Filing Support'), 'Pillar 1 CAR present');
