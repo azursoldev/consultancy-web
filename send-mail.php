@@ -204,7 +204,7 @@ try {
 
     echo json_encode([
         'success' => true,
-        'message' => 'Consultation inquiry dispatched successfully to info@amstel.ng, support@amstel.ng, and dpo@amstel.ng.'
+        'message' => 'Consultation inquiry dispatched successfully to our advisory team.'
     ]);
 } catch (Exception $e) {
     // Fallback: try PHP mail() if local sendmail is available

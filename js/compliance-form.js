@@ -23,53 +23,37 @@
 
   // Generate form HTML based on context
   function generateFormHTML(type, isModal = false) {
-    let formTitle = 'Appoint Your DPO Team';
-    let formSubtitle = 'Fill out the form below to map out a tailored, fixed-fee DPCO architecture';
     let ctaText = 'Initiate Secure Consultation';
     let showRadios = false;
     let prechecked = '';
     let showMessage = false;
 
     if (type === 'car') {
-      formTitle = 'Initiate Compliance Audit Return (CAR)';
-      formSubtitle = 'Connect with an NDPC-licensed DPCO lead auditor within 4 business hours to secure your filing certificate.';
       ctaText = 'Initiate Compliance Audit Return (CAR)';
       showRadios = true;
       prechecked = 'car';
     } else if (type === 'audit') {
-      formTitle = 'Request Data Protection Audit';
-      formSubtitle = 'Uncover compliance vulnerabilities and receive a tailored audit proposal within 4 business hours.';
       ctaText = 'Request Data Protection Audit';
       showRadios = true;
       prechecked = 'audit';
     } else if (type === 'dpo') {
-      formTitle = 'Appoint Your DPO Team';
-      formSubtitle = 'Fill out the form below to map out a tailored, fixed-fee DPCO architecture.';
       ctaText = 'Appoint Your Certified Outsourced DPO';
       showRadios = false;
       prechecked = 'dpo';
     } else if (type === 'training') {
-      formTitle = 'Request Corporate Training';
-      formSubtitle = 'Empower your leadership and staff with certified NDPA data privacy training programmes.';
       ctaText = 'Request Data Privacy Training';
       showRadios = false;
       prechecked = 'training';
     } else if (type === 'readiness') {
-      formTitle = 'Get FREE NDPA Gap Assessment';
-      formSubtitle = 'Identify and close your NDPA 2023 compliance gaps with licensed DPCO experts.';
       ctaText = 'Get FREE NDPA Gap Assessment';
       showRadios = true;
       showMessage = true;
       prechecked = 'readiness';
     } else if (type === 'contact') {
-      formTitle = 'Initiate Corporate Scoping';
-      formSubtitle = 'Direct channel to our senior data privacy partners. Response within 4 business hours.';
       ctaText = 'Initiate Secure Consultation';
       showMessage = true;
       prechecked = 'dpo';
     } else if (type === 'about' || isModal) {
-      formTitle = 'Speak with an Advisory Consultant';
-      formSubtitle = 'Our senior partners provide boardroom-level guidance and rapid incident support.';
       ctaText = 'Submit Consultation Request';
       showMessage = true;
       prechecked = 'dpo'; // Yellow highlight: About Us modal automatically pre-checks DPO option!
@@ -182,7 +166,7 @@
           </div>
 
           <div class="form-privacy-note">
-            By submitting, you agree to our <a href="${privacyHref}" target="_blank">Privacy Statement</a>. Enquiries are encrypted, retained solely for advisory scoping under NDPA 2023, and answered within 4 business hours.
+            By submitting, you agree to our <a href="${privacyHref}" target="_blank">Privacy Statement</a>.
           </div>
 
         </div>
@@ -198,7 +182,7 @@
         </div>
         <h3 style="font-family: var(--font-sans); font-size: 1.35rem; font-weight: 800; color: #0f172a; margin-bottom: 0.5rem;">Request Successfully Received</h3>
         <p style="font-size: 0.92rem; color: #475569; line-height: 1.6; max-width: 380px; margin: 0 auto 1.5rem;">
-          Thank you. Your consultation request has been sent to our advisory team at <strong>info@amstel.ng</strong>, <strong>support@amstel.ng</strong>, and <strong>dpo@amstel.ng</strong>. We will contact you within 4 business hours.
+          Thank you. Your consultation request has been sent to our advisory team. We will contact you within 4 business hours.
         </p>
         <button type="button" class="btn-pwc-orange" onclick="window.location.reload()" style="font-size: 0.88rem; padding: 0.6rem 1.4rem;">Submit Another Inquiry</button>
       </div>
@@ -349,7 +333,6 @@
           <div class="modal-header">
             <span class="compliance-form-badge">Confidential Consultation</span>
             <h3>Speak with an Advisory Consultant</h3>
-            <p>Connect with our senior data privacy lawyers and cybersecurity engineers.</p>
           </div>
           <div id="modalFormContainer"></div>
         </div>
@@ -376,24 +359,19 @@
       const formContainer = document.getElementById('modalFormContainer');
       const badgeEl = modalOverlay.querySelector('.compliance-form-badge');
       const titleEl = modalOverlay.querySelector('.modal-header h3');
-      const subEl = modalOverlay.querySelector('.modal-header p');
 
       if (precheckOption === 'readiness' || precheckOption === 'gap' || precheckOption === 'pia') {
         if (badgeEl) badgeEl.textContent = 'NDPA 2023 Gap Assessment';
         if (titleEl) titleEl.textContent = 'Get FREE NDPA Gap Assessment';
-        if (subEl) subEl.textContent = 'Connect with our accredited DPCO directors to identify vulnerabilities and receive your tailored NDPA gap assessment within 4 business hours.';
       } else if (precheckOption === 'audit') {
         if (badgeEl) badgeEl.textContent = 'Data Protection Audit';
         if (titleEl) titleEl.textContent = 'Request Data Protection Audit';
-        if (subEl) subEl.textContent = 'Uncover compliance vulnerabilities and receive a tailored audit proposal within 4 business hours.';
       } else if (precheckOption === 'car') {
         if (badgeEl) badgeEl.textContent = 'Statutory DPCO Filing';
         if (titleEl) titleEl.textContent = 'Initiate Compliance Audit Return (CAR)';
-        if (subEl) subEl.textContent = 'Connect with an NDPC-licensed DPCO lead auditor within 4 business hours to secure your filing certificate.';
       } else {
         if (badgeEl) badgeEl.textContent = 'Confidential Consultation';
         if (titleEl) titleEl.textContent = 'Speak with an Advisory Consultant';
-        if (subEl) subEl.textContent = 'Connect with our senior data privacy lawyers and cybersecurity engineers.';
       }
 
       if (formContainer) {
