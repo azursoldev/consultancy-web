@@ -339,7 +339,7 @@
       url: 'team.html',
       badge: 'Advisory Board',
       desc: 'Multidisciplinary Advisory Board and senior consultants delivering boardroom-level privacy, regulatory, and cybersecurity guidance.',
-      keywords: 'team advisory board leadership senior compliance consultants specialists charles odetola martha jowah esther samson femi leslie subhash desai oluwatosin reis oluwabukola olasehinde slav nakov our organisation'
+      keywords: 'team advisory board leadership senior compliance consultants specialists charles odetola martha jowah esther samson femi leslie subhash desai oluwatosin reis oluwabukola olasehinde our organisation'
     },
     {
       title: 'Career & Strategic Advisory Partnerships',
@@ -403,13 +403,6 @@
       badge: 'Leadership',
       desc: 'Cybersecurity professional specialising in vulnerability assessment, penetration testing (VAPT), OWASP testing, and web-application security.',
       keywords: 'oluwabukola olasehinde cybersecurity vapt penetration testing owasp web application api vulnerability testing'
-    },
-    {
-      title: 'Slav Nakov, LL.M. — Senior Advisory Board Member',
-      url: 'slav-nakov.html',
-      badge: 'Advisory Board',
-      desc: 'Senior international expert in privacy, regulatory compliance, corporate governance, and digital business.',
-      keywords: 'slav nakov senior advisory board member compliance international governance'
     },
     {
       title: 'Contact Practice Offices & RFP Enquiries',

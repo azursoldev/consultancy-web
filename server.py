@@ -127,7 +127,7 @@ class CustomHandler(http.server.SimpleHTTPRequestHandler):
             context = data.get('Form_Context') or data.get('context') or 'Consultation Request'
             source_page = data.get('Source_Page') or data.get('sourcePage') or self.headers.get('Referer', 'Website')
 
-            recipients = ['info@amstel.ng', 'support@amstel.ng', 'dpo@amstel.ng']
+            recipients = ['info@amstelconsulting.ng', 'support@amstelconsulting.ng', 'dpo@amstelconsulting.ng']
             subject = f"New Lead: {company} - {context}"
 
             html_body = f"""<!DOCTYPE html>
@@ -159,7 +159,7 @@ class CustomHandler(http.server.SimpleHTTPRequestHandler):
             try:
                 msg = MIMEMultipart('alternative')
                 msg['Subject'] = subject
-                msg['From'] = 'Amstel Lead Desk <info@amstel.ng>'
+                msg['From'] = 'Amstel Lead Desk <info@amstelconsulting.ng>'
                 msg['To'] = ', '.join(recipients)
                 if email:
                     msg['Reply-To'] = email

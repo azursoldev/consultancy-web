@@ -2,9 +2,9 @@
 /**
  * Amstel Consulting — Secure Server-Side SMTP Form Dispatcher
  * Dispatches all website form enquiries to:
- *   - info@amstel.ng
- *   - support@amstel.ng
- *   - dpo@amstel.ng
+ *   - info@amstelconsulting.ng
+ *   - support@amstelconsulting.ng
+ *   - dpo@amstelconsulting.ng
  *
  * Connects directly to mail.amstel.ng:587 over TLS.
  */
@@ -54,9 +54,9 @@ $smtpUser = 'info@amstel.ng';
 $smtpPass = 'mjFfwhKFdLzvUWHXN6jN';
 
 $recipients = [
-    'info@amstel.ng',
-    'support@amstel.ng',
-    'dpo@amstel.ng'
+    'info@amstelconsulting.ng',
+    'support@amstelconsulting.ng',
+    'dpo@amstelconsulting.ng'
 ];
 
 $subject = "New Lead: {$company} - {$context}";
@@ -102,7 +102,7 @@ $htmlBody = '
     </table>
   </div>
   <div class="footer">
-    Dispatched securely via Amstel Consulting Licensed DPCO Web Gateway to info@amstel.ng, support@amstel.ng, and dpo@amstel.ng.
+    Dispatched securely via Amstel Consulting Licensed DPCO Web Gateway to info@amstelconsulting.ng, support@amstelconsulting.ng, and dpo@amstelconsulting.ng.
   </div>
 </div>
 </body>
@@ -208,13 +208,13 @@ try {
     ]);
 } catch (Exception $e) {
     // Fallback: try PHP mail() if local sendmail is available
-    $headers  = "From: info@amstel.ng\r\n";
+    $headers  = "From: info@amstelconsulting.ng\r\n";
     $headers .= "Reply-To: {$email}\r\n";
-    $headers .= "Cc: support@amstel.ng, dpo@amstel.ng\r\n";
+    $headers .= "Cc: support@amstelconsulting.ng, dpo@amstelconsulting.ng\r\n";
     $headers .= "MIME-Version: 1.0\r\n";
     $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
-    $mailSent = @mail('info@amstel.ng', $subject, $htmlBody, $headers);
+    $mailSent = @mail('info@amstelconsulting.ng', $subject, $htmlBody, $headers);
     if ($mailSent) {
         echo json_encode(['success' => true, 'message' => 'Sent via server mail agent.']);
     } else {

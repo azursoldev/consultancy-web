@@ -71,7 +71,7 @@
 
     return `
       <form action="${endpointHref}" method="POST" class="compliance-dynamic-form" onsubmit="window.handleComplianceSubmit(event, this)">
-        <input type="hidden" name="_cc" value="support@amstel.ng,dpo@amstel.ng">
+        <input type="hidden" name="_cc" value="support@amstelconsulting.ng,dpo@amstelconsulting.ng">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_subject" value="New Consultation Request - Amstel Consulting">
@@ -203,7 +203,7 @@
     }
   }
 
-  // Global submission handler connecting to client emails (info@amstel.ng, support@amstel.ng, dpo@amstel.ng)
+  // Global submission handler connecting to client emails (info@amstelconsulting.ng, support@amstelconsulting.ng, dpo@amstelconsulting.ng)
   window.handleComplianceSubmit = async function (e, form) {
     e.preventDefault();
     const btn = form.querySelector('.btn-compliance-submit');
@@ -253,7 +253,7 @@
       submitData.append('Source_Page', window.location.href);
       submitData.append('_subject', `New Lead: ${formData.get('company') || 'Client'} - ${contextLabel}`);
       submitData.append('_replyto', formData.get('email') || '');
-      submitData.append('_cc', 'support@amstel.ng,dpo@amstel.ng');
+      submitData.append('_cc', 'support@amstelconsulting.ng,dpo@amstelconsulting.ng');
       submitData.append('_template', 'table');
       submitData.append('_captcha', 'false');
 
@@ -280,7 +280,7 @@
 
       // 2. Resilient fallback to FormSubmit if backend endpoint is unavailable (e.g. static CDN)
       if (!sentSuccessfully) {
-        await fetch('https://formsubmit.co/ajax/info@amstel.ng', {
+        await fetch('https://formsubmit.co/ajax/info@amstelconsulting.ng', {
           method: 'POST',
           headers: {
             'Accept': 'application/json'

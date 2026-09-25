@@ -196,7 +196,7 @@ window.siteSearchIndex = [
     category: 'Organisation',
     badge: 'Advisory Board',
     desc: 'Multidisciplinary Advisory Board and senior consultants delivering boardroom-level privacy, regulatory, and cybersecurity guidance.',
-    keywords: 'team leadership advisory board consultants partners legal practitioners privacy experts charles odetola martha jowah subhash desai oluwatosin reis esther samson femi leslie oluwabukola olasehinde slav nakov'
+    keywords: 'team leadership advisory board consultants partners legal practitioners privacy experts charles odetola martha jowah subhash desai oluwatosin reis esther samson femi leslie oluwabukola olasehinde'
   },
   {
     id: 'charles-odetola',
@@ -269,15 +269,6 @@ window.siteSearchIndex = [
     badge: 'Leadership',
     desc: 'Cybersecurity professional specialising in vulnerability assessment, penetration testing (VAPT), OWASP testing, and web-application security.',
     keywords: 'oluwabukola olasehinde cybersecurity vapt penetration testing owasp web application api vulnerability testing'
-  },
-  {
-    id: 'slav-nakov',
-    title: 'Slav Nakov, LL.M. — Senior Advisory Board Member',
-    url: 'slav-nakov.html',
-    category: 'Organisation',
-    badge: 'Advisory Board',
-    desc: 'Senior international expert in privacy, regulatory compliance, corporate governance, and digital business.',
-    keywords: 'slav nakov senior advisory board member compliance international governance'
   },
   {
     id: 'career-partnerships',

@@ -89,11 +89,11 @@
             </div>
 
             <div class="footer-contact-item">
-              <a href="mailto:info@amstel.ng" class="footer-contact-icon-box" title="Email Us">
+              <a href="mailto:info@amstelconsulting.ng" class="footer-contact-icon-box" title="Email Us">
                 <i class="fa-solid fa-envelope"></i>
               </a>
               <div class="footer-contact-text-group">
-                <a href="mailto:info@amstel.ng" class="footer-contact-link">info@amstel.ng</a>
+                <a href="mailto:info@amstelconsulting.ng" class="footer-contact-link">info@amstelconsulting.ng</a>
               </div>
             </div>
           </div>
