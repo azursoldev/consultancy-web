@@ -8,6 +8,20 @@
 
   const headerHTML = `
 
+  <!-- 1. Sitewide Regulatory Announcement Banner -->
+  <aside class="top-announcement-bar" role="status" aria-label="Regulatory Notice">
+    <div class="announcement-inner">
+      <div class="announcement-text">
+        <i class="fa-solid fa-circle-info announcement-icon"></i>
+        <strong>DPCO LICENSING IN PROCESS</strong>
+      </div>
+      <a href="${pfx}licensed-dpco-status.html" class="announcement-action-btn">
+        <span>Status Details</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </aside>
+
   <!-- 2. Top Utility Bar (PwC Standard) -->
   <div class="top-bar">
     <span class="top-bar-item"><i class="fa-solid fa-location-dot"></i> Nigeria</span>

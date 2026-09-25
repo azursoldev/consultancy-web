@@ -242,8 +242,8 @@ h6 {
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  justify-content: center;
+  gap: 1.25rem;
   flex-wrap: wrap;
 }
 
@@ -260,7 +260,7 @@ h6 {
 }
 
 .announcement-icon {
-  color: #f59e0b;
+  color: var(--pwc-orange, #d04a02);
   font-size: 0.95rem;
 }
 
@@ -2044,13 +2044,13 @@ html body .mega-dropdown-grid,
 .accreditation-seal {
   width: 110px;
   height: 110px;
-  border: 3px solid #0284c7;
+  border: 3px solid var(--pwc-orange, #d04a02);
   border-radius: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #0284c7;
+  color: var(--pwc-orange, #d04a02);
   font-family: var(--font-mono);
   font-weight: 800;
   text-align: center;
@@ -2065,7 +2065,7 @@ html body .mega-dropdown-grid,
 
 .accreditation-seal span.big {
   font-size: 1.1rem;
-  color: #0369a1;
+  color: var(--pwc-orange, #d04a02);
 }
 
 .accreditation-text p {
@@ -2836,8 +2836,8 @@ html body .mega-dropdown-grid,
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  justify-content: center;
+  gap: 1.25rem;
   flex-wrap: wrap;
 }
 
@@ -2854,7 +2854,7 @@ html body .mega-dropdown-grid,
 }
 
 .announcement-icon {
-  color: #f59e0b;
+  color: var(--pwc-orange, #d04a02);
   font-size: 0.95rem;
 }
 
@@ -9184,15 +9184,15 @@ textarea.form-control {
 }
 
 .dot-blue {
-  background: #2563eb !important;
+  background: var(--pwc-orange, #d04a02) !important;
 }
 
 .dot-green {
-  background: #10b981 !important;
+  background: var(--pwc-orange, #d04a02) !important;
 }
 
 .dot-purple {
-  background: #8b5cf6 !important;
+  background: var(--pwc-orange, #d04a02) !important;
 }
 
 .callout-alert-red {
@@ -9543,7 +9543,7 @@ textarea.form-control {
 }
 
 .form-guarantee-note i {
-  color: #10b981;
+  color: var(--pwc-orange, #d04a02);
 }
 
 .form-privacy-note {
@@ -10169,7 +10169,7 @@ textarea.form-control {
 
 .pillar-goal-box {
   background: #f8fafc;
-  border-left: 3px solid #0284c7;
+  border-left: 3px solid var(--pwc-orange, #d04a02);
   padding: 0.85rem 1rem;
   border-radius: 0 4px 4px 0;
   margin-bottom: 1.2rem;
@@ -10179,7 +10179,7 @@ textarea.form-control {
   font-size: 0.82rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: #0369a1;
+  color: var(--pwc-orange, #d04a02);
   display: block;
   margin-bottom: 0.2rem;
 }
@@ -10359,7 +10359,7 @@ footer.footer .container,
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  color: #25D366 !important;
+  color: var(--pwc-orange, #d04a02) !important;
   font-size: 1.15rem !important;
   line-height: 1 !important;
   text-decoration: none !important;
@@ -12113,9 +12113,9 @@ footer.footer .footer-legal-links a:hover,
 .cookie-badge-locked {
   font-size: 0.72rem;
   font-weight: 700;
-  color: #047857;
-  background: #ecfdf5;
-  border: 1px solid #a7f3d0;
+  color: var(--pwc-orange, #d04a02);
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
   padding: 2px 8px;
   border-radius: 4px;
   text-transform: uppercase;
@@ -12284,9 +12284,9 @@ footer.footer .footer-legal-links a:hover,
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: #fef3c7;
-  color: #92400e;
-  border: 1px solid #fde68a;
+  background: #fff7ed;
+  color: var(--pwc-orange, #d04a02);
+  border: 1px solid #fed7aa;
   font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -12297,9 +12297,9 @@ footer.footer .footer-legal-links a:hover,
 }
 
 .dpco-status-badge.verified {
-  background: #ecfdf5;
-  color: #065f46;
-  border-color: #a7f3d0;
+  background: #fff7ed;
+  color: var(--pwc-orange, #d04a02);
+  border-color: #fed7aa;
 }
 
 .dpco-page-title {
@@ -12363,9 +12363,9 @@ footer.footer .footer-legal-links a:hover,
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(34, 197, 94, 0.2);
-  color: #86efac;
-  border: 1px solid rgba(34, 197, 94, 0.4);
+  background: rgba(208, 74, 2, 0.15);
+  color: #fed7aa;
+  border: 1px solid rgba(208, 74, 2, 0.4);
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -12377,9 +12377,9 @@ footer.footer .footer-legal-links a:hover,
 .dpco-live-dot {
   width: 8px;
   height: 8px;
-  background: #22c55e;
+  background: var(--pwc-orange, #d04a02);
   border-radius: 50%;
-  box-shadow: 0 0 8px #22c55e;
+  box-shadow: 0 0 8px rgba(208, 74, 2, 0.6);
 }
 
 /* Table / Data Grid */

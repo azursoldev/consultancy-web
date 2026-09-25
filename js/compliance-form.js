@@ -183,7 +183,7 @@
   function showSuccessState(form) {
     form.innerHTML = `
       <div style="text-align: center; padding: 2.5rem 1rem;">
-        <div style="width: 56px; height: 56px; background: #ecfdf5; color: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin: 0 auto 1.2rem;">
+        <div style="width: 56px; height: 56px; background: #fff7ed; color: var(--pwc-orange, #d04a02); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin: 0 auto 1.2rem; border: 1px solid #fed7aa;">
           <i class="fa-solid fa-check"></i>
         </div>
         <h3 style="font-family: var(--font-sans); font-size: 1.35rem; font-weight: 800; color: #0f172a; margin-bottom: 0.5rem;">Request Successfully Received</h3>
