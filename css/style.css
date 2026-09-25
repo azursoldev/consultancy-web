@@ -9286,6 +9286,20 @@ textarea.form-control {
   line-height: 1.7;
 }
 
+.split-60-main ul {
+  margin: 0.75rem 0 1.5rem 1.4rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.split-60-main ul li {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--pwc-gray-text, #475569);
+}
+
 /* 40% Sticky Compliance Mini-Form Box */
 .split-40-aside {
   position: sticky;

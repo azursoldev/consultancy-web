@@ -35,6 +35,7 @@
             <li><a href="${pfx}services/outsourced-dpo.html">Appoint Outsourced Certified DPO</a></li>
             <li><a href="${pfx}services/data-protection-audit.html">Data Protection Audit</a></li>
             <li><a href="${pfx}services/data-privacy-training.html">Data Privacy Training</a></li>
+            <li><a href="${pfx}services/vapt-services.html">VAPT Services</a></li>
             <li><a href="${pfx}services/index.html">View All</a></li>
           </ul>
         </div>
@@ -118,6 +119,7 @@
                 <li><a href="${pfx}services/outsourced-dpo.html" onclick="toggleMobileMenu()">Appoint Outsourced Certified DPO</a></li>
                 <li><a href="${pfx}services/data-protection-audit.html" onclick="toggleMobileMenu()">Data Protection Audit</a></li>
                 <li><a href="${pfx}services/data-privacy-training.html" onclick="toggleMobileMenu()">Data Privacy Training</a></li>
+                <li><a href="${pfx}services/vapt-services.html" onclick="toggleMobileMenu()">VAPT Services</a></li>
                 <li><a href="${pfx}services/index.html" onclick="toggleMobileMenu()">View All</a></li>
               </ul>
             </div>
@@ -284,6 +286,13 @@
       keywords: 'dpo outsourced data protection officer dpoaas representation contact liaison advisory ndpa officer dcmi compliance comply compliant complying legal privacy conflict alignment align services solutions consulting consultant hire appoint'
     },
     {
+      title: 'VAPT Services (Vulnerability Assessment & Penetration Testing)',
+      url: 'services/vapt-services.html',
+      badge: 'Cybersecurity',
+      desc: 'Specialist-led Vulnerability Assessment and Penetration Testing for web applications, mobile applications, APIs, network infrastructure, and cloud environments.',
+      keywords: 'vapt vulnerability assessment penetration testing pentest security testing web application mobile app api network cloud owasp remediation infrastructure cyber'
+    },
+    {
       title: 'NDPA 2023 Alignment: Strategic Executive Checklist',
       url: 'publication-detail.html',
       badge: 'Executive Briefing',
@@ -442,6 +451,7 @@
           <a href="${pfx}services/outsourced-dpo.html">Outsourced DPO</a>
           <a href="${pfx}services/data-protection-audit.html">Data Protection Audit</a>
           <a href="${pfx}services/data-privacy-training.html">Data Privacy Training</a>
+          <a href="${pfx}services/vapt-services.html">VAPT Services</a>
           <a href="${pfx}publication-detail.html">Complying With NDPA 2023</a>
           <a href="${pfx}about.html#credentials">Licensed DPCO</a>
           <a href="${pfx}contact.html">Contact Advisory Desk</a>

@@ -24,6 +24,7 @@
             <li><a href="${pfx}services/outsourced-dpo.html">Appoint Outsourced Certified DPO</a></li>
             <li><a href="${pfx}services/data-protection-audit.html">Data Protection Audit</a></li>
             <li><a href="${pfx}services/data-privacy-training.html">Data Privacy Training</a></li>
+            <li><a href="${pfx}services/vapt-services.html">VAPT Services</a></li>
             <li><a href="${pfx}services/index.html">View All</a></li>
           </ul>
         </div>

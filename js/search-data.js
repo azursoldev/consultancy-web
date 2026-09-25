@@ -118,6 +118,15 @@ window.siteSearchIndex = [
     keywords: 'training education masterclass workforce awareness staff training ndpa certification privacy skills compliance comply compliant course elearning section 31 staff phish simulation certificate alignment align services solutions capacity building executive training'
   },
   {
+    id: 'vapt-services',
+    title: 'Vulnerability Assessment and Penetration Testing (VAPT)',
+    url: 'services/vapt-services.html',
+    category: 'Solutions',
+    badge: 'Cybersecurity',
+    desc: 'Specialist-led Vulnerability Assessment and Penetration Testing services across web applications, mobile apps, APIs, networks, and cloud infrastructure.',
+    keywords: 'vapt vulnerability assessment penetration testing pentest security testing web application mobile app api network cloud owasp remediation infrastructure cyber cybersecurity technical security'
+  },
+  {
     id: 'executive-checklist',
     title: 'NDPA 2023 Alignment: A Strategic Checklist for Public and Private Sector Executives',
     url: 'publication-detail.html',
