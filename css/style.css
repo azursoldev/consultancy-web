@@ -9264,6 +9264,7 @@ textarea.form-control {
   border-top: 1px solid #eaeaea;
 }
 
+.split-section-block h2,
 .split-section-block h3 {
   font-family: var(--font-sans);
   font-size: 1.25rem;
@@ -9275,6 +9276,7 @@ textarea.form-control {
   gap: 0.6rem;
 }
 
+.split-section-block h2 i,
 .split-section-block h3 i {
   color: var(--pwc-orange);
   font-size: 1.1rem;

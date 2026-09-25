@@ -1,0 +1,95 @@
+# ==============================================================================
+# AMSTEL CONSULTING (.htaccess)
+# Domain: amstelconsulting.ng
+# Handles 301 redirects, SSL enforcement, caching, compression & security
+# ==============================================================================
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # ----------------------------------------------------------------------
+  # 1. 301 REDIRECT FROM OLD DOMAIN (amstel.ng) TO LIVE (amstelconsulting.ng)
+  # ----------------------------------------------------------------------
+  RewriteCond %{HTTP_HOST} ^(www\.)?amstel\.ng$ [NC]
+  RewriteRule ^(.*)$ https://amstelconsulting.ng/$1 [R=301,L]
+
+  # ----------------------------------------------------------------------
+  # 2. CANONICAL HOST: Redirect www.amstelconsulting.ng to amstelconsulting.ng
+  # ----------------------------------------------------------------------
+  RewriteCond %{HTTP_HOST} ^www\.amstelconsulting\.ng$ [NC]
+  RewriteRule ^(.*)$ https://amstelconsulting.ng/$1 [R=301,L]
+
+  # ----------------------------------------------------------------------
+  # 3. FORCE SSL / HTTPS ENFORCEMENT
+  # ----------------------------------------------------------------------
+  RewriteCond %{HTTPS} off
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^(.*)$ https://amstelconsulting.ng/$1 [R=301,L]
+
+  # ----------------------------------------------------------------------
+  # 4. PREVENT ACCESS TO PRIVATE SCRIPTS & REPOSITORY ASSETS
+  # ----------------------------------------------------------------------
+  RewriteRule ^(server\.py|server\.js|scratch/.*|\.git.*)$ - [F,L,NC]
+</IfModule>
+
+# ==============================================================================
+# GZIP / BROTLI COMPRESSION (PAGE SPEED OPTIMIZATION)
+# ==============================================================================
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/xml
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/x-javascript
+  AddOutputFilterByType DEFLATE application/json
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE application/rss+xml
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE font/ttf
+  AddOutputFilterByType DEFLATE font/otf
+  AddOutputFilterByType DEFLATE font/woff
+  AddOutputFilterByType DEFLATE font/woff2
+</IfModule>
+
+# ==============================================================================
+# BROWSER CACHING (EXPIRES HEADERS)
+# ==============================================================================
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 month"
+
+  # HTML pages (revalidate often for fresh content)
+  ExpiresByType text/html "access plus 1 hour"
+
+  # CSS, JavaScript
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+
+  # Images & Media
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType video/mp4 "access plus 1 year"
+
+  # Web Fonts
+  ExpiresByType font/ttf "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+# ==============================================================================
+# SECURITY HEADERS
+# ==============================================================================
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>

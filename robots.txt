@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /scratch/
+Disallow: /server.py
+Disallow: /server.js
+Disallow: /send-mail.php
 
-Sitemap: https://amstel.ng/sitemap.xml
+Sitemap: https://amstelconsulting.ng/sitemap.xml

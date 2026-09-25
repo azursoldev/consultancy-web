@@ -1,44 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Core Architecture (Primary Sitemap - amstel.ng) -->
+  <!-- Core Architecture (Primary Sitemap - amstelconsulting.ng) -->
   <url>
-    <loc>https://amstel.ng/</loc>
+    <loc>https://amstelconsulting.ng/</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://amstel.ng/about.html</loc>
+    <loc>https://amstelconsulting.ng/about.html</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://amstel.ng/licensed-dpco-status.html</loc>
+    <loc>https://amstelconsulting.ng/licensed-dpco-status.html</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://amstel.ng/team.html</loc>
+    <loc>https://amstelconsulting.ng/team.html</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://amstel.ng/careers.html</loc>
+    <loc>https://amstelconsulting.ng/careers.html</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://amstel.ng/contact.html</loc>
+    <loc>https://amstelconsulting.ng/contact.html</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://amstel.ng/faq.html</loc>
+    <loc>https://amstelconsulting.ng/faq.html</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -46,37 +46,37 @@
 
   <!-- Core Services & Solutions -->
   <url>
-    <loc>https://amstel.ng/services/</loc>
+    <loc>https://amstelconsulting.ng/services/</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://amstel.ng/services/compliance-audit-return.html</loc>
+    <loc>https://amstelconsulting.ng/services/compliance-audit-return.html</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://amstel.ng/services/outsourced-dpo.html</loc>
+    <loc>https://amstelconsulting.ng/services/outsourced-dpo.html</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://amstel.ng/services/data-protection-audit.html</loc>
+    <loc>https://amstelconsulting.ng/services/data-protection-audit.html</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://amstel.ng/services/data-privacy-training.html</loc>
+    <loc>https://amstelconsulting.ng/services/data-privacy-training.html</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://amstel.ng/services/vapt-services.html</loc>
+    <loc>https://amstelconsulting.ng/services/vapt-services.html</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
@@ -84,37 +84,37 @@
 
   <!-- Knowledge Hub, Regulatory Guidance & Trackers -->
   <url>
-    <loc>https://amstel.ng/blog/</loc>
+    <loc>https://amstelconsulting.ng/blog/</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://amstel.ng/regulatory-guidance.html</loc>
+    <loc>https://amstelconsulting.ng/regulatory-guidance.html</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://amstel.ng/must-a-data-protection-officer-be-nigerian.html</loc>
+    <loc>https://amstelconsulting.ng/must-a-data-protection-officer-be-nigerian.html</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://amstel.ng/ai-regulatory-tracker.html</loc>
+    <loc>https://amstelconsulting.ng/ai-regulatory-tracker.html</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://amstel.ng/publication-detail.html</loc>
+    <loc>https://amstelconsulting.ng/publication-detail.html</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://amstel.ng/blog/complying-with-ndpa-2023.html</loc>
+    <loc>https://amstelconsulting.ng/blog/complying-with-ndpa-2023.html</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -122,19 +122,19 @@
 
   <!-- Advisory Board Profiles -->
   <url>
-    <loc>https://amstel.ng/esmee-de-jong.html</loc>
+    <loc>https://amstelconsulting.ng/esmee-de-jong.html</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://amstel.ng/subhash-desai.html</loc>
+    <loc>https://amstelconsulting.ng/subhash-desai.html</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://amstel.ng/oluwatosin-reis.html</loc>
+    <loc>https://amstelconsulting.ng/oluwatosin-reis.html</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
@@ -142,31 +142,31 @@
 
   <!-- Our Professionals Profiles -->
   <url>
-    <loc>https://amstel.ng/charles-odetola.html</loc>
+    <loc>https://amstelconsulting.ng/charles-odetola.html</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://amstel.ng/martha-jowah.html</loc>
+    <loc>https://amstelconsulting.ng/martha-jowah.html</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://amstel.ng/femi-leslie.html</loc>
+    <loc>https://amstelconsulting.ng/femi-leslie.html</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://amstel.ng/esther-samson.html</loc>
+    <loc>https://amstelconsulting.ng/esther-samson.html</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://amstel.ng/oluwabukola-olasehinde.html</loc>
+    <loc>https://amstelconsulting.ng/oluwabukola-olasehinde.html</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
@@ -174,13 +174,13 @@
 
   <!-- Navigation, Search & Visual Sitemap -->
   <url>
-    <loc>https://amstel.ng/search.html</loc>
+    <loc>https://amstelconsulting.ng/search.html</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://amstel.ng/sitemap.html</loc>
+    <loc>https://amstelconsulting.ng/sitemap.html</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -188,25 +188,25 @@
 
   <!-- Legal & Policies -->
   <url>
-    <loc>https://amstel.ng/privacy-statement.html</loc>
+    <loc>https://amstelconsulting.ng/privacy-statement.html</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://amstel.ng/cookie-policy.html</loc>
+    <loc>https://amstelconsulting.ng/cookie-policy.html</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://amstel.ng/terms-of-service.html</loc>
+    <loc>https://amstelconsulting.ng/terms-of-service.html</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://amstel.ng/legal-disclaimer.html</loc>
+    <loc>https://amstelconsulting.ng/legal-disclaimer.html</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
