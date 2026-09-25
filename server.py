@@ -18,6 +18,11 @@ LEGACY_REDIRECTS = {
     '/service-training': '/services/data-privacy-training.html',
     '/data-privacy-training.html': '/services/data-privacy-training.html',
     '/services.html': '/services/index.html',
+    '/vapt.html': '/services/vapt-services.html',
+    '/vapt': '/services/vapt-services.html',
+    '/vapt-services': '/services/vapt-services.html',
+    '/vapt-services.html': '/services/vapt-services.html',
+    '/services/vapt': '/services/vapt-services.html',
     '/organisation.html': '/about.html',
     '/organisation': '/about.html',
     '/terms-and-conditions.html': '/terms-of-service.html',
@@ -61,6 +66,33 @@ class CustomHandler(http.server.SimpleHTTPRequestHandler):
             return super().do_GET()
 
         return super().do_GET()
+
+    def do_HEAD(self):
+        parsed = urllib.parse.urlparse(self.path)
+        path = parsed.path
+
+        if path in LEGACY_REDIRECTS:
+            self.send_response(301)
+            self.send_header('Location', LEGACY_REDIRECTS[path])
+            self.end_headers()
+            return
+
+        clean_path = path.lstrip('/')
+        target = os.path.join(DIRECTORY, clean_path)
+
+        if os.path.isfile(target):
+            return super().do_HEAD()
+
+        if os.path.isfile(target + '.html'):
+            self.path = path + '.html'
+            return super().do_HEAD()
+
+        trimmed = clean_path.rstrip('/')
+        if trimmed and os.path.isfile(os.path.join(DIRECTORY, trimmed + '.html')):
+            self.path = '/' + trimmed + '.html'
+            return super().do_HEAD()
+
+        return super().do_HEAD()
 
     def do_POST(self):
         parsed = urllib.parse.urlparse(self.path)

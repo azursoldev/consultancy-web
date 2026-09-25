@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Map &bull; Complete Website Index | Amstel Consulting</title>
+  <meta name="description" content="Explore the complete site map of Amstel Consulting: licensed DPCO services, VAPT cybersecurity assessments, regulatory guidance, AI tracker, and leadership profiles.">
+  <link rel="canonical" href="https://amstel.ng/sitemap.html">
+  <link rel="icon" type="image/jpeg" href="logo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Amstel Consulting">
+  <meta property="og:url" content="https://amstel.ng/sitemap.html">
+  <meta property="og:title" content="Site Map &bull; Complete Website Index | Amstel Consulting">
+  <meta property="og:description" content="A comprehensive directory of all services, publications, leadership biographies, and compliance resources at Amstel Consulting.">
+  <meta property="og:image" content="https://amstel.ng/logo.png">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://amstel.ng/sitemap.html">
+  <meta name="twitter:title" content="Site Map &bull; Complete Website Index | Amstel Consulting">
+  <meta name="twitter:description" content="A comprehensive directory of all services, publications, leadership biographies, and compliance resources at Amstel Consulting.">
+  <meta name="twitter:image" content="https://amstel.ng/logo.png">
+
+  <style>
+    .sitemap-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-top: 2.5rem;
+    }
+    @media (max-width: 860px) {
+      .sitemap-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .sitemap-section-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .sitemap-section-card:hover {
+      border-color: #cbd5e1;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    }
+    .sitemap-section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.85rem;
+      border-bottom: 2px solid #f1f5f9;
+    }
+    .sitemap-section-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 6px;
+      background: #fff7ed;
+      color: var(--pwc-orange, #d04a02);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .sitemap-section-title {
+      font-family: var(--font-serif, Georgia, serif);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--pwc-charcoal, #2d2d2d);
+      margin: 0;
+    }
+    .sitemap-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .sitemap-list li {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+    .sitemap-link {
+      color: var(--pwc-charcoal, #2d2d2d);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.96rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: color 0.15s;
+    }
+    .sitemap-link:hover {
+      color: var(--pwc-orange, #d04a02);
+    }
+    .sitemap-link i {
+      font-size: 0.75rem;
+      color: var(--pwc-orange, #d04a02);
+      transition: transform 0.15s;
+    }
+    .sitemap-link:hover i {
+      transform: translateX(3px);
+    }
+    .sitemap-link-desc {
+      font-size: 0.84rem;
+      color: #64748b;
+      margin-left: 1.25rem;
+      line-height: 1.4;
+    }
+    .sitemap-badge-pill {
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+      background: #f1f5f9;
+      color: #475569;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-left: 0.4rem;
+    }
+    .sitemap-badge-pill.new {
+      background: #eff6ff;
+      color: #1d4ed8;
+      border: 1px solid #bfdbfe;
+    }
+  </style>
+</head>
+<body>
+  <!-- Unified Site Header (Single Source: js/header.js) -->
+  <div id="site-header"></div>
+  <script src="js/header.js"></script>
+
+  <main class="dpco-status-container">
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs-detail" style="margin-top: 1.5rem; margin-bottom: 2rem;" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <span>Site Map</span>
+    </nav>
+
+    <!-- Page Header / Hero -->
+    <header class="dpco-hero-header">
+      <div class="dpco-status-badge verified">
+        <i class="fa-solid fa-sitemap"></i>
+        <span>Website Architecture &bull; Complete Navigation Directory</span>
+      </div>
+      <h1 class="dpco-page-title">Amstel Consulting Site Map</h1>
+      <p class="dpco-lead-desc">
+        A structured index of all client solutions, regulatory guidance publications, artificial intelligence trackers, advisory credentials, and legal policies published across Amstel Consulting.
+      </p>
+    </header>
+
+    <!-- Site Map Grid -->
+    <div class="sitemap-grid">
+
+      <!-- 1. Core Services -->
+      <section class="sitemap-section-card">
+        <div class="sitemap-section-header">
+          <div class="sitemap-section-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h2 class="sitemap-section-title">Core Services &amp; Solutions</h2>
+        </div>
+        <ul class="sitemap-list">
+          <li>
+            <a href="services/compliance-audit-return.html" class="sitemap-link">
+              <i class="fa-solid fa-chevron-right"></i> Annual Compliance Audit Return (CAR) Filing
+            </a>
+            <span class="sitemap-link-desc">Statutory NDPC compliance audit preparation, independent DPCO verification, and portal filing.</span>
+          </li>
+          <li>
+            <a href="services/outsourced-dpo.html" class="sitemap-link">
+              <i class="fa-solid fa-chevron-right"></i> Appoint Outsourced Certified DPO
+            </a>
+            <span class="sitemap-link-desc">External accredited Data Protection Officer services and regulatory liaison desk.</span>
+          </li>
+          <li>
+            <a href="services/data-protection-audit.html" class="sitemap-link">
+              <i class="fa-solid fa-chevron-right"></i> Data Protection Audit
+            </a>
+            <span class="sitemap-link-desc">End-to-end data mapping, gap assessments, DPIA reviews, and compliance remediation.</span>
+          </li>
+          <li>
+            <a href="services/data-privacy-training.html" class="sitemap-link">
+              <i class="fa-solid fa-chevron-right"></i> Data Privacy Training
+            </a>
+            <span class="sitemap-link-desc">Tailored executive briefings and workforce compliance training programmes.</span>
+          </li>
+          <li>
+            <a href="services/vapt-services.html" class="sitemap-link">
+              <i class="fa-solid fa-chevron-right"></i> VAPT Services <span class="sitemap-badge-pill new">New</span>
+            </a>
+            <span class="sitemap-link-desc">Specialist-led Vulnerability Assessment and Penetration Testing for web apps, APIs, networks, and cloud.</span>
+          </li>
+          <li>
+            <a href="services/index.html" class="sitemap-link">
+              <i class="fa-solid fa-chevron-right"></i> Solutions Overview Directory
+            </a>
+            <span class="sitemap-link-desc">Complete overview of Amstel Consulting’s integrated advisory and security practices.</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 2. Our Organisation -->
+      <section class="sitemap-section-card">
+        <div class="sitemap-section-header">
+          <div class="sitemap-section-icon"><i class="fa-solid fa-building-columns"></i></div>
+          <h2 class="sitemap-section-title">Our Organisation</h2>
+        </div>
+        <ul class="sitemap-list">
+          <li>
+            <a href="about.html" class="sitemap-link">
+              <i class="fa-solid fa-chevron-right"></i> About Us
+            </a>
+            <span class="sitemap-link-desc">Firm history, practice methodology, statutory credentials, and leadership overview.</span>
+          </li>
+          <li>
+            <a href="licensed-dpco-status.html" class="sitemap-link">
+              <i class="fa-solid fa-chevron-right"></i> Licensed DPCO Status
+            </a>
+            <span class="sitemap-link-desc">Official regulatory licensing credentials with the Nigeria Data Protection Commission (NDPC).</span>
+          </li>
+          <li>
+            <a href="team.html" class="sitemap-link">
+              <i class="fa-solid fa-chevron-right"></i> Team &amp; Advisory Board
+            </a>
+            <span class="sitemap-link-desc">Our multidisciplinary team of senior privacy lawyers, VAPT consultants, and Advisory Board members.</span>
+          </li>
+          <li>
+            <a href="careers.html" class="sitemap-link">
+              <i class="fa-solid fa-chevron-right"></i> Career &amp; Partnerships
+            </a>
+            <span class="sitemap-link-desc">Professional opportunities for data privacy practitioners, technical auditors, and affiliate firms.</span>
+          </li>
+          <li>
+            <a href="contact.html" class="sitemap-link">
+              <i class="fa-solid fa-chevron-right"></i> Contact Us
+            </a>
+            <span class="sitemap-link-desc">Confidential consultation desks, Abuja operational headquarters, telephone, and WhatsApp channels.</span>
+          </li>
+          <li>
+            <a href="faq.html" class="sitemap-link">
+              <i class="fa-solid fa-chevron-right"></i> Frequently Asked Questions (FAQ)
+            </a>
+            <span class="sitemap-link-desc">Clear guidance on statutory deadlines, DPO designations, audit scopes, and penalty avoidance.</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 3. Knowledge Hub & Regulatory Guidance -->
+      <section class="sitemap-section-card">
+        <div class="sitemap-section-header">
+          <div class="sitemap-section-icon"><i class="fa-solid fa-book-bookmark"></i></div>
+          <h2 class="sitemap-section-title">Knowledge Hub &amp; Insights</h2>
+        </div>
+        <ul class="sitemap-list">
+          <li>
+            <a href="blog/index.html" class="sitemap-link">
+              <i class="fa-solid fa-chevron-right"></i> Knowledge Hub Index
+            </a>
+            <span class="sitemap-link-desc">Central repository for executive publications, legislative analyses, and compliance checklists.</span>
+          </li>
+          <li>
+            <a href="regulatory-guidance.html" class="sitemap-link">
+              <i class="fa-solid fa-chevron-right"></i> Regulatory Guidance Portal <span class="sitemap-badge-pill new">New</span>
+            </a>
+            <span class="sitemap-link-desc">Executive explanations on NDPC regulations, compliance circulars, and licensing requirements.</span>
+          </li>
+          <li>
+            <a href="must-a-data-protection-officer-be-nigerian.html" class="sitemap-link">
+              <i class="fa-solid fa-chevron-right"></i> Must a DPO Be Nigerian? <span class="sitemap-badge-pill new">New</span>
+            </a>
+            <span class="sitemap-link-desc">Comprehensive legal analysis examining the NDPC’s NIN requirement for DPCO licensing applications.</span>
+          </li>
+          <li>
+            <a href="ai-regulatory-tracker.html" class="sitemap-link">
+              <i class="fa-solid fa-chevron-right"></i> Artificial Intelligence Regulatory Tracker <span class="sitemap-badge-pill new">New</span>
+            </a>
+            <span class="sitemap-link-desc">Monitoring AI governance, legislative frameworks, and accountability standards across Africa.</span>
+          </li>
+          <li>
+            <a href="publication-detail.html" class="sitemap-link">
+              <i class="fa-solid fa-chevron-right"></i> Complying With NDPA 2023: Strategic Checklist
+            </a>
+            <span class="sitemap-link-desc">Executive briefing and compliance roadmap for public and private sector leadership.</span>
+          </li>
+          <li>
+            <a href="blog/complying-with-ndpa-2023.html" class="sitemap-link">
+              <i class="fa-solid fa-chevron-right"></i> NDPA 2023 Compliance Article
+            </a>
+            <span class="sitemap-link-desc">Full-length briefing detailing lawful data processing, DPIA triggers, and statutory fines.</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 4. Leadership & Advisory Profiles -->
+      <section class="sitemap-section-card">
+        <div class="sitemap-section-header">
+          <div class="sitemap-section-icon"><i class="fa-solid fa-users-viewfinder"></i></div>
+          <h2 class="sitemap-section-title">Leadership &amp; Professionals</h2>
+        </div>
+        <ul class="sitemap-list">
+          <li>
+            <a href="charles-odetola.html" class="sitemap-link">
+              <i class="fa-solid fa-chevron-right"></i> Charles Odetola
+            </a>
+            <span class="sitemap-link-desc">Lead Partner &amp; Principal Consultant &bull; Enterprise Compliance &amp; Regulatory Strategy</span>
+          </li>
+          <li>
+            <a href="martha-jowah.html" class="sitemap-link">
+              <i class="fa-solid fa-chevron-right"></i> Martha Jowah
+            </a>
+            <span class="sitemap-link-desc">Head of Legal &amp; Compliance &bull; Data Protection Law &amp; Regulatory Liaison</span>
+          </li>
+          <li>
+            <a href="femi-leslie.html" class="sitemap-link">
+              <i class="fa-solid fa-chevron-right"></i> Femi Leslie
+            </a>
+            <span class="sitemap-link-desc">Senior Data Privacy &amp; Compliance Consultant &bull; Audits &amp; Governance Frameworks</span>
+          </li>
+          <li>
+            <a href="esther-samson.html" class="sitemap-link">
+              <i class="fa-solid fa-chevron-right"></i> Esther Samson
+            </a>
+            <span class="sitemap-link-desc">Associate Consultant &bull; Data Protection &amp; Compliance Monitoring</span>
+          </li>
+          <li>
+            <a href="oluwabukola-olasehinde.html" class="sitemap-link">
+              <i class="fa-solid fa-chevron-right"></i> Oluwabukola C. Olasehinde
+            </a>
+            <span class="sitemap-link-desc">Cybersecurity &amp; VAPT Consultant &bull; Technical Penetration Testing &amp; Vulnerability Audits</span>
+          </li>
+          <li>
+            <a href="esmee-de-jong.html" class="sitemap-link">
+              <i class="fa-solid fa-chevron-right"></i> Esmée de Jong
+            </a>
+            <span class="sitemap-link-desc">Advisory Board Member &bull; Senior Privacy &amp; AI Governance Strategist</span>
+          </li>
+          <li>
+            <a href="slav-nakov.html" class="sitemap-link">
+              <i class="fa-solid fa-chevron-right"></i> Slav Nakov
+            </a>
+            <span class="sitemap-link-desc">Advisory Board Member &bull; Enterprise Cybersecurity Architect</span>
+          </li>
+          <li>
+            <a href="subhash-desai.html" class="sitemap-link">
+              <i class="fa-solid fa-chevron-right"></i> Subhash Desai
+            </a>
+            <span class="sitemap-link-desc">Advisory Board Member &bull; Global Data Governance &amp; IT Risk Specialist</span>
+          </li>
+          <li>
+            <a href="oluwatosin-reis.html" class="sitemap-link">
+              <i class="fa-solid fa-chevron-right"></i> Oluwatosin Reis
+            </a>
+            <span class="sitemap-link-desc">Advisory Board Member &bull; Strategic Governance &amp; Public Policy Advisor</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 5. Legal & Statutory Policies -->
+      <section class="sitemap-section-card">
+        <div class="sitemap-section-header">
+          <div class="sitemap-section-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+          <h2 class="sitemap-section-title">Legal &amp; Regulatory Policies</h2>
+        </div>
+        <ul class="sitemap-list">
+          <li>
+            <a href="privacy-statement.html" class="sitemap-link">
+              <i class="fa-solid fa-chevron-right"></i> Privacy Statement
+            </a>
+            <span class="sitemap-link-desc">Official policy governing data collection, lawful bases, data subject rights, and retention.</span>
+          </li>
+          <li>
+            <a href="cookie-policy.html" class="sitemap-link">
+              <i class="fa-solid fa-chevron-right"></i> Cookie Policy
+            </a>
+            <span class="sitemap-link-desc">Technical disclosure of essential cookies, analytics tokens, and consent controls.</span>
+          </li>
+          <li>
+            <a href="terms-of-service.html" class="sitemap-link">
+              <i class="fa-solid fa-chevron-right"></i> Terms of Service
+            </a>
+            <span class="sitemap-link-desc">Terms governing engagement of advisory services, website usage, and professional liability.</span>
+          </li>
+          <li>
+            <a href="legal-disclaimer.html" class="sitemap-link">
+              <i class="fa-solid fa-chevron-right"></i> Legal Disclaimer
+            </a>
+            <span class="sitemap-link-desc">Regulatory notices and statutory limitations under the Nigeria Data Protection Act 2023.</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 6. Search & Technical Tools -->
+      <section class="sitemap-section-card">
+        <div class="sitemap-section-header">
+          <div class="sitemap-section-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+          <h2 class="sitemap-section-title">Search &amp; Machine Feeds</h2>
+        </div>
+        <ul class="sitemap-list">
+          <li>
+            <a href="search.html" class="sitemap-link">
+              <i class="fa-solid fa-chevron-right"></i> Universal Search Portal
+            </a>
+            <span class="sitemap-link-desc">Instant indexed search engine covering all regulatory publications and service pillars.</span>
+          </li>
+          <li>
+            <a href="sitemap.xml" target="_blank" class="sitemap-link">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> XML Sitemap (Machine-Readable)
+            </a>
+            <span class="sitemap-link-desc">Standard XML protocol feed adhering to sitemaps.org guidelines for web crawlers.</span>
+          </li>
+          <li>
+            <a href="robots.txt" target="_blank" class="sitemap-link">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Robots.txt Directives
+            </a>
+            <span class="sitemap-link-desc">Robots Exclusion Protocol directives and sitemap declaration.</span>
+          </li>
+        </ul>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Unified Site Footer (Single Source: js/footer.js) -->
+  <div id="site-footer"></div>
+  <script src="js/footer.js"></script>
+
+  <script src="js/compliance-form.js"></script>
+</body>
+</html>

@@ -341,5 +341,14 @@ window.siteSearchIndex = [
     badge: 'Legal Notice',
     desc: 'Official Cookie Notice of Amstel Tech Compliance and Consulting Ltd d/b/a Amstel Consulting. Explaining our use of cookies and tracking technologies under NDPA 2023 and GAID 2025.',
     keywords: 'cookie cookies cookie notice tracking telemetry gaid ndpa consent preferences analytics strictly necessary third party cookies'
+  },
+  {
+    id: 'site-map',
+    title: 'Site Map & Navigation Directory',
+    url: 'sitemap.html',
+    category: 'Navigation',
+    badge: 'Directory',
+    desc: 'Comprehensive visual site map and directory index of all services, publications, leadership biographies, and compliance resources at Amstel Consulting.',
+    keywords: 'sitemap site map directory index pages navigation links architecture overview all pages sitemap.xml structure'
   }
 ];

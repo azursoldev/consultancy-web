@@ -22,7 +22,7 @@
     </a>
 
     <ul class="main-nav">
-      <!-- 1. Our Solutions Dropdown (Client Sitemap: Exactly 4 Core Services) -->
+      <!-- 1. Our Solutions Dropdown (Services) -->
       <li class="nav-item-dropdown">
         <a href="javascript:void(0)" class="nav-dropdown-trigger">
           <span>Services</span>

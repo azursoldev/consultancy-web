@@ -60,6 +60,7 @@
             <li><a href="javascript:void(0)" onclick="window.openCookiePreferences &amp;&amp; window.openCookiePreferences(); return false;">Cookie Preferences</a></li>
             <li><a href="${pfx}terms-of-service.html">Terms of Service</a></li>
             <li><a href="${pfx}legal-disclaimer.html">Legal Disclaimer</a></li>
+            <li><a href="${pfx}sitemap.html">Sitemap</a></li>
             <li><a href="${pfx}faq.html">FAQ</a></li>
             <li><a href="${pfx}contact.html">Contact</a></li>
           </ul>
