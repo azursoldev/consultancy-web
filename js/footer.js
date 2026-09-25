@@ -34,8 +34,8 @@
           <ul>
             <li><a href="${pfx}about.html">About Us</a></li>
             <li><a href="${pfx}licensed-dpco-status.html">Licensed DPCO Status</a></li>
-            <li><a href="javascript:void(0)">Team &amp; Advisory Board</a></li>
-            <li><a href="javascript:void(0)">Career &amp; Partnerships</a></li>
+            <li><a href="${pfx}team.html">Team &amp; Advisory Board</a></li>
+            <li><a href="${pfx}careers.html">Career &amp; Partnerships</a></li>
           </ul>
         </div>
 
@@ -44,8 +44,8 @@
           <h5>Knowledge Hub</h5>
           <ul>
             <li><a href="${pfx}publication-detail.html">Complying With NDPA 2023</a></li>
-            <li><a href="javascript:void(0)">Regulatory Guidance</a></li>
-            <li><a href="javascript:void(0)">Artificial Intelligence Tracker</a></li>
+            <li><a href="${pfx}regulatory-guidance.html">Regulatory Guidance</a></li>
+            <li><a href="${pfx}ai-regulatory-tracker.html">Artificial Intelligence Tracker</a></li>
             <li><a href="${pfx}blog/index.html">View All</a></li>
           </ul>
         </div>
@@ -106,12 +106,7 @@
         </div>
         <div class="footer-disclaimer">
           <p class="footer-license-text">Licensed as a Data Protection Compliance Organisation (DPCO) by the Nigeria Data Protection Commission. License No: DPCO/XXXX/2026.</p>
-          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.35rem;">
-            <p class="footer-copyright-text" style="margin: 0;">&copy; 2026 Amstel Tech Compliance and Consulting Ltd. All rights reserved.</p>
-            <button type="button" class="footer-cookie-pref-btn" onclick="window.openCookiePreferences &amp;&amp; window.openCookiePreferences(); return false;" title="Manage Cookie Preferences">
-              <i class="fa-solid fa-cookie-bite"></i> Cookie Preferences
-            </button>
-          </div>
+          <p class="footer-copyright-text" style="margin-top: 0.35rem;">&copy; 2026 Amstel Tech Compliance and Consulting Ltd. All rights reserved.</p>
         </div>
       </div>
     </div>

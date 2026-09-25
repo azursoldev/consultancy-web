@@ -13,6 +13,7 @@
       return container.dataset.formType;
     }
     const path = window.location.pathname.toLowerCase();
+    if (path.includes('vapt')) return 'vapt';
     if (path.includes('car') || path.includes('compliance-audit-return')) return 'car';
     if (path.includes('audit') || path.includes('data-protection-audit')) return 'audit';
     if (path.includes('dpo') || path.includes('outsourced-dpo')) return 'dpo';
@@ -28,7 +29,12 @@
     let prechecked = '';
     let showMessage = false;
 
-    if (type === 'car') {
+    if (type === 'vapt') {
+      ctaText = 'Request a VAPT Consultation';
+      showRadios = false;
+      showMessage = true;
+      prechecked = 'audit';
+    } else if (type === 'car') {
       ctaText = 'Initiate Compliance Audit Return (CAR)';
       showRadios = true;
       prechecked = 'car';
@@ -226,7 +232,8 @@
       // Determine form context
       let contextLabel = 'Advisory Consultation';
       const path = window.location.pathname.toLowerCase();
-      if (path.includes('car') || path.includes('compliance-audit-return')) contextLabel = 'CAR Filing Consultation';
+      if (path.includes('vapt')) contextLabel = 'VAPT Assessment Consultation';
+      else if (path.includes('car') || path.includes('compliance-audit-return')) contextLabel = 'CAR Filing Consultation';
       else if (path.includes('audit') || path.includes('data-protection-audit')) contextLabel = 'Data Protection Audit';
       else if (path.includes('dpo') || path.includes('outsourced-dpo')) contextLabel = 'Outsourced DPO Appointment';
       else if (path.includes('training') || path.includes('data-privacy-training')) contextLabel = 'Data Privacy Training';
@@ -363,6 +370,9 @@
       if (precheckOption === 'readiness' || precheckOption === 'gap' || precheckOption === 'pia') {
         if (badgeEl) badgeEl.textContent = 'NDPA 2023 Gap Assessment';
         if (titleEl) titleEl.textContent = 'Get FREE NDPA Gap Assessment';
+      } else if (precheckOption === 'vapt') {
+        if (badgeEl) badgeEl.textContent = 'VAPT Assessment';
+        if (titleEl) titleEl.textContent = 'Request a VAPT Consultation';
       } else if (precheckOption === 'audit') {
         if (badgeEl) badgeEl.textContent = 'Data Protection Audit';
         if (titleEl) titleEl.textContent = 'Request Data Protection Audit';
@@ -375,11 +385,11 @@
       }
 
       if (formContainer) {
-        const formType = precheckOption === 'readiness' ? 'readiness' : 'about';
+        const formType = precheckOption === 'readiness' ? 'readiness' : (precheckOption === 'vapt' ? 'vapt' : 'about');
         formContainer.innerHTML = generateFormHTML(formType, true);
 
         // Pre-selection logic (map pia/gap -> readiness)
-        let targetValue = precheckOption;
+        let targetValue = precheckOption === 'vapt' ? 'audit' : precheckOption;
         if (precheckOption === 'pia' || precheckOption === 'gap') {
           targetValue = 'readiness';
         }
@@ -399,7 +409,9 @@
         // Contextual CTA button text
         const submitBtnSpan = formContainer.querySelector('.btn-compliance-submit span');
         if (submitBtnSpan) {
-          if (precheckOption === 'pia' || precheckOption === 'gap' || precheckOption === 'readiness') {
+          if (precheckOption === 'vapt') {
+            submitBtnSpan.textContent = 'Request a VAPT Consultation';
+          } else if (precheckOption === 'pia' || precheckOption === 'gap' || precheckOption === 'readiness') {
             submitBtnSpan.textContent = 'Get FREE NDPA Gap Assessment';
           } else if (precheckOption === 'car') {
             submitBtnSpan.textContent = 'Initiate Compliance Audit Return (CAR)';

@@ -127,22 +127,31 @@ window.siteSearchIndex = [
     keywords: 'checklist executive ndpa 2023 alignment align aligning strategic c-suite board directors fines 2 percent lawful basis breach 72 hours dpia dpo car filing audit circulars regulations ndpa alignment strategic checklist public sector private sector executives compliance comply complying guide proactive mitigation statutory requirements article publication complying with ndpa knowledge hub whitepaper'
   },
   {
-    id: 'knowledge-hub',
-    title: 'Knowledge Hub: Insights & Regulatory Guidance',
-    url: 'blog/index.html',
+    id: 'regulatory-guidance',
+    title: 'Regulatory Guidance — Practical Compliance Explanations',
+    url: 'regulatory-guidance.html',
     category: 'Knowledge Hub',
     badge: 'Regulatory Guidance',
-    desc: 'Explore legal analyses, empirical compliance checklists, and technical implementation playbooks published by Amstel Consulting licensed DPCO practitioners.',
-    keywords: 'knowledge hub regulatory guidance articles publications blog insights ndpc circulars research briefings legal intelligence comply compliance regulations artificial intelligence tracker articles'
+    desc: 'Clear guidance for an evolving data-protection environment covering CAR filings, major-importance obligations, DPO duties, DPIAs, and cross-border transfers.',
+    keywords: 'regulatory guidance framework car filing major importance dpo dpia breach notification cross border transfers vendor management ndpa 2023 ndpc directives'
+  },
+  {
+    id: 'dpo-nin-requirement',
+    title: 'Must a Data Protection Officer Be Nigerian? Examining the NDPC’s NIN Requirement',
+    url: 'must-a-data-protection-officer-be-nigerian.html',
+    category: 'Knowledge Hub',
+    badge: 'Regulatory Analysis',
+    desc: 'Examining whether a Data Protection Officer must be a Nigerian citizen or resident under the NDPA 2023 and the NDPC NIN requirement for DPCO licensing.',
+    keywords: 'must a data protection officer be nigerian nin requirement ndpc national identification number dpco licence application data protection officer citizenship residency foreign dpo section 32 section 33'
   },
   {
     id: 'ai-tracker',
-    title: 'Artificial Intelligence Tracker',
-    url: 'blog/index.html#ai-tracker',
+    title: 'Artificial Intelligence Regulatory Tracker',
+    url: 'ai-regulatory-tracker.html',
     category: 'Knowledge Hub',
     badge: 'AI Tracker',
-    desc: 'Regulatory intelligence monitoring algorithmic accountability, AI ethics, automated decision systems, and emerging privacy frameworks in Nigeria and globally.',
-    keywords: 'artificial intelligence tracker ai machine learning algorithms automated decisions generative ai tech governance llm compliance safety ethics knowledge hub technology data privacy'
+    desc: 'Monitoring AI governance, legislation, automated decision-making policies, and algorithmic accountability across Nigeria, Africa, and international markets.',
+    keywords: 'artificial intelligence regulatory tracker ai machine learning algorithms automated decisions generative ai tech governance llm compliance safety ethics knowledge hub technology data privacy africa nigeria'
   },
   {
     id: 'about-organisation',
@@ -174,11 +183,11 @@ window.siteSearchIndex = [
   {
     id: 'leadership-team',
     title: 'Team & Advisory Board — Senior Compliance Consultants',
-    url: 'about.html#leadership',
+    url: 'team.html',
     category: 'Organisation',
     badge: 'Advisory Board',
-    desc: 'Senior Data Protection and Corporate Governance Specialists with extensive legal practice experience across Nigeria, the UK, Europe, and international markets.',
-    keywords: 'team leadership advisory board consultants partners legal practitioners privacy experts charles odetola corporate governance abuja lagos'
+    desc: 'Multidisciplinary Advisory Board and senior consultants delivering boardroom-level privacy, regulatory, and cybersecurity guidance.',
+    keywords: 'team leadership advisory board consultants partners legal practitioners privacy experts charles odetola martha jowah subhash desai oluwatosin reis esther samson femi leslie oluwabukola olasehinde slav nakov'
   },
   {
     id: 'charles-odetola',
@@ -208,13 +217,67 @@ window.siteSearchIndex = [
     keywords: 'esmee de jong advisory board member international expansion media communications netherlands creative entrepreneurship training awareness storytelling public relations stakeholder relations partner team advisor'
   },
   {
+    id: 'subhash-desai',
+    title: 'Subhash Desai — Senior Advisory Board Member (Enterprise Risk & Governance)',
+    url: 'subhash-desai.html',
+    category: 'Organisation',
+    badge: 'Advisory Board',
+    desc: 'Senior risk executive with over 25 years experience leading enterprise risk, governance, and operational resilience across international markets.',
+    keywords: 'subhash desai senior advisory board member enterprise risk governance operational resilience london internal controls business continuity'
+  },
+  {
+    id: 'oluwatosin-reis',
+    title: 'Oluwatosin Reis — Advisory Board Member (Global Privacy & Data Governance)',
+    url: 'oluwatosin-reis.html',
+    category: 'Organisation',
+    badge: 'Advisory Board',
+    desc: 'Dual-qualified lawyer and international privacy professional managing privacy programmes across Canada, India, the US, and Denmark.',
+    keywords: 'oluwatosin reis advisory board global privacy data governance international cross-border compliance canada ontario tecsys'
+  },
+  {
+    id: 'esther-samson',
+    title: 'Esther Samson — Data Privacy Training Consultant',
+    url: 'esther-samson.html',
+    category: 'Organisation',
+    badge: 'Leadership',
+    desc: 'Data Privacy Training Consultant drawing on banking sector expertise to deliver practical employee privacy awareness and customer-data training.',
+    keywords: 'esther samson data privacy training consultant banking uba fcmb kyc customer service employee education'
+  },
+  {
+    id: 'femi-leslie',
+    title: 'Femi Leslie — IT Network & Infrastructure Consultant',
+    url: 'femi-leslie.html',
+    category: 'Organisation',
+    badge: 'Leadership',
+    desc: 'IT Network Operator and infrastructure consultant connecting data protection requirements with technical controls, access management, and network security.',
+    keywords: 'femi leslie it network infrastructure consultant network security access management technical troubleshooting'
+  },
+  {
+    id: 'oluwabukola-olasehinde',
+    title: 'Oluwabukola C. Olasehinde — Cybersecurity & VAPT Consultant',
+    url: 'oluwabukola-olasehinde.html',
+    category: 'Organisation',
+    badge: 'Leadership',
+    desc: 'Cybersecurity professional specialising in vulnerability assessment, penetration testing (VAPT), OWASP testing, and web-application security.',
+    keywords: 'oluwabukola olasehinde cybersecurity vapt penetration testing owasp web application api vulnerability testing'
+  },
+  {
+    id: 'slav-nakov',
+    title: 'Slav Nakov, LL.M. — Senior Advisory Board Member',
+    url: 'slav-nakov.html',
+    category: 'Organisation',
+    badge: 'Advisory Board',
+    desc: 'Senior international expert in privacy, regulatory compliance, corporate governance, and digital business.',
+    keywords: 'slav nakov senior advisory board member compliance international governance'
+  },
+  {
     id: 'career-partnerships',
-    title: 'Build a Trusted Advisory Partnership',
-    url: 'about.html#partnerships',
+    title: 'Careers & Partnerships — Work With Us',
+    url: 'careers.html',
     category: 'Organisation',
     badge: 'Partnership',
-    desc: 'Partner with Amstel Consulting or explore advisory partnerships in data protection compliance, statutory audit return filing, and cybersecurity advisory.',
-    keywords: 'career partnerships partner advisory partnership join jobs team hiring strategic alliance collaborate contact alignment our organisation'
+    desc: 'Work with Amstel Consulting. Explore careers, independent consultant network, and strategic partnerships across Nigeria and African markets.',
+    keywords: 'careers partnerships work with us partner advisory consultant jobs hiring alliance vacancies nigeria africa digital trust compliance our organisation'
   },
   {
     id: 'car-regulatory-filing',

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Knowledge Hub & Regulatory Briefings | Amstel Consulting</title>
+  <title>Knowledge Hub &amp; Regulatory Briefings | Amstel Consulting</title>
   <meta name="description"
     content="Explore legal analyses, empirical compliance studies, and technical implementation playbooks on the Nigeria Data Protection Act (NDPA) 2023.">
   <link rel="canonical" href="https://amstel.ng/blog/">
@@ -18,20 +18,48 @@
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="../css/style.css">
-    <!-- Open Graph / Social Sharing -->
+
+  <!-- Open Graph / Social Sharing -->
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Amstel Consulting">
   <meta property="og:url" content="https://amstel.ng/blog/">
-  <meta property="og:title" content="Knowledge Hub & Regulatory Briefings | Amstel Consulting">
+  <meta property="og:title" content="Knowledge Hub &amp; Regulatory Briefings | Amstel Consulting">
   <meta property="og:description" content="Explore legal analyses, empirical compliance studies, and technical implementation playbooks on the Nigeria Data Protection Act (NDPA) 2023.">
   <meta property="og:image" content="https://amstel.ng/logo.png">
 
   <!-- Twitter / X Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://amstel.ng/blog/">
-  <meta name="twitter:title" content="Knowledge Hub & Regulatory Briefings | Amstel Consulting">
+  <meta name="twitter:title" content="Knowledge Hub &amp; Regulatory Briefings | Amstel Consulting">
   <meta name="twitter:description" content="Explore legal analyses, empirical compliance studies, and technical implementation playbooks on the Nigeria Data Protection Act (NDPA) 2023.">
   <meta name="twitter:image" content="https://amstel.ng/logo.png">
+
+  <style>
+    .kh-pill-btn {
+      padding: 0.55rem 1.35rem;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-family: inherit;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      background: #ffffff;
+      color: #64748b;
+      border: 1px solid #e2e8f0;
+      font-weight: 600;
+    }
+    .kh-pill-btn:hover {
+      border-color: #cbd5e1;
+      color: var(--pwc-charcoal);
+      background: #f8fafc;
+    }
+    .kh-pill-btn.active {
+      background: var(--pwc-orange) !important;
+      color: #ffffff !important;
+      border-color: var(--pwc-orange) !important;
+      font-weight: 700 !important;
+      box-shadow: 0 2px 6px rgba(208, 74, 2, 0.25) !important;
+    }
+  </style>
 </head>
 
 <body>
@@ -61,37 +89,132 @@
   <section class="topics-section">
     <div class="container">
 
-      <!-- Knowledge Hub Categories Specified by Client -->
-      <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2.75rem;">
-        <span
-          style="padding: 0.55rem 1.35rem; border-radius: 999px; font-size: 0.88rem; font-weight: 700; background: var(--pwc-orange); color: #ffffff; box-shadow: 0 2px 6px rgba(208, 74, 2, 0.2);">Complying
-          With NDPA 2023 (1)</span>
-        <span
-          style="padding: 0.55rem 1.35rem; border-radius: 999px; font-size: 0.88rem; font-weight: 600; background: #ffffff; color: #64748b; border: 1px solid #e2e8f0;">Regulatory
-          Guidance</span>
-        <span
-          style="padding: 0.55rem 1.35rem; border-radius: 999px; font-size: 0.88rem; font-weight: 600; background: #ffffff; color: #64748b; border: 1px solid #e2e8f0;">Artificial
-          Intelligence Tracker</span>
+      <!-- Knowledge Hub Interactive Filter Categories -->
+      <div class="kh-category-pills" style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2.75rem;">
+        <button type="button"
+          class="kh-pill-btn active"
+          data-filter="ndpa"
+          id="pill-ndpa">
+          Complying With NDPA 2023 (1)
+        </button>
+        <button type="button"
+          class="kh-pill-btn"
+          data-filter="regulatory-guidance"
+          id="pill-regulatory-guidance">
+          Regulatory Guidance (2)
+        </button>
+        <button type="button"
+          class="kh-pill-btn"
+          data-filter="ai-tracker"
+          id="pill-ai-tracker">
+          Artificial Intelligence Tracker (1)
+        </button>
       </div>
 
-      <div class="topics-grid" style="grid-template-columns: 1fr; max-width: 840px; margin: 0 auto;">
+      <div class="topics-grid" style="grid-template-columns: 1fr; max-width: 840px; margin: 0 auto; gap: 2rem;">
 
-        <!-- Briefing 1: The Only Official Strategic Checklist from 13 September Google Doc -->
-        <article class="topic-article-card" id="ndpc-updates">
+        <!-- Category 1: Complying With NDPA 2023 -->
+        <article class="topic-article-card" data-category="ndpa" id="ndpc-updates">
           <div class="topic-header-bar"></div>
           <div class="topic-body">
             <div class="topic-meta">
+              <span class="topic-tag">Strategic Checklist</span>
+              <span>&bull;</span>
               <span>7 Min Read</span>
             </div>
-            <h3><a href="../publication-detail.html" style="color: inherit; text-decoration: none;">NDPA 2023 Alignment:
-                A Strategic Checklist for Public and Private Sector Executives</a></h3>
-            <p>Under the Nigeria Data Protection Act (NDPA) 2023, proactive alignment is critical. Review the top 5
+            <h3>
+              <a href="../publication-detail.html" style="color: inherit; text-decoration: none;">
+                NDPA 2023 Alignment: A Strategic Checklist for Public and Private Sector Executives
+              </a>
+            </h3>
+            <p>
+              Under the Nigeria Data Protection Act (NDPA) 2023, proactive alignment is critical. Review the top 5
               strategic requirements every C-suite executive must implement to mitigate regulatory risk and prevent
-              statutory fines.</p>
+              statutory fines.
+            </p>
           </div>
           <div class="topic-footer">
             <a href="../publication-detail.html" class="read-more-link">
               <span>Read Full Checklist</span>
+              <i class="fa-solid fa-arrow-right" style="margin-left: 0.4rem;"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Category 2: Regulatory Guidance (Post 1: Must a DPO Be Nigerian?) -->
+        <article class="topic-article-card" data-category="regulatory-guidance" id="dpo-nin-article" style="display: none;">
+          <div class="topic-header-bar"></div>
+          <div class="topic-body">
+            <div class="topic-meta">
+              <span class="topic-tag">Regulatory Guidance</span>
+              <span>&bull;</span>
+              <span>8 Min Read</span>
+            </div>
+            <h3>
+              <a href="../must-a-data-protection-officer-be-nigerian.html" style="color: inherit; text-decoration: none;">
+                Must a Data Protection Officer Be Nigerian? Examining the NDPC’s NIN Requirement for DPCO Licence Applications
+              </a>
+            </h3>
+            <p>
+              A practical analysis examining Section 32 and Section 33 of the Nigeria Data Protection Act 2023, assessing whether the NDPC's mandatory National Identification Number (NIN) field creates a statutory citizenship requirement for Data Protection Officers.
+            </p>
+          </div>
+          <div class="topic-footer">
+            <a href="../must-a-data-protection-officer-be-nigerian.html" class="read-more-link">
+              <span>Read Full Analysis</span>
+              <i class="fa-solid fa-arrow-right" style="margin-left: 0.4rem;"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Category 2: Regulatory Guidance (Post 2: Regulatory Framework & Overview) -->
+        <article class="topic-article-card" data-category="regulatory-guidance" id="regulatory-framework-article" style="display: none;">
+          <div class="topic-header-bar"></div>
+          <div class="topic-body">
+            <div class="topic-meta">
+              <span class="topic-tag">Regulatory Guidance</span>
+              <span>&bull;</span>
+              <span>6 Min Read</span>
+            </div>
+            <h3>
+              <a href="../regulatory-guidance.html" style="color: inherit; text-decoration: none;">
+                Clear Guidance for an Evolving Data-Protection Environment
+              </a>
+            </h3>
+            <p>
+              Comprehensive regulatory explanations covering statutory Compliance Audit Returns (CAR), Data Controllers and Processors of Major Importance, outsourced DPO responsibilities, DPIA criteria, and cross-border transfer safeguards under the NDPA.
+            </p>
+          </div>
+          <div class="topic-footer">
+            <a href="../regulatory-guidance.html" class="read-more-link">
+              <span>Explore Regulatory Guidance</span>
+              <i class="fa-solid fa-arrow-right" style="margin-left: 0.4rem;"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Category 3: Artificial Intelligence Tracker -->
+        <article class="topic-article-card" data-category="ai-tracker" id="ai-tracker-article" style="display: none;">
+          <div class="topic-header-bar"></div>
+          <div class="topic-body">
+            <div class="topic-meta">
+              <span class="topic-tag">AI Tracker</span>
+              <span>&bull;</span>
+              <span>Monitoring Resource</span>
+            </div>
+            <h3>
+              <a href="../ai-regulatory-tracker.html" style="color: inherit; text-decoration: none;">
+                Artificial Intelligence Regulatory Tracker: Monitoring AI Governance Across Africa and International Markets
+              </a>
+            </h3>
+            <p>
+              Following significant AI-policy, legislative and regulatory developments in Nigeria, across Africa and in selected international markets. Monitoring algorithmic accountability, risk-management frameworks, generative AI in the workplace, and vendor due diligence.
+            </p>
+          </div>
+          <div class="topic-footer">
+            <a href="../ai-regulatory-tracker.html" class="read-more-link">
+              <span>Explore AI Tracker</span>
+              <i class="fa-solid fa-arrow-right" style="margin-left: 0.4rem;"></i>
             </a>
           </div>
         </article>
@@ -100,10 +223,70 @@
     </div>
   </section>
 
+  <!-- Interactive Category Filtering Script -->
+  <script>
+    function filterCategory(categoryKey) {
+      // 1. Update pill button states
+      const pills = document.querySelectorAll('.kh-pill-btn');
+      pills.forEach(pill => {
+        if (pill.dataset.filter === categoryKey) {
+          pill.classList.add('active');
+        } else {
+          pill.classList.remove('active');
+        }
+      });
+
+      // 2. Show/hide article cards
+      const cards = document.querySelectorAll('.topic-article-card');
+      cards.forEach(card => {
+        if (card.dataset.category === categoryKey) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Attach click events to pills
+    document.addEventListener('DOMContentLoaded', function () {
+      const pills = document.querySelectorAll('.kh-pill-btn');
+      pills.forEach(pill => {
+        pill.addEventListener('click', function () {
+          const filter = this.dataset.filter;
+          filterCategory(filter);
+          if (history.replaceState) {
+            history.replaceState(null, null, '#' + filter);
+          } else {
+            window.location.hash = filter;
+          }
+        });
+      });
+
+      // Handle direct hash navigation on load
+      const hash = window.location.hash.replace('#', '').toLowerCase();
+      if (hash === 'regulatory-guidance' || hash === 'regulatory' || hash === 'guidance') {
+        filterCategory('regulatory-guidance');
+      } else if (hash === 'ai-tracker' || hash === 'ai') {
+        filterCategory('ai-tracker');
+      } else {
+        filterCategory('ndpa');
+      }
+    });
+
+    // Handle browser back/forward or hash changes
+    window.addEventListener('hashchange', function () {
+      const hash = window.location.hash.replace('#', '').toLowerCase();
+      if (hash === 'regulatory-guidance' || hash === 'regulatory' || hash === 'guidance') {
+        filterCategory('regulatory-guidance');
+      } else if (hash === 'ai-tracker' || hash === 'ai') {
+        filterCategory('ai-tracker');
+      } else if (hash === 'ndpa') {
+        filterCategory('ndpa');
+      }
+    });
+  </script>
+
   <!-- Global Footer -->
-  <!-- ==========================================================================
-       PwC MULTI-COLUMN MEGA FOOTER (Standardised Light Theme Across All Pages)
-       ========================================================================== -->
   <!-- Unified Site Footer (Single Source: js/footer.js) -->
   <div id="site-footer"></div>
   <script src="../js/footer.js"></script>

@@ -51,8 +51,8 @@
           <ul class="simple-dropdown-list">
             <li><a href="${pfx}about.html">About Us</a></li>
             <li><a href="${pfx}licensed-dpco-status.html">Licensed DPCO Status</a></li>
-            <li><a href="javascript:void(0)">Team &amp; Advisory Board</a></li>
-            <li><a href="javascript:void(0)">Career &amp; Partnerships</a></li>
+            <li><a href="${pfx}team.html">Team &amp; Advisory Board</a></li>
+            <li><a href="${pfx}careers.html">Career &amp; Partnerships</a></li>
           </ul>
         </div>
       </li>
@@ -67,8 +67,8 @@
         <div class="simple-dropdown-menu">
           <ul class="simple-dropdown-list">
             <li><a href="${pfx}publication-detail.html">Complying With NDPA 2023</a></li>
-            <li><a href="javascript:void(0)">Regulatory Guidance</a></li>
-            <li><a href="javascript:void(0)">Artificial Intelligence Tracker</a></li>
+            <li><a href="${pfx}regulatory-guidance.html">Regulatory Guidance</a></li>
+            <li><a href="${pfx}ai-regulatory-tracker.html">Artificial Intelligence Tracker</a></li>
             <li><a href="${pfx}blog/index.html">View All</a></li>
           </ul>
         </div>
@@ -133,8 +133,8 @@
               <ul class="mobile-submenu-list">
                 <li><a href="${pfx}about.html" onclick="toggleMobileMenu()">About Us</a></li>
                 <li><a href="${pfx}licensed-dpco-status.html" onclick="toggleMobileMenu()">Licensed DPCO Status</a></li>
-                <li><a href="javascript:void(0)">Team &amp; Advisory Board</a></li>
-                <li><a href="javascript:void(0)">Career &amp; Partnerships</a></li>
+                <li><a href="${pfx}team.html" onclick="toggleMobileMenu()">Team &amp; Advisory Board</a></li>
+                <li><a href="${pfx}careers.html" onclick="toggleMobileMenu()">Career &amp; Partnerships</a></li>
               </ul>
             </div>
           </div>
@@ -148,8 +148,8 @@
             <div class="mobile-submenu">
               <ul class="mobile-submenu-list">
                 <li><a href="${pfx}publication-detail.html" onclick="toggleMobileMenu()">Complying With NDPA 2023</a></li>
-                <li><a href="javascript:void(0)">Regulatory Guidance</a></li>
-                <li><a href="javascript:void(0)">Artificial Intelligence Tracker</a></li>
+                <li><a href="${pfx}regulatory-guidance.html" onclick="toggleMobileMenu()">Regulatory Guidance</a></li>
+                <li><a href="${pfx}ai-regulatory-tracker.html" onclick="toggleMobileMenu()">Artificial Intelligence Tracker</a></li>
                 <li><a href="${pfx}blog/index.html" onclick="toggleMobileMenu()">View All</a></li>
               </ul>
             </div>
@@ -291,18 +291,25 @@
       keywords: 'checklist executive ndpa 2023 alignment align aligning strategic c-suite board directors fines 2 percent lawful basis breach 72 hours dpia dpo car filing audit circulars regulations ndpa alignment strategic checklist public sector private sector executives compliance comply complying guide proactive mitigation statutory requirements article publication complying with ndpa knowledge hub'
     },
     {
-      title: 'Knowledge Hub: Insights & Regulatory Guidance',
-      url: 'blog/index.html',
+      title: 'Regulatory Guidance — Practical Explanations & Compliance Center',
+      url: 'regulatory-guidance.html',
       badge: 'Regulatory Guidance',
-      desc: 'Explore legal analyses, empirical compliance checklists, and technical implementation playbooks published by licensed DPCO practitioners.',
-      keywords: 'knowledge hub regulatory guidance articles publications blog insights ndpc circulars research briefings legal intelligence comply compliance regulations artificial intelligence tracker'
+      desc: 'Practical regulatory explanations under the Nigeria Data Protection Act 2023 covering CAR filings, DPO duties, DPIAs, breach management, and vendor oversight.',
+      keywords: 'knowledge hub regulatory guidance articles publications insights ndpc circulars research briefings legal intelligence comply compliance regulations major importance car dpo dpia breach cross border'
     },
     {
-      title: 'Artificial Intelligence Tracker',
-      url: 'blog/index.html#ai-tracker',
+      title: 'Must a Data Protection Officer Be Nigerian? Examining the NDPC’s NIN Requirement',
+      url: 'must-a-data-protection-officer-be-nigerian.html',
+      badge: 'Regulatory Analysis',
+      desc: 'Examining whether a Data Protection Officer must be a Nigerian citizen or resident under the NDPA 2023 and the NDPC NIN requirement for DPCO licensing.',
+      keywords: 'dpo nigerian nin requirement ndpc national identification number dpco licence application data protection officer citizenship residency foreign dpo section 32 section 33'
+    },
+    {
+      title: 'Artificial Intelligence Regulatory Tracker',
+      url: 'ai-regulatory-tracker.html',
       badge: 'AI Tracker',
-      desc: 'Regulatory intelligence monitoring algorithmic accountability, AI ethics, automated decision systems, and emerging privacy frameworks.',
-      keywords: 'artificial intelligence tracker ai machine learning algorithms automated decisions generative ai tech governance llm compliance safety ethics knowledge hub'
+      desc: 'Monitoring AI governance, legislation, automated decision-making policies, and algorithmic accountability across Nigeria, Africa, and international markets.',
+      keywords: 'artificial intelligence tracker ai machine learning algorithms automated decisions generative ai tech governance llm compliance safety ethics knowledge hub regulatory tracker'
     },
     {
       title: 'Our Organisation: About Amstel Consulting',
@@ -320,14 +327,14 @@
     },
     {
       title: 'Team & Advisory Board — Senior Compliance Consultants',
-      url: 'about.html#leadership',
+      url: 'team.html',
       badge: 'Advisory Board',
       desc: 'Multidisciplinary Advisory Board and senior consultants delivering boardroom-level privacy, regulatory, and cybersecurity guidance.',
-      keywords: 'team advisory board leadership senior compliance consultants specialists charles odetola martha jowah lawyers legal risk governance our organisation'
+      keywords: 'team advisory board leadership senior compliance consultants specialists charles odetola martha jowah esther samson femi leslie subhash desai oluwatosin reis oluwabukola olasehinde slav nakov our organisation'
     },
     {
       title: 'Career & Strategic Advisory Partnerships',
-      url: 'about.html#partnerships',
+      url: 'careers.html',
       badge: 'Partnership',
       desc: 'Partner with Amstel Consulting or explore careers in data protection compliance, statutory audit return filing, and cybersecurity advisory.',
       keywords: 'career partnerships partner advisory partnership join jobs team hiring strategic alliance collaborate contact alignment our organisation'
@@ -352,6 +359,48 @@
       badge: 'Advisory Board',
       desc: 'Creative entrepreneur and communications specialist advising on international expansion, audience engagement, storytelling, and corporate training design.',
       keywords: 'esmee de jong advisory board member international expansion media communications netherlands creative entrepreneurship training awareness storytelling partner team advisor'
+    },
+    {
+      title: 'Subhash Desai — Senior Advisory Board Member (Enterprise Risk & Governance)',
+      url: 'subhash-desai.html',
+      badge: 'Advisory Board',
+      desc: 'Senior risk executive with over 25 years experience leading enterprise risk, governance, and operational resilience across international markets.',
+      keywords: 'subhash desai senior advisory board member enterprise risk governance operational resilience london internal controls business continuity'
+    },
+    {
+      title: 'Oluwatosin Reis — Advisory Board Member (Global Privacy & Data Governance)',
+      url: 'oluwatosin-reis.html',
+      badge: 'Advisory Board',
+      desc: 'Dual-qualified lawyer and international privacy professional managing privacy programmes across Canada, India, the US, and Denmark.',
+      keywords: 'oluwatosin reis advisory board global privacy data governance international cross-border compliance canada ontario tecsys'
+    },
+    {
+      title: 'Esther Samson — Data Privacy Training Consultant',
+      url: 'esther-samson.html',
+      badge: 'Leadership',
+      desc: 'Data Privacy Training Consultant drawing on banking sector expertise to deliver practical employee privacy awareness and customer-data training.',
+      keywords: 'esther samson data privacy training consultant banking uba fcmb kyc customer service employee education'
+    },
+    {
+      title: 'Femi Leslie — IT Network & Infrastructure Consultant',
+      url: 'femi-leslie.html',
+      badge: 'Leadership',
+      desc: 'IT Network Operator and infrastructure consultant connecting data protection requirements with technical controls, access management, and network security.',
+      keywords: 'femi leslie it network infrastructure consultant network security access management technical troubleshooting'
+    },
+    {
+      title: 'Oluwabukola C. Olasehinde — Cybersecurity & VAPT Consultant',
+      url: 'oluwabukola-olasehinde.html',
+      badge: 'Leadership',
+      desc: 'Cybersecurity professional specialising in vulnerability assessment, penetration testing (VAPT), OWASP testing, and web-application security.',
+      keywords: 'oluwabukola olasehinde cybersecurity vapt penetration testing owasp web application api vulnerability testing'
+    },
+    {
+      title: 'Slav Nakov, LL.M. — Senior Advisory Board Member',
+      url: 'slav-nakov.html',
+      badge: 'Advisory Board',
+      desc: 'Senior international expert in privacy, regulatory compliance, corporate governance, and digital business.',
+      keywords: 'slav nakov senior advisory board member compliance international governance'
     },
     {
       title: 'Contact Practice Offices & RFP Enquiries',
